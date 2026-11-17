@@ -111,7 +111,7 @@ echo.
 
 :: Open current folder and open the Master Study Guide
 call "%CODE_CMD%" "%~dp0."
-call "%CODE_CMD%" "%~dp0BACSE350 Blockchain Master Study Guide.md"
+call "%CODE_CMD%" "%~dp0Markdown\BACSE350 Blockchain Master Study Guide.md"
 
 timeout /t 5 >nul
 exit /b 0
