@@ -418,7 +418,7 @@ In the Ethereum Virtual Machine (EVM), writing to persistent contract storage is
   $$\text{Gas per KB} = 32 \times 20,000 = 640,000 \text{ gas}$$
 * Writing **1 MB** requires $640,000 \times 1,024 \approx 655,360,000 \text{ gas}$.
 * At a modest gas price of **30 Gwei** and an Ether price of **\$3,000 USD**:
-  $$\text{Cost per MB} = 655,360,000 \text{ gas} \times 30 \times 10^{-9} \text{ ETH} \times \$3,000 \approx \$59,000 \text{ USD}$$
+$$\text{Cost per MB} = 655,360,000 \text{ gas} \times (30 \times 10^{-9} \text{ ETH}) \times 3,000 \text{ USD/ETH} \approx 59,000 \text{ USD}$$
 * Storing a single **1 GB** file directly on-chain would cost **~\$59,000,000 USD**!
 * **Conclusion**: Directly storing multi-megabyte files (such as medical imaging scans, high-resolution media, PDF legal agreements, or firmware blobs) on a public blockchain is economically impossible and technically catastrophic.
 
@@ -1227,22 +1227,22 @@ This section provides high-yield revision summaries, definitive concept comparis
 >
 > | # | Core Architectural Principle | Exam Key Fact / Rule |
 > |:---:|---|---|
-> | **1** | **Six Layers of Blockchain** | Functional stack: Data $\to$Network$\to$Consensus$\to$Incentive$\to$Contract$\to$ Application. |
+> | **1** | **Six Layers of Blockchain** | Functional stack: Data $\to$ Network $\to$ Consensus $\to$ Incentive $\to$ Contract $\to$ Application. |
 > | **2** | **Incentive Layer is Optional** | Excluded or configured as "zero-gas" in private and consortium enterprise blockchains. |
-> | **3** | **2/3rd Voting Rule (BFT)** | Tolerates up to $f$Byzantine nodes if$n \ge 3f + 1$; Quorum requires$\ge 2f + 1 > \frac{2}{3}n$ signatures. |
+> | **3** | **2/3rd Voting Rule (BFT)** | Tolerates up to $f$ Byzantine nodes if $n \ge 3f + 1$; Quorum requires $\ge 2f + 1 > \frac{2}{3}n$ signatures. |
 > | **4** | **EEA Enterprise Stack** | Extends base Ethereum with HSM vaults, OAuth/RBAC, Oracles, ZK-SNARKs, TEE enclaves, and private state. |
 > | **5** | **10-Step Design Methodology** | Step 6 (*Configure Blockchain Instance*) and Step 7 (*Build APIs*) are the core implementation milestones. |
 > | **6** | **10 Instance Parameters** | Permissions, Asset Issuance, Atomic Swaps, Key Mgmt, Multisig, Block Params, Limits, Handshakes, Address Formats, Native Assets. |
 > | **7** | **7 Blockchain API Classes** | Keygen, Asset Issuance, Data Authentication, Status Querying, Create/Read (CRUD), Smart Contracts, Address Verification. |
-> | **8** | **EVM SSTORE Storage Economics** | Costs 20,000 gas per 32-byte non-zero slot ($\approx 640{,}000$gas/KB); costs$\approx \$59{,}000$ per MB on L1! |
+> | **8** | **EVM SSTORE Storage Economics** | Costs 20,000 gas per 32-byte non-zero slot ($\approx 640{,}000$ gas/KB); costs $\approx 59{,}000$ USD per MB on L1! |
 > | **9** | **The Storage Trilemma** | Systems trade off between **Decentralization** (node storage), **Throughput** (TPS), and **Immutability/Verifiability**. |
 > | **10** | **GDPR Article 17 Conflict** | "Right to be Forgotten" makes storing raw PII on an immutable ledger legally and architecturally non-compliant. |
 > | **11** | **Hybrid Storage Architecture** | Bulky payloads (PDF, scans, big data) live off-chain; only fixed 32-byte cryptographic hashes anchor on-chain. |
-> | **12** | **4-Stage Hybrid Lifecycle** | 1. Asset Creation $\to$2. The Split (payload off-chain, hash on-chain)$\to$3. Secure Anchoring$\to$ 4. Verifiable Access. |
+> | **12** | **4-Stage Hybrid Lifecycle** | 1. Asset Creation $\to$ 2. The Split (payload off-chain, hash on-chain) $\to$ 3. Secure Anchoring $\to$ 4. Verifiable Access. |
 > | **13** | **IPFS Content Addressing** | Data is fetched by cryptographic content identifier (CID), not by physical host URL location. |
 > | **14** | **CIDv0 vs. CIDv1** | CIDv0 is Base58btc starting with `Qm` (46 chars); CIDv1 uses Multiformats (Multibase + Version + Multicodec + Multihash). |
 > | **15** | **UnixFS & Merkle DAG** | Splits large files into 256 KB blocks structured as a Directed Acyclic Graph, enabling deduplication. |
-> | **16** | **Kademlia DHT Routing** | Measures peer distance via XOR metric ($d(x, y) = x \oplus y$), routing queries across the network in$O(\log N)$ hops. |
+> | **16** | **Kademlia DHT Routing** | Measures peer distance via XOR metric ($d(x, y) = x \oplus y$), routing queries across the network in $O(\log N)$ hops. |
 > | **17** | **Bitswap Protocol** | Exchange protocol using peer `Wantlists` and credit/debt tit-for-tat game theory to incentivize bandwidth sharing. |
 > | **18** | **IPFS Garbage Collection** | Unpinned blocks are purged when disk caches fill; mission-critical data must be explicitly PINNED. |
 > | **19** | **BigchainDB Fusion** | Blends MongoDB distributed NoSQL storage with Tendermint Core BFT consensus, governed by the CRAB data model. |
@@ -1383,8 +1383,8 @@ This section provides high-yield revision summaries, definitive concept comparis
     * $1 \text{ MB} = 1,048,576 \text{ bytes}$.
     * Total slots required $= 1,048,576 / 32 = 32,768 \text{ slots}$.
     * Total gas $= 32,768 \times 20,000 = 655,360,000 \text{ gas}$.
-    * Assuming gas price $= 30 \text{ Gwei} = 30 \times 10^{-9} \text{ ETH}$, and ETH price$= \$3,000 \text{ USD}$:
-      $$\text{Cost} = 655,360,000 \times (30 \times 10^{-9}) \times 3,000 = 19.6608 \text{ ETH} \times 3,000 \approx \$58,982.40 \text{ USD}$$
+    * Assuming gas price $= 30 \text{ Gwei} = 30 \times 10^{-9} \text{ ETH}$, and ETH price $= 3,000 \text{ USD}$:
+      $$\text{Cost} = 655,360,000 \times (30 \times 10^{-9}) \times 3,000 = 19.6608 \text{ ETH} \times 3,000 \approx 58,982.40 \text{ USD}$$
   * *The Storage Trilemma*: The architectural impossibility of simultaneously maximizing:
     1. *Decentralization* (keeping node hardware costs low enough for home users).
     2. *High Throughput* (processing thousands of transactions per second with low latency).

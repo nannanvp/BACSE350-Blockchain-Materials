@@ -397,7 +397,7 @@ flowchart TD
 | **Write / Transaction Submission** | Anyone with native tokens for fees | Pre-authorized consortium participants | Authorized internal employees / departments |
 | **Consensus Participants** | Anonymous global miners / validators | Pre-selected known institutional nodes | Centralized designated internal nodes |
 | **Governance Structure** | Decentralized; community-driven | Multi-organizational federation | Centralized enterprise leadership |
-| **Transaction Throughput** | Low ($7$ to $35$ TPS on L1) | High (\$1,000$ to \$5,000 +$ TPS) | Ultra-high (\$5,000$ to \$20,000 +$ TPS) |
+| **Transaction Throughput** | Low ($7$ to $35$ TPS on L1) | High (1,000 to 5,000+ TPS) | Ultra-high (5,000 to 20,000+ TPS) |
 | **Settlement Finality** | Probabilistic (Minutes to 1 hour) | Immediate / Deterministic (Seconds) | Immediate / Deterministic (Milliseconds) |
 | **Energy Consumption** | High (in PoW) to Low (in PoS) | Negligible (No compute puzzle) | Negligible (Crash fault algorithms) |
 | **Incentive / Token Layer** | Mandatory (Mining subsidies, fees) | Optional (Can operate tokenless) | Unnecessary (No native cryptocurrency needed) |

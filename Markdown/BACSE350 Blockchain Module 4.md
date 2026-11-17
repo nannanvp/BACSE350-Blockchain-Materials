@@ -181,7 +181,7 @@ Imagine an automated teller machine (ATM) programmed with a flawed sequence of o
 6. Only after the cash vault is empty does the ATM finally update your passbook balance to zero.
 
 #### The Flawed Solidity Code Flow
-The vulnerable withdrawal function in The DAO contract executed operations in the fatal order: **Check $ightarrow$Interact$ightarrow$ Effect**.
+The vulnerable withdrawal function in The DAO contract executed operations in the fatal order: **Check $\rightarrow$ Interact $\rightarrow$ Effect**.
 
 ```solidity
 // VULNERABLE CONTRACT PATTERN (The DAO Anti-Pattern)
@@ -246,7 +246,7 @@ contract ReentrancyExploiter
 #### Step-by-Step Exploit Mechanics:
 1. **Deposit**: Attacker deposits 1 ETH into `VulnerableDAO`. State: `balances[Attacker] = 1 ETH`. Vault balance: 100 ETH.
 2. **First Call**: Attacker calls `attack()`, which invokes `targetDAO.withdraw()`.
-3. **Target Check**: `targetDAO` checks `balances[msg.sender] >= 1 ETH` $ightarrow$ Evaluates to **TRUE**.
+3. **Target Check**: `targetDAO` checks `balances[msg.sender] >= 1 ETH` $\rightarrow$ Evaluates to **TRUE**.
 4. **Premature Ether Dispatch**: `targetDAO` executes `msg.sender.call{value: 1 ETH}("")`.
 5. **Execution Interception**: Sending Ether to `ReentrancyExploiter` automatically triggers its `receive()` fallback function.
 6. **Reentrant Invocations**: Inside `receive()`, the attacker's contract calls `targetDAO.withdraw()` *again*.
@@ -784,10 +784,10 @@ Multisignature (Multisig) technology distributes operational authorization acros
 
 #### $M$-of-$N$ Threshold Signing
 In a standard single-signature wallet:
-$$	ext{Private Key} \longrightarrow 	ext{Transaction Approved}$$
+$$\text{Private Key} \longrightarrow \text{Transaction Approved}$$
 In an $M$-of-$N$ multisig wallet:
 - There are $N$ authorized signers.
-- Any $M$distinct valid signatures (where$M \le N$) are required to release funds or execute an on-chain smart contract call.
+- Any $M$ distinct valid signatures (where $M \le N$) are required to release funds or execute an on-chain smart contract call.
 
 #### Real-World Scenario: 2-of-3 Corporate Multisig
 An enterprise treasury designates three executive officers:

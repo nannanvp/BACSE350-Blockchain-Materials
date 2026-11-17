@@ -223,7 +223,7 @@ while (true)
 Without gas, every node in the world would hang indefinitely attempting to execute this single transaction, bringing global consensus to a dead stop. Gas completely neutralizes this attack: each transaction defines a finite **Gas Limit**. Every opcode deducts its exact deterministic gas cost from the gas counter. When the counter hits zero, execution halts immediately.
 
 #### Core Gas Metrics:
-1. **Gas Limit:** The absolute maximum number of gas units the sender authorizes for consumption during transaction execution. Standard ETH transfers have a fixed gas limit of **21,000 gas**. Complex contract invocations typically allocate between \$100,000$and \$3,000,000$ gas.
+1. **Gas Limit:** The absolute maximum number of gas units the sender authorizes for consumption during transaction execution. Standard ETH transfers have a fixed gas limit of **21,000 gas**. Complex contract invocations typically allocate between 100,000 and 3,000,000 gas.
 2. **Gas Used:** The actual cumulative gas consumed by the opcodes executed up to transaction completion. Any unused gas is refunded directly to the sender:
    $$\text{Gas Refunded} = \text{Gas Limit} - \text{Gas Used}$$
 3. **Gas Price:** The amount of Ether the sender is willing to pay per unit of gas, denominated in Gwei ($10^{-9} \text{ ETH}$).
@@ -445,7 +445,7 @@ Every reference type variable in Solidity (arrays, structs, strings, bytes) must
 |:---|:---|:---|:---|
 | **Persistence** | Permanent (recorded on blockchain) | Ephemeral (cleared after execution) | Ephemeral (cleared after execution) |
 | **Location** | Merkle Patricia Storage Trie | Volatile linear byte-array | Read-only input buffer sent with tx |
-| **Gas Cost** | Extremely expensive (\$20,000$/ \$2,100$ gas) | Inexpensive (linear + quadratic growth) | Cheapest (no memory expansion cost) |
+| **Gas Cost** | Extremely expensive (20,000 / 2,100 gas) | Inexpensive (linear + quadratic growth) | Cheapest (no memory expansion cost) |
 | **Mutability** | Mutable | Mutable | **Immutable (Read-Only)** |
 | **Default Context** | Contract-level state variables | Local variables in function body | External function reference arguments |
 
@@ -827,9 +827,7 @@ Hyperledger Fabric solves this via **Channels**:
 
 #### Channel Characteristics:
 1. **Cryptographic Isolation:** A channel is defined by its own Genesis Block (`configtxgen`). Only organizations possessing certificates authorized in the channel's Membership Service Provider (Channel MSP) can connect peers or query data.
-2. **Dedicated Ledgers:** Each channel maintains its own independent physical ledger:
-   $$\text{Ledger}_{\text{Channel 1}} \neq \text{Ledger}_{\text{Channel 2}}$$
-   Peers belonging to Organization 1 joined to both `Channel 1` and `Channel 2` maintain two physically distinct databases on disk (`var/hyperledger/production/ledgersData`).
+2. **Dedicated Ledgers:** Each channel maintains its own independent physical ledger ($\text{Ledger}_{\text{Channel 1}} \neq \text{Ledger}_{\text{Channel 2}}$). Peers belonging to Organization 1 joined to both `Channel 1` and `Channel 2` maintain two physically distinct databases on disk (`var/hyperledger/production/ledgersData`).
 3. **Zero Visibility for Non-Members:** Organization 2 (joined exclusively to `Channel 1`) has zero cryptographic or network visibility into transactions occurring on `Channel 2`. Even the block headers are hidden.
 
 ---

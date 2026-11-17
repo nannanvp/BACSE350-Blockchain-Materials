@@ -83,7 +83,7 @@ flowchart TD
 * **Foundational Tenets:** Explores the shift from centralized client-server silos to peer-to-peer decentralized networks. Resolves the fundamental double-spending problem without relying on a central clearinghouse.
 * **Storage & Header Mechanics:** Deep-dives into the 80-byte block header format (Version, Previous Block Hash, Merkle Root Hash, Timestamp, nBits difficulty target, Nonce) and binary Merkle trees enabling $O(\log N)$ Simplified Payment Verification (SPV) proofs.
 * **Cryptographic Primitives:** Dissects asymmetric cryptography, the secp256k1 curve ($y^2 \equiv x^3 + 7 \pmod p$), and the SHA-256 trapdoor one-way hash function.
-* **Consensus Theories:** Provides mathematical proofs of impossibility for the Two Generals Problem over unauthenticated lossy networks, alongside Lamport’s Byzantine Generals Problem proof requiring $N \ge 3m + 1$(strictly$> \frac{2}{3}$ honest supermajority) to guarantee safety under arbitrary Byzantine faults.
+* **Consensus Theories:** Provides mathematical proofs of impossibility for the Two Generals Problem over unauthenticated lossy networks, alongside Lamport’s Byzantine Generals Problem proof requiring $N \ge 3m + 1$ (strictly $> \frac{2}{3}$ honest supermajority) to guarantee safety under arbitrary Byzantine faults.
 * **Consensus Models & Nakamoto Consensus:** Compares Proof-of-Work (Hashcash, dynamic difficulty adjustment), Proof-of-Stake (validator bonding, slashing conditions, Nothing-at-Stake mitigation), and Delegated Proof-of-Stake (21 active witnesses, round-robin block production). Explains tie-breaking via the longest/heaviest chain rule, orphan block eviction, and mempool recovery.
 
 ### [Module 2: Bitcoin Network and Transactions](BACSE350%20Blockchain%20Module%202.md)
@@ -92,7 +92,7 @@ flowchart TD
 * **The UTXO Transaction Model:** Explains atomic transaction consumption under the Rule of Entirety. Discusses the elimination of account balances in favor of discrete cryptographic outputs, explicit outputs versus implicit miner transaction fees ($\text{Fee} = \sum \text{Inputs} - \sum \text{Outputs}$).
 * **Raw Transaction Serialization & Byte Anatomy:** Deconstructs raw hex serialization including little-endian TxIDs, VarInts, Outpoint indices, sequence numbers, locktime, and the 107-byte ScriptSig DER signature.
 * **Bitcoin Script Stack Machine:** Demonstrates the Turing-incomplete execution of Forth-like stack opcodes. Traces standard P2PKH script execution (`OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG`), P2SH (BIP-16), multi-sig scripts, and provably unspendable data storage via `OP_RETURN` (up to 80 bytes).
-* **P2P Network Discovery & Propagation:** Covers node bootstrap via hardcoded DNS seeds, fallback lists, and local `peers.dat` caches; TCP port 8333 handshakes (`version`/`verack`); and gossip-based inventory dissemination (`inv` $\rightarrow `getdata` \rightarrow$ `block`).
+* **P2P Network Discovery & Propagation:** Covers node bootstrap via hardcoded DNS seeds, fallback lists, and local `peers.dat` caches; TCP port 8333 handshakes (`version`/`verack`); and gossip-based inventory dissemination (`inv` $\rightarrow$ `getdata` $\rightarrow$ `block`).
 
 ### [Module 3: Ethereum and Hyperledger Fabric](BACSE350%20Blockchain%20Module%203.md)
 * **Ethereum Execution Environment (EVM):** Analyzes the EVM as a 256-bit quasi-Turing-complete stack machine operating with a 1,024-element stack depth, volatile byte-addressable memory, and persistent key-value storage trie slots.
@@ -114,7 +114,7 @@ flowchart TD
 ### [Module 5: Blockchain Storage Models and Use Cases](BACSE350%20Blockchain%20Module%205.md)
 * **Layered Architectural Stack:** Formulates the 6-layer blockchain reference model (Data, Network, Consensus, Incentive, Contract/Execution, Application Layer) alongside the Enterprise Ethereum Alliance (EEA) cross-industry standard.
 * **10-Step Application Design Methodology:** Outlines the rigorous engineering framework required to evaluate, design, instantiate, and deploy decentralized systems, including the 10 immutable parameters established at network genesis.
-* **Storage Economics & The Blockchain Trilemma:** Details the prohibitive cost of on-chain data storage ($20,000 \text{ gas per 32-byte word} \approx \$50,000\text{–}\$60,000\text{ per MB}$ on Ethereum), transaction latency, and storage bloat. Discusses the tension between permanent blockchain immutability and data privacy mandates (GDPR "Right to be Forgotten").
+* **Storage Economics & The Blockchain Trilemma:** Details the prohibitive cost of on-chain data storage ($20,000 \text{ gas per 32-byte word} \approx 50,000\text{–}60,000\text{ USD per MB}$ on Ethereum), transaction latency, and storage bloat. Discusses the tension between permanent blockchain immutability and data privacy mandates (GDPR "Right to be Forgotten").
 * **Hybrid Storage Architecture:** Introduces the off-chain payload storage pattern paired with on-chain cryptographic anchor verification. Provides an end-to-end production Solidity contract (`HybridDocumentRegistry.sol`) demonstrating SHA-256 digest notarization.
 * **InterPlanetary File System (IPFS):** Details content addressing via CIDs (CIDv0 Base58 vs CIDv1 Multiformats: multibase, multicodec, multihash), UnixFS Merkle DAG chunking (256 KB slices), Kademlia Distributed Hash Table (DHT) $O(\log N)$ XOR distance routing, Bitswap credit/debt block exchanges, and pinning services.
 * **BigchainDB Decentralized Database:** Explores the fusion of blockchain immutability and distributed database performance (MongoDB clustering + Tendermint BFT consensus) supporting high-throughput queryable JSON documents under a Create-Read-Append-Burn (CRAB) paradigm.
@@ -206,11 +206,11 @@ All 28 diagrams have been handcrafted as modular, valid XML SVG vector graphics 
 
 | Consensus Class | Representative Protocol | Finality Guarantee | Fault Tolerance Threshold | Energy Consumption | Vulnerabilities / Weaknesses |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Proof-of-Work (PoW)** | Bitcoin (Hashcash) | Probabilistic (Nakamoto rule) | $< 50\%$hashrate ($> 50\%$ causes double-spend) | Extremely High (Gigawatts) | 51% Hashrate Attack, Selfish Mining, Pool Centralization |
-| **Proof-of-Stake (PoS)** | Ethereum (Proof-of-Stake) | Deterministic (Casper FFG 2/3) | $< 33.3\%$malicious stake ($> 33\%$ stalls finality) | Negligible (< 0.05% of PoW) | Nothing-at-Stake (fixed by slashing), Stake Cartelization |
+| **Proof-of-Work (PoW)** | Bitcoin (Hashcash) | Probabilistic (Nakamoto rule) | $< 50\%$ hashrate ($> 50\%$ causes double-spend) | Extremely High (Gigawatts) | 51% Hashrate Attack, Selfish Mining, Pool Centralization |
+| **Proof-of-Stake (PoS)** | Ethereum (Proof-of-Stake) | Deterministic (Casper FFG 2/3) | $< 33.3\%$ malicious stake ($> 33\%$ stalls finality) | Negligible (< 0.05% of PoW) | Nothing-at-Stake (fixed by slashing), Stake Cartelization |
 | **Delegated PoS (DPoS)** | EOS, Tron, BitShares | Deterministic (21 Witnesses) | $< 33.3\%$ dishonest block producers | Low | Voter apathy, Witness collusion, Governance bribery |
 | **Crash Fault Tolerant (CFT)** | Hyperledger Fabric (EtcdRaft) | Immediate / Absolute | Up to $f < \frac{n}{2}$ crashed nodes | Negligible | Cannot tolerate malicious / Byzantine adversarial behavior |
-| **Byzantine Fault Tolerant (BFT)** | Tendermint, PBFT | Immediate / Absolute | Up to $f < \frac{n}{3}$Byzantine nodes ($2f+1 > \frac{2}{3}n$) | Negligible | High$O(n^2)$ network communication overhead; limited node scaling |
+| **Byzantine Fault Tolerant (BFT)** | Tendermint, PBFT | Immediate / Absolute | Up to $f < \frac{n}{3}$ Byzantine nodes ($2f+1 > \frac{2}{3}n$) | Negligible | High $O(n^2)$ network communication overhead; limited node scaling |
 
 ### 3. Decentralized & Distributed Storage Comparison
 
@@ -228,11 +228,15 @@ All 28 diagrams have been handcrafted as modular, valid XML SVG vector graphics 
 ### 1. Elliptic Curve Cryptography (SECP256k1)
 Bitcoin and Ethereum utilize the Koblitz elliptic curve defined over the finite field $\mathbb{F}_p$:
 $$y^2 \equiv x^3 + 7 \pmod p$$
-* **Field Prime ($p$):**$2^{256} - 2^{32} - 977 = \text{0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F}$* **Base Point / Generator ($G$):**
-  - $G_x = \text{0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798}$-$G_y = \text{0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8}$* **Curve Order ($n$):**$\text{0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141}$* **Public Key Derivation:**$K = k \cdot G$(Scalar point multiplication using double-and-add algorithm; computing$k$from$K$ is the Discrete Logarithm Problem, computationally infeasible).
+* **Field Prime ($p$):** $2^{256} - 2^{32} - 977 = \text{0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F}$
+* **Base Point / Generator ($G$):**
+  - $G_x = \text{0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798}$
+  - $G_y = \text{0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8}$
+* **Curve Order ($n$):** $\text{0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141}$
+* **Public Key Derivation:** $K = k \cdot G$ (Scalar point multiplication using double-and-add algorithm; computing $k$ from $K$ is the Discrete Logarithm Problem, computationally infeasible).
 * **Coordinate Compression:**
   - Uncompressed: $\text{0x04} \,||\, x \,||\, y$ (65 bytes)
-  - Compressed: If $y \text{ is even} \implies \text{0x02} \,||\, x$; If$y \text{ is odd} \implies \text{0x03} \,||\, x$ (33 bytes)
+  - Compressed: If $y \text{ is even} \implies \text{0x02} \,||\, x$; If $y \text{ is odd} \implies \text{0x03} \,||\, x$ (33 bytes)
 
 ### 2. Hash Functions & Address Derivation
 * **Bitcoin HASH160:** $\text{HASH160}(K) = \text{RIPEMD-160}(\text{SHA-256}(K))$ (Yields 20 bytes / 160 bits).
@@ -240,7 +244,7 @@ $$y^2 \equiv x^3 + 7 \pmod p$$
 * **Bitcoin Base58Check Encoding:** Converts $[\text{Version} (1) \,||\, \text{Payload} (20) \,||\, \text{Checksum} (4)]$ into alphanumeric characters excluding ambiguous glyphs `0`, `O`, `I`, `l`, `+`, `/`.
 * **Ethereum Address Derivation:**
   $$\text{Address} = \text{Last 20 bytes of } \text{Keccak-256}(K_{\text{uncompressed}}[1:65])$$
-* **EIP-55 Mixed-Case Checksum:** Converts address characters to uppercase if the $i$-th nibble of$\text{Keccak-256}(\text{lowercase}(address)) \ge 8$.
+* **EIP-55 Mixed-Case Checksum:** Converts address characters to uppercase if the $i$-th nibble of $\text{Keccak-256}(\text{lowercase}(address)) \ge 8$.
 
 ### 3. EVM Gas Economics & EIP-1559 Pricing
 * **Total Fee Calculation:**
