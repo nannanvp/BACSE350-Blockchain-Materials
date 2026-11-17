@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="msigGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="govGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="forkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow6" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="860" rx="16" fill="url(#bgGrad6)"/>
+  <rect x="2" y="2" width="1196" height="856" rx="14" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(60, 30)">
+    <rect x="0" y="0" width="1080" height="70" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <text x="540" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle">MULTISIGNATURE (M-OF-N) THRESHOLD SIGNING &amp; GOVERNANCE</text>
+    <text x="540" y="52" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Cryptographic Threshold Consensus, Two-Layer Governance, and Forking Mechanics (Soft vs Hard Forks)</text>
+  </g>
+
+  <!-- Top Section: 3-of-5 Multisig Workflow -->
+  <g transform="translate(60, 120)" filter="url(#shadow6)">
+    <rect x="0" y="0" width="1080" height="370" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="1080" height="34" rx="12" fill="url(#msigGrad)"/>
+    <text x="24" y="22" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1. Workflow of a 3-of-5 Threshold Multisignature Treasury Vault</text>
+
+    <!-- Step 1: Proposal Creation -->
+    <g transform="translate(30, 55)">
+      <rect x="0" y="0" width="170" height="90" rx="8" fill="#0F172A" stroke="#60A5FA" stroke-width="1.5"/>
+      <text x="85" y="22" fill="#93C5FD" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 1: Propose Tx</text>
+      <text x="85" y="42" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Initiator creates</text>
+      <text x="85" y="58" fill="#CBD5E1" font-family="monospace" font-size="9.5" text-anchor="middle">Transfer 50 ETH</text>
+      <text x="85" y="74" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">to Audit Firm</text>
+    </g>
+
+    <!-- Arrow 1 to 2 -->
+    <path d="M 205 100 L 245 100" fill="none" stroke="#60A5FA" stroke-width="2"/>
+
+    <!-- Step 2: The 5 Signers Column -->
+    <g transform="translate(250, 48)">
+      <!-- Signer 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="180" height="36" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+        <text x="14" y="22" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">Key 1 (Director):</text>
+        <text x="135" y="22" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">SIGNED &#10003;</text>
+      </g>
+      <!-- Signer 2 -->
+      <g transform="translate(0, 42)">
+        <rect x="0" y="0" width="180" height="36" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+        <text x="14" y="22" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">Key 2 (Finance):</text>
+        <text x="135" y="22" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">SIGNED &#10003;</text>
+      </g>
+      <!-- Signer 3 -->
+      <g transform="translate(0, 84)">
+        <rect x="0" y="0" width="180" height="36" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+        <text x="14" y="22" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">Key 3 (Auditor):</text>
+        <text x="135" y="22" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">SIGNED &#10003;</text>
+      </g>
+      <!-- Signer 4 -->
+      <g transform="translate(0, 126)">
+        <rect x="0" y="0" width="180" height="36" rx="6" fill="#0F172A" stroke="#64748B" stroke-width="1"/>
+        <text x="14" y="22" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Key 4 (Admin):</text>
+        <text x="135" y="22" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Offline &#9899;</text>
+      </g>
+      <!-- Signer 5 -->
+      <g transform="translate(0, 168)">
+        <rect x="0" y="0" width="180" height="36" rx="6" fill="#0F172A" stroke="#64748B" stroke-width="1"/>
+        <text x="14" y="22" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Key 5 (Legal):</text>
+        <text x="135" y="22" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Abstained &#9899;</text>
+      </g>
+    </g>
+
+    <!-- Aggregator Bracket -->
+    <path d="M 435 66 L 470 66 L 470 152 L 490 152" fill="none" stroke="#10B981" stroke-width="2"/>
+    <path d="M 435 108 L 470 108" fill="none" stroke="#10B981" stroke-width="2"/>
+    <path d="M 435 150 L 470 150" fill="none" stroke="#10B981" stroke-width="2"/>
+
+    <!-- Step 3: Multisig Vault Verification Engine -->
+    <g transform="translate(495, 80)">
+      <rect x="0" y="0" width="280" height="145" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+      <text x="140" y="26" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">ON-CHAIN MULTISIG VAULT</text>
+      <text x="140" y="44" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">Gnosis / Safe / P2SH</text>
+
+      <rect x="20" y="55" width="240" height="42" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1"/>
+      <text x="140" y="73" fill="#D1FAE5" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">&#10003; THRESHOLD MET: 3 &gt;= 3</text>
+      <text x="140" y="88" fill="#A7F3D0" font-family="monospace" font-size="9.5" text-anchor="middle">Signatures verified against PKs</text>
+
+      <text x="140" y="118" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" text-anchor="middle">State: Pending &#8594; Execution Authorized</text>
+      <text x="140" y="132" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">Nonce incremented (Anti-Replay)</text>
+    </g>
+
+    <!-- Arrow to Blockchain Execution -->
+    <path d="M 780 152 L 830 152" fill="none" stroke="#34D399" stroke-width="2.5"/>
+
+    <!-- Step 4: Blockchain Execution -->
+    <g transform="translate(835, 95)">
+      <rect x="0" y="0" width="210" height="115" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
+      <text x="105" y="25" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">BLOCKCHAIN EXECUTION</text>
+      <text x="105" y="48" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">&#8226; 50 ETH released</text>
+      <text x="105" y="68" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">&#8226; Audit Firm funded</text>
+      <text x="105" y="88" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">&#10003; Transaction Settled</text>
+      <text x="105" y="104" fill="#94A3B8" font-family="monospace" font-size="8.5" text-anchor="middle">Block #18,492,012</text>
+    </g>
+
+    <!-- Threat Resilience Inset -->
+    <g transform="translate(30, 270)">
+      <rect x="0" y="0" width="1015" height="80" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="24" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">&#128737; Fault Tolerance &amp; Threat Defense Inset:</text>
+      <text x="20" y="44" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">&#8226; <tspan fill="#F87171" font-weight="600">Theft Resistance:</tspan> If an attacker steals 1 or 2 keys (e.g. Director &amp; Finance), they CANNOT steal funds. 3 keys are required.</text>
+      <text x="20" y="64" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">&#8226; <tspan fill="#34D399" font-weight="600">Loss Resistance:</tspan> If 1 or 2 keyholders lose their hardware devices or die, the remaining 3 signers can still access the treasury safely.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Section Left: Two-Layer Governance Architecture -->
+  <g transform="translate(60, 510)" filter="url(#shadow6)">
+    <rect x="0" y="0" width="525" height="320" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="525" height="34" rx="12" fill="url(#govGrad)"/>
+    <text x="20" y="22" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2. Two-Layer Governance &amp; Defense Architecture</text>
+
+    <!-- Layer 1 -->
+    <g transform="translate(25, 50)">
+      <rect x="0" y="0" width="475" height="80" rx="8" fill="#0F172A" stroke="#A78BFA" stroke-width="1.5"/>
+      <text x="16" y="24" fill="#C4B5FD" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">LAYER 1: Community Governance Vote</text>
+      <text x="16" y="44" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">&#8226; Question: <tspan fill="#FDE68A" font-weight="600">"Should this action be performed?"</tspan></text>
+      <text x="16" y="64" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Mechanism: Token-weighted voting (Snapshot, DAO Governor Bravo, Quadratic Voting)</text>
+    </g>
+
+    <!-- Layer Connection Arrow -->
+    <path d="M 262 135 L 262 155" fill="none" stroke="#10B981" stroke-width="2"/>
+    <text x="290" y="148" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">If YES (Approved)</text>
+
+    <!-- Layer 2 -->
+    <g transform="translate(25, 160)">
+      <rect x="0" y="0" width="475" height="80" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+      <text x="16" y="24" fill="#6EE7B7" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">LAYER 2: Multisig Execution Council</text>
+      <text x="16" y="44" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">&#8226; Question: <tspan fill="#6EE7B7" font-weight="600">"Are authorized signers verifying payload code safety?"</tspan></text>
+      <text x="16" y="64" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Mechanism: 3-of-5 or 4-of-7 trusted cryptographic signers verify and trigger execution</text>
+    </g>
+
+    <!-- Governance Defense Summary -->
+    <g transform="translate(25, 250)">
+      <rect x="0" y="0" width="475" height="55" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="20" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700">Dual-Layer Protection:</text>
+      <text x="12" y="38" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">Protects against rogue admins (blocked by L1) AND flash-loan governance takeovers (blocked by L2 veto).</text>
+    </g>
+  </g>
+
+  <!-- Bottom Section Right: Hard Forks vs Soft Forks Mechanics -->
+  <g transform="translate(615, 510)" filter="url(#shadow6)">
+    <rect x="0" y="0" width="525" height="320" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="0" y="0" width="525" height="34" rx="12" fill="url(#forkGrad)"/>
+    <text x="20" y="22" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">3. Consensus Forks: Soft Fork vs. Hard Fork Dynamics</text>
+
+    <!-- Sub-panel: Soft Fork -->
+    <g transform="translate(25, 48)">
+      <rect x="0" y="0" width="475" height="110" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+      <text x="14" y="20" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">SOFT FORK: Backward Compatible (Rule Tightening)</text>
+      <text x="14" y="38" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#6EE7B7" font-weight="600">Compatibility:</tspan> Old non-upgraded nodes still accept new blocks as valid.</text>
+      <text x="14" y="56" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#6EE7B7" font-weight="600">Chain Behavior:</tspan> Single unified chain continues without currency split.</text>
+      <text x="14" y="74" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#6EE7B7" font-weight="600">Real-World Examples:</tspan> Bitcoin SegWit (BIP 141), Taproot (BIP 341).</text>
+      <text x="14" y="94" fill="#94A3B8" font-family="monospace" font-size="9.5">Old Rule: Max 1MB Block  &#8594;  New Rule: Max 1MB Base + Segregated Witness</text>
+    </g>
+
+    <!-- Sub-panel: Hard Fork -->
+    <g transform="translate(25, 170)">
+      <rect x="0" y="0" width="475" height="135" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="1"/>
+      <text x="14" y="20" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700">HARD FORK: Non-Backward Compatible (Rule Loosening / Divergence)</text>
+      <text x="14" y="38" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#FCA5A5" font-weight="600">Compatibility:</tspan> Old nodes reject new blocks as invalid. All must upgrade.</text>
+      <text x="14" y="56" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#FCA5A5" font-weight="600">Chain Behavior:</tspan> Permanent chain split if miners disagree. Two coins created!</text>
+      <text x="14" y="74" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#FCA5A5" font-weight="600">Historical Case 1:</tspan> Bitcoin (BTC) vs. Bitcoin Cash (BCH) - 8MB block size (2017).</text>
+      <text x="14" y="92" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; <tspan fill="#FCA5A5" font-weight="600">Historical Case 2:</tspan> Ethereum (ETH) vs. Ethereum Classic (ETC) - The DAO bailout (2016).</text>
+      <text x="14" y="114" fill="#EF4444" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700">&#8658; Philosophical divide: "Code is Law" (ETC) vs. Social consensus intervention (ETH).</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="100%" height="100%" style="background:#0f172a; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="gradDapp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="gradClient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="gradEVM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="gradState" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="40" y="25" width="1020" height="65" rx="10" fill="url(#gradHeader)" filter="url(#shadow)" />
+  <text x="550" y="55" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">Ethereum System Architecture &amp; Execution Environment</text>
+  <text x="550" y="76" fill="#bfdbfe" font-size="13" text-anchor="middle">Clients (Geth/Parity), Web3.js / JSON-RPC, EVM Stack Machine, Accounts &amp; World State</text>
+
+  <!-- COLUMN 1: User / DApp Layer -->
+  <rect x="40" y="110" width="220" height="630" rx="12" fill="url(#gradDapp)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="55" y="125" width="190" height="35" rx="6" fill="#7c3aed" />
+  <text x="150" y="148" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">DApp &amp; Wallet Tier</text>
+
+  <!-- Browser / UI -->
+  <rect x="55" y="180" width="190" height="90" rx="8" fill="#1e1b4b" stroke="#a78bfa" stroke-width="1" />
+  <text x="150" y="205" fill="#e0e7ff" font-size="13" font-weight="700" text-anchor="middle">DApp Frontend</text>
+  <text x="150" y="225" fill="#c4b5fd" font-size="11" text-anchor="middle">React / Vue / HTML5</text>
+  <text x="150" y="245" fill="#94a3b8" font-size="11" text-anchor="middle">User Interface &amp; Business Logic</text>
+
+  <!-- Wallet -->
+  <rect x="55" y="290" width="190" height="120" rx="8" fill="#1e1b4b" stroke="#a78bfa" stroke-width="1" />
+  <text x="150" y="315" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle">Crypto Wallet (MetaMask)</text>
+  <text x="150" y="335" fill="#e0e7ff" font-size="11" text-anchor="middle">• Private Key Storage (KDF)</text>
+  <text x="150" y="353" fill="#e0e7ff" font-size="11" text-anchor="middle">• BIP-39 Seed Phrase (12/24 w)</text>
+  <text x="150" y="371" fill="#e0e7ff" font-size="11" text-anchor="middle">• BIP-44 Derivation Path</text>
+  <text x="150" y="389" fill="#e0e7ff" font-size="11" text-anchor="middle">• Signs Transactions (v, r, s)</text>
+
+  <!-- Web3 Library -->
+  <rect x="55" y="430" width="190" height="130" rx="8" fill="#1e1b4b" stroke="#a78bfa" stroke-width="1" />
+  <text x="150" y="455" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">Client SDK</text>
+  <text x="150" y="475" fill="#e0e7ff" font-size="12" font-weight="600" text-anchor="middle">Web3.js / Ethers.js</text>
+  <text x="150" y="495" fill="#94a3b8" font-size="11" text-anchor="middle">• JSON-RPC Client Wrapper</text>
+  <text x="150" y="513" fill="#94a3b8" font-size="11" text-anchor="middle">• ABI Encoding &amp; Decoding</text>
+  <text x="150" y="531" fill="#94a3b8" font-size="11" text-anchor="middle">• Event Filter Subscriptions</text>
+
+  <!-- Network Gateway -->
+  <rect x="55" y="580" width="190" height="140" rx="8" fill="#1e1b4b" stroke="#a78bfa" stroke-width="1" />
+  <text x="150" y="605" fill="#e0e7ff" font-size="12" font-weight="700" text-anchor="middle">Transport Providers</text>
+  <text x="150" y="625" fill="#c4b5fd" font-size="11" text-anchor="middle">• HTTP / HTTPS (Stateless)</text>
+  <text x="150" y="643" fill="#c4b5fd" font-size="11" text-anchor="middle">• WebSocket (Duplex/Events)</text>
+  <text x="150" y="661" fill="#c4b5fd" font-size="11" text-anchor="middle">• IPC (Local Unix Domain)</text>
+  <text x="150" y="685" fill="#f43f5e" font-size="10" font-weight="600" text-anchor="middle">Infura / Alchemy / Local</text>
+
+  <!-- Connection Line 1 to 2 -->
+  <path d="M 245 495 L 305 495" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)" />
+  <text x="275" y="485" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">JSON-RPC</text>
+
+  <!-- COLUMN 2: Ethereum Node / Client -->
+  <rect x="310" y="110" width="230" height="630" rx="12" fill="url(#gradClient)" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="325" y="125" width="200" height="35" rx="6" fill="#0284c7" />
+  <text x="425" y="148" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">Ethereum Client (Node)</text>
+
+  <!-- Node Implementations -->
+  <rect x="325" y="180" width="200" height="105" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1" />
+  <text x="425" y="205" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">Client Implementations</text>
+  <text x="425" y="225" fill="#e0f2fe" font-size="11" text-anchor="middle">• Geth (Go-Ethereum)</text>
+  <text x="425" y="243" fill="#e0f2fe" font-size="11" text-anchor="middle">• Parity / OpenEthereum (Rust)</text>
+  <text x="425" y="261" fill="#e0f2fe" font-size="11" text-anchor="middle">• Nethermind (C#) / Besu (Java)</text>
+
+  <!-- Node Architectures / Types -->
+  <rect x="325" y="300" width="200" height="120" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1" />
+  <text x="425" y="325" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">Node Storage Profiles</text>
+  <text x="425" y="345" fill="#e0f2fe" font-size="10.5" text-anchor="middle"><tspan font-weight="700">Full Node:</tspan> Recent states + headers</text>
+  <text x="425" y="365" fill="#e0f2fe" font-size="10.5" text-anchor="middle"><tspan font-weight="700">Light Node (LES):</tspan> Headers only</text>
+  <text x="425" y="385" fill="#e0f2fe" font-size="10.5" text-anchor="middle"><tspan font-weight="700">Archive Node:</tspan> All historical states</text>
+  <text x="425" y="405" fill="#94a3b8" font-size="10" text-anchor="middle">(Full verification &amp; P2P relay)</text>
+
+  <!-- JSON-RPC Server -->
+  <rect x="325" y="435" width="200" height="85" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1" />
+  <text x="425" y="460" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">JSON-RPC Endpoint</text>
+  <text x="425" y="480" fill="#e0f2fe" font-size="10.5" text-anchor="middle">eth_sendRawTransaction</text>
+  <text x="425" y="498" fill="#e0f2fe" font-size="10.5" text-anchor="middle">eth_call | eth_getBalance</text>
+
+  <!-- Tx Pool / P2P -->
+  <rect x="325" y="535" width="200" height="90" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1" />
+  <text x="425" y="560" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">Mempool &amp; DevP2P</text>
+  <text x="425" y="580" fill="#e0f2fe" font-size="10.5" text-anchor="middle">• Transaction Pool (Mempool)</text>
+  <text x="425" y="598" fill="#e0f2fe" font-size="10.5" text-anchor="middle">• RLPx Transport / Discovery v4</text>
+  <text x="425" y="614" fill="#94a3b8" font-size="10" text-anchor="middle">• Gossip block &amp; tx broadcasting</text>
+
+  <!-- Consensus Engine -->
+  <rect x="325" y="640" width="200" height="85" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1" />
+  <text x="425" y="663" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">Consensus Engine</text>
+  <text x="425" y="682" fill="#e0f2fe" font-size="10.5" text-anchor="middle">Engine API (Post-Merge PoS)</text>
+  <text x="425" y="700" fill="#94a3b8" font-size="10" text-anchor="middle">Beacon Chain Staking (32 ETH)</text>
+
+  <!-- Connection Line 2 to 3 -->
+  <path d="M 540 475 L 575 475" stroke="#34d399" stroke-width="2.5" marker-end="url(#arrowGreen)" />
+  <text x="557" y="465" fill="#34d399" font-size="10" font-weight="700" text-anchor="middle">Bytecode</text>
+
+  <!-- COLUMN 3: EVM Execution Environment -->
+  <rect x="580" y="110" width="235" height="630" rx="12" fill="url(#gradEVM)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="595" y="125" width="205" height="35" rx="6" fill="#059669" />
+  <text x="697" y="148" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">EVM Execution Engine</text>
+
+  <!-- Stack -->
+  <rect x="595" y="180" width="205" height="100" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="697" y="205" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">EVM Stack (256-bit Words)</text>
+  <text x="697" y="225" fill="#ecfdf5" font-size="11" text-anchor="middle">• Max Depth: 1024 Elements</text>
+  <text x="697" y="243" fill="#ecfdf5" font-size="11" text-anchor="middle">• Word Size: 256 bits (32 bytes)</text>
+  <text x="697" y="261" fill="#a7f3d0" font-size="10" text-anchor="middle">PUSH, POP, DUP, SWAP, ADD, MUL</text>
+
+  <!-- Memory -->
+  <rect x="595" y="295" width="205" height="100" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="697" y="320" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">Memory (Volatile Byte-Array)</text>
+  <text x="697" y="340" fill="#ecfdf5" font-size="11" text-anchor="middle">• Linear, byte-addressable</text>
+  <text x="697" y="358" fill="#ecfdf5" font-size="11" text-anchor="middle">• Cleared between message calls</text>
+  <text x="697" y="376" fill="#a7f3d0" font-size="10" text-anchor="middle">MLOAD, MSTORE, MSTORE8, MSIZE</text>
+
+  <!-- Gas Counter -->
+  <rect x="595" y="410" width="205" height="120" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="697" y="433" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle">Gas &amp; Metering Engine</text>
+  <text x="697" y="453" fill="#ecfdf5" font-size="10.5" text-anchor="middle">• Halting Problem Defense</text>
+  <text x="697" y="471" fill="#ecfdf5" font-size="10.5" text-anchor="middle">• Gas Limit vs Gas Used</text>
+  <text x="697" y="489" fill="#ecfdf5" font-size="10.5" text-anchor="middle">• Out-of-Gas =&gt; State Revert</text>
+  <text x="697" y="509" fill="#fca5a5" font-size="10" text-anchor="middle">Opcode Cost: SSTORE (20k), ADD (3)</text>
+
+  <!-- Virtual ROM -->
+  <rect x="595" y="545" width="205" height="85" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="697" y="570" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">Contract Code (ROM)</text>
+  <text x="697" y="590" fill="#ecfdf5" font-size="11" text-anchor="middle">• Immutable compiled bytecode</text>
+  <text x="697" y="608" fill="#a7f3d0" font-size="10" text-anchor="middle">CODESIZE, CODECOPY, EXTCODECOPY</text>
+
+  <!-- Execution Status -->
+  <rect x="595" y="645" width="205" height="80" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="697" y="668" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">Execution Outcome</text>
+  <text x="697" y="688" fill="#ecfdf5" font-size="10.5" text-anchor="middle">SUCCESS / REVERT / INVALID</text>
+  <text x="697" y="706" fill="#a7f3d0" font-size="10" text-anchor="middle">Logs &amp; Events =&gt; Bloom Filter</text>
+
+  <!-- Connection Line 3 to 4 -->
+  <path d="M 815 475 L 850 475" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arrowAmber)" />
+  <text x="832" y="465" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">Read/Write</text>
+
+  <!-- COLUMN 4: World State & Accounts -->
+  <rect x="855" y="110" width="205" height="630" rx="12" fill="url(#gradState)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)" />
+  <rect x="870" y="125" width="175" height="35" rx="6" fill="#d97706" />
+  <text x="957" y="148" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Accounts &amp; State</text>
+
+  <!-- Merkle Patricia Trie -->
+  <rect x="870" y="180" width="175" height="95" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1" />
+  <text x="957" y="205" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">World State DB</text>
+  <text x="957" y="225" fill="#fef3c7" font-size="10.5" text-anchor="middle">• Modified Merkle Patricia</text>
+  <text x="957" y="243" fill="#fef3c7" font-size="10.5" text-anchor="middle">• Key: 20-byte Address</text>
+  <text x="957" y="261" fill="#fef3c7" font-size="10.5" text-anchor="middle">• Value: Account State RLP</text>
+
+  <!-- Account Types Comparison -->
+  <rect x="870" y="290" width="175" height="205" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1" />
+  <text x="957" y="313" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">EOA vs Contract Account</text>
+  
+  <text x="880" y="335" fill="#e0e7ff" font-size="11" font-weight="700">EOA (User Owned):</text>
+  <text x="885" y="352" fill="#fed7aa" font-size="10">• Controlled by Private Key</text>
+  <text x="885" y="369" fill="#fed7aa" font-size="10">• Nonce: Tx counter</text>
+  <text x="885" y="386" fill="#fed7aa" font-size="10">• Balance: Ether amount</text>
+  <text x="885" y="403" fill="#fed7aa" font-size="10">• CodeHash: keccak256("")</text>
+
+  <text x="880" y="425" fill="#34d399" font-size="11" font-weight="700">Contract Account (CA):</text>
+  <text x="885" y="442" fill="#fed7aa" font-size="10">• Controlled by Code logic</text>
+  <text x="885" y="459" fill="#fed7aa" font-size="10">• Nonce: Contract creations</text>
+  <text x="885" y="476" fill="#fed7aa" font-size="10">• StorageRoot: 256-bit trie</text>
+
+  <!-- Account Address Derivation -->
+  <rect x="870" y="510" width="175" height="115" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1" />
+  <text x="957" y="533" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">Address Derivation</text>
+  <text x="957" y="553" fill="#fed7aa" font-size="10" text-anchor="middle">Private Key (256-bit)</text>
+  <text x="957" y="569" fill="#94a3b8" font-size="9" text-anchor="middle">▼ ECDSA (secp256k1)</text>
+  <text x="957" y="583" fill="#fed7aa" font-size="10" text-anchor="middle">Public Key (512-bit / 64B)</text>
+  <text x="957" y="599" fill="#94a3b8" font-size="9" text-anchor="middle">▼ Keccak-256 [last 20 Bytes]</text>
+  <text x="957" y="613" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">0x + 40 Hex (EIP-55)</text>
+
+  <!-- Block Storage -->
+  <rect x="870" y="640" width="175" height="85" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1" />
+  <text x="957" y="663" fill="#fbbf24" font-size="12" font-weight="700" text-anchor="middle">Blockchain Storage</text>
+  <text x="957" y="682" fill="#fed7aa" font-size="10.5" text-anchor="middle">• LevelDB / Pebble</text>
+  <text x="957" y="700" fill="#fed7aa" font-size="10.5" text-anchor="middle">• Block Headers &amp; Bodies</text>
+  <text x="957" y="714" fill="#94a3b8" font-size="9.5" text-anchor="middle">• Tx Receipts &amp; Logs</text>
+</svg>

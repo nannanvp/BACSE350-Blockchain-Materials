@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="rootGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="techGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="inhGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="840" rx="16" fill="url(#bgGrad1)"/>
+  <rect x="2" y="2" width="1196" height="836" rx="14" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- Title Header -->
+  <g transform="translate(60, 35)">
+    <rect x="0" y="0" width="1080" height="70" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <text x="540" y="30" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle">BLOCKCHAIN SECURITY RISK TAXONOMY</text>
+    <text x="540" y="52" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Classification Framework: Technical Implementation Vulnerabilities vs. Inherent Architectural Trade-Offs</text>
+  </g>
+
+  <!-- Central Root Node -->
+  <g transform="translate(450, 135)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="300" height="60" rx="12" fill="url(#rootGrad1)" stroke="#60A5FA" stroke-width="2"/>
+    <text x="150" y="26" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" text-anchor="middle">BLOCKCHAIN SYSTEM RISKS</text>
+    <text x="150" y="46" fill="#DBEAFE" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">Comprehensive Threat Taxonomy</text>
+  </g>
+
+  <!-- Branch Connectors -->
+  <path d="M 450 165 L 300 165 L 300 225" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="6 4"/>
+  <path d="M 750 165 L 900 165 L 900 225" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="6 4"/>
+
+  <!-- Technical Risks Header -->
+  <g transform="translate(150, 225)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="300" height="55" rx="10" fill="url(#techGrad1)" stroke="#F87171" stroke-width="1.5"/>
+    <text x="150" y="24" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" text-anchor="middle">1. TECHNICAL RISKS</text>
+    <text x="150" y="43" fill="#FEE2E2" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">Software, Bugs, Hardware &amp; Config Flaws</text>
+  </g>
+
+  <!-- Inherent Risks Header -->
+  <g transform="translate(750, 225)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="300" height="55" rx="10" fill="url(#inhGrad1)" stroke="#FBBF24" stroke-width="1.5"/>
+    <text x="150" y="24" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" text-anchor="middle">2. INHERENT RISKS</text>
+    <text x="150" y="43" fill="#FEF3C7" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">Decentralization Trade-offs &amp; Architectural Limits</text>
+  </g>
+
+  <!-- Vertical Trunk Lines -->
+  <line x1="300" y1="280" x2="300" y2="745" stroke="#EF4444" stroke-width="2" opacity="0.5"/>
+  <line x1="900" y1="280" x2="900" y2="745" stroke="#F59E0B" stroke-width="2" opacity="0.5"/>
+
+  <!-- Left Column: Technical Risks -->
+  <!-- 1.1 -->
+  <path d="M 300 325 L 320 325" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <g transform="translate(60, 298)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1.1 Smart Contract Vulnerabilities</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Reentrancy exploits (The DAO), integer overflow/underflow</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Broken access control (uninitialized owner), logic flaws, unpatchable code</text>
+  </g>
+
+  <!-- 1.2 -->
+  <path d="M 300 410 L 320 410" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <g transform="translate(60, 383)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1.2 Key Custody &amp; Endpoint Compromise</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Private key theft via keyloggers, clipper malware, clipboard hijackers</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Phishing websites, fake seed backup prompts, lack of password reset</text>
+  </g>
+
+  <!-- 1.3 -->
+  <path d="M 300 495 L 320 495" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <g transform="translate(60, 468)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1.3 Network &amp; Routing Level Attacks</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Sybil attacks (forging pseudo-nodes to dominate peer routing)</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Eclipse attacks (peer isolation), Timejacking, BGP hijacking, DDoS on nodes</text>
+  </g>
+
+  <!-- 1.4 -->
+  <path d="M 300 580 L 320 580" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <g transform="translate(60, 553)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1.4 Cross-Chain Interoperability &amp; Bridges</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Validator multi-sig compromise (Ronin $624M, Nomad $190M)</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Synthetic token minting desynchronization, relayer spoofing</text>
+  </g>
+
+  <!-- 1.5 -->
+  <path d="M 300 665 L 320 665" fill="none" stroke="#EF4444" stroke-width="2"/>
+  <g transform="translate(60, 638)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1.5 Oracle Manipulation &amp; Flash Loans</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Single DEX spot-price tampering via instant uncollateralized loans</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Stale price feeds, front-running MEV bots (sandwich attacks)</text>
+  </g>
+
+  <!-- Right Column: Inherent Risks -->
+  <!-- 2.1 -->
+  <path d="M 900 325 L 880 325" fill="none" stroke="#F59E0B" stroke-width="2"/>
+  <g transform="translate(660, 298)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2.1 Immutability vs. Error Correction</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Permanence of errors: Code deployed cannot be edited in place</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Irreversible transactions: No chargebacks or consumer dispute recourse</text>
+  </g>
+
+  <!-- 2.2 -->
+  <path d="M 900 410 L 880 410" fill="none" stroke="#F59E0B" stroke-width="2"/>
+  <g transform="translate(660, 383)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2.2 Scalability Trilemma (CAP Analog)</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Impossible trinity: Cannot optimize Security, Decentralization &amp; Speed</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Throughput limits (7 TPS BTC, 15 TPS ETH) vs. Node state storage bloat</text>
+  </g>
+
+  <!-- 2.3 -->
+  <path d="M 900 495 L 880 495" fill="none" stroke="#F59E0B" stroke-width="2"/>
+  <g transform="translate(660, 468)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2.3 Consensus Centralization &amp; 51% Power</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; 51% majority hashpower/stake enables double spending &amp; reorgs</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Mining pool concentration and liquid staking derivatives (LSDs)</text>
+  </g>
+
+  <!-- 2.4 -->
+  <path d="M 900 580 L 880 580" fill="none" stroke="#F59E0B" stroke-width="2"/>
+  <g transform="translate(660, 553)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2.4 Transparency vs. Data Privacy</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Pseudonymity is not anonymity: All balances &amp; Tx graphs are public</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Address clustering, taint analysis, and external KYC de-anonymization</text>
+  </g>
+
+  <!-- 2.5 -->
+  <path d="M 900 665 L 880 665" fill="none" stroke="#F59E0B" stroke-width="2"/>
+  <g transform="translate(660, 638)" filter="url(#shadow1)">
+    <rect x="0" y="0" width="480" height="65" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="16" y="22" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2.5 Governance Disputes &amp; Regulatory Conflict</text>
+    <text x="16" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Hard fork splits (BTC/BCH, ETH/ETC) divide capital &amp; communities</text>
+    <text x="16" y="55" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10">&#8226; Legal clash: GDPR Article 17 "Right to Erasure" vs immutable on-chain data</text>
+  </g>
+
+  <!-- Bottom Synthesis Banner -->
+  <g transform="translate(60, 745)">
+    <rect x="0" y="0" width="1080" height="50" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <text x="540" y="24" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">FUNDAMENTAL ARCHITECTURAL PRINCIPLE</text>
+    <text x="540" y="42" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">Technical vulnerabilities can be patched, audited, and hardened; Inherent risks reflect the foundational laws of decentralized consensus.</text>
+  </g>
+</svg>

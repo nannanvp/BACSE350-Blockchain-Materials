@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 880" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgDark3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="gOnChain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="gOffChain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="gHybrid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="880" rx="14" fill="url(#bgDark3)"/>
+  <rect x="2" y="2" width="1276" height="876" rx="13" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="640" y="44" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="0.5">BLOCKCHAIN STORAGE MODELS: ON-CHAIN vs. OFF-CHAIN vs. HYBRID</text>
+  <text x="640" y="70" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13">Trade-Off Analysis Matrix and The 4-Stage Lifecycle of Hybrid Data Storage</text>
+
+  <!-- TOP SECTION: Comparative 3-Column Storage Models -->
+  <g transform="translate(35, 95)">
+    <!-- Column 1: On-Chain -->
+    <g transform="translate(0, 0)" filter="url(#shadow3)">
+      <rect width="385" height="235" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="1.2"/>
+      <rect x="0" y="0" width="385" height="32" rx="8" fill="url(#gOnChain)"/>
+      <text x="192" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">ON-CHAIN STORAGE</text>
+      
+      <text x="16" y="54" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">&#9888; HIGH COST &amp; STORAGE BLOAT</text>
+      <text x="16" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Data written directly to block state trie</text>
+      <text x="16" y="90" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Replicated across 100% of network nodes</text>
+      <text x="16" y="108" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Extremely expensive: ~$20,000 to $1M per GB</text>
+      <text x="16" y="126" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Absolute immutability &amp; public verifiability</text>
+      <text x="16" y="144" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Zero native confidentiality (all state is public)</text>
+      
+      <rect x="16" y="162" width="353" height="58" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="24" y="180" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="700">OPTIMAL FOR:</text>
+      <text x="24" y="196" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Account balances, token balances, smart contract bytecode,</text>
+      <text x="24" y="210" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">governance votes, cryptographic state roots.</text>
+    </g>
+
+    <!-- Column 2: Off-Chain -->
+    <g transform="translate(412, 0)" filter="url(#shadow3)">
+      <rect width="385" height="235" rx="8" fill="#0F172A" stroke="#0EA5E9" stroke-width="1.2"/>
+      <rect x="0" y="0" width="385" height="32" rx="8" fill="url(#gOffChain)"/>
+      <text x="192" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">OFF-CHAIN STORAGE</text>
+      
+      <text x="16" y="54" fill="#BAE6FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">&#10003; LOW COST &amp; HIGH CAPACITY</text>
+      <text x="16" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Data resides on external databases/clouds</text>
+      <text x="16" y="90" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Repositories: AWS S3, Google Cloud, IPFS</text>
+      <text x="16" y="108" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Cheap: cents per GB per month</text>
+      <text x="16" y="126" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; High query throughput &amp; complex SQL/NoSQL</text>
+      <text x="16" y="144" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#9888; Risk: Subject to data tampering, deletion &amp; silos</text>
+      
+      <rect x="16" y="162" width="353" height="58" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="24" y="180" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="700">OPTIMAL FOR:</text>
+      <text x="24" y="196" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">High-res MRI scans, legal contracts (PDF), streaming video,</text>
+      <text x="24" y="210" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">user profile images, detailed supply chain telemetry.</text>
+    </g>
+
+    <!-- Column 3: Hybrid Storage Model -->
+    <g transform="translate(825, 0)" filter="url(#shadow3)">
+      <rect width="385" height="235" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+      <rect x="0" y="0" width="385" height="32" rx="8" fill="url(#gHybrid)"/>
+      <text x="192" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">HYBRID STORAGE MODEL (GOLD STANDARD)</text>
+      
+      <text x="16" y="54" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">&#9733; SYNERGISTIC BEST-OF-BOTH-WORLDS</text>
+      <text x="16" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Heavy payload stored off-chain (IPFS / S3 / DB)</text>
+      <text x="16" y="90" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Fixed 32-byte hash / CID anchored ON-CHAIN</text>
+      <text x="16" y="108" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Eliminates storage bloat while guaranteeing truth</text>
+      <text x="16" y="126" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Verifiable integrity: Hash match proves authentic</text>
+      <text x="16" y="144" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Supports GDPR "Right to be Forgotten" compliance</text>
+      
+      <rect x="16" y="162" width="353" height="58" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="24" y="180" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="700">OPTIMAL FOR:</text>
+      <text x="24" y="196" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Academic credentials, healthcare EHR records, land deeds,</text>
+      <text x="24" y="210" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">pharmaceutical provenance batches, enterprise ERP audit trails.</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM SECTION: THE 4-STAGE DATA LIFECYCLE FOR HYBRID STORAGE -->
+  <g transform="translate(35, 360)">
+    <rect width="1210" height="485" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="30" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700">DATA LIFECYCLE IN HYBRID BLOCKCHAIN ARCHITECTURE</text>
+    <text x="25" y="48" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5">How data is created, split, anchored cryptographically on-chain, and independently audited by consumers.</text>
+
+    <!-- Stage 1: Asset Creation -->
+    <g transform="translate(25, 70)">
+      <rect width="260" height="380" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2"/>
+      <rect x="0" y="0" width="260" height="32" rx="8" fill="#0284C7"/>
+      <text x="130" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">STAGE 1: ASSET CREATION</text>
+      
+      <circle cx="130" cy="80" r="32" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="130" y="85" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">&#128196;</text>
+      <text x="130" y="130" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">Origin Data Generated</text>
+      
+      <text x="16" y="160" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Physical Asset: QR/RFID label</text>
+      <text x="16" y="180" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Digital File: University degree PDF,</text>
+      <text x="16" y="196" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  EHR patient scan, real estate deed</text>
+      <text x="16" y="220" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Rich metadata: Serial numbers,</text>
+      <text x="16" y="236" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  manufacturing specs, high-res photos</text>
+      <text x="16" y="260" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Data size: 5 MB to 100+ GB</text>
+
+      <rect x="16" y="295" width="228" height="65" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="24" y="315" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">CHALLENGE:</text>
+      <text x="24" y="332" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Storing 100 MB directly on Ethereum</text>
+      <text x="24" y="348" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">would cost &gt; $500,000 in gas fees!</text>
+    </g>
+
+    <!-- Arrow 1->2 -->
+    <path d="M 295 240 L 325 240" stroke="#38BDF8" stroke-width="2.5"/>
+
+    <!-- Stage 2: The Split -->
+    <g transform="translate(330, 70)">
+      <rect width="270" height="380" rx="8" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="270" height="32" rx="8" fill="#6D28D9"/>
+      <text x="135" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">STAGE 2: THE DATA SPLIT</text>
+
+      <!-- Upper Branch: On-Chain Core -->
+      <rect x="14" y="48" width="242" height="150" rx="6" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+      <text x="24" y="68" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">ON-CHAIN: Light Core Proof</text>
+      <text x="24" y="86" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Transaction ID &amp; Timestamp</text>
+      <text x="24" y="102" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Issuer Public Key Address</text>
+      <text x="24" y="118" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Cryptographic Signature</text>
+      <text x="24" y="134" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Content Hash (CID / SHA-256)</text>
+      <text x="24" y="152" fill="#FCA5A5" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#9733; Immutable, tiny footprint (32 bytes)</text>
+
+      <!-- Lower Branch: Off-Chain Payload -->
+      <rect x="14" y="212" width="242" height="152" rx="6" fill="#1E293B" stroke="#0EA5E9" stroke-width="1"/>
+      <text x="24" y="232" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">OFF-CHAIN: Bulky / Private Payload</text>
+      <text x="24" y="250" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Option A: IPFS (Decentralized CID)</text>
+      <text x="24" y="266" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Option B: BigchainDB (CRAB model)</text>
+      <text x="24" y="282" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Option C: Enterprise Cloud (AWS S3)</text>
+      <text x="24" y="298" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Option D: Secure Hospital Data Lake</text>
+      <text x="24" y="316" fill="#BAE6FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#10003; High capacity, confidential, fast query</text>
+    </g>
+
+    <!-- Arrow 2->3 -->
+    <path d="M 610 240 L 640 240" stroke="#38BDF8" stroke-width="2.5"/>
+
+    <!-- Stage 3: Secure Linking & Anchoring -->
+    <g transform="translate(645, 70)">
+      <rect width="265" height="380" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2"/>
+      <rect x="0" y="0" width="265" height="32" rx="8" fill="#D97706"/>
+      <text x="132" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">STAGE 3: SECURE ANCHORING</text>
+
+      <circle cx="132" cy="78" r="30" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="132" y="84" text-anchor="middle" fill="#F59E0B" font-family="'Segoe UI', system-ui, sans-serif" font-size="18">&#9875;</text>
+      <text x="132" y="126" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">Cryptographic Hash Anchoring</text>
+
+      <text x="14" y="156" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Compute SHA-256 or IPFS CID of</text>
+      <text x="14" y="172" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  the off-chain payload file.</text>
+      <text x="14" y="196" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Hash pointer is embedded into the</text>
+      <text x="14" y="212" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  smart contract on-chain transaction.</text>
+      <text x="14" y="236" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Nodes validate &amp; execute consensus.</text>
+      <text x="14" y="258" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Creates a permanent tamper-proof</text>
+      <text x="14" y="274" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  cryptographic link to external data.</text>
+
+      <rect x="14" y="296" width="237" height="64" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="22" y="316" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="700">SECURITY PROPERTY:</text>
+      <text x="22" y="332" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Even a 1-bit alteration off-chain</text>
+      <text x="22" y="348" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">causes the hash to completely mismatch!</text>
+    </g>
+
+    <!-- Arrow 3->4 -->
+    <path d="M 920 240 L 950 240" stroke="#38BDF8" stroke-width="2.5"/>
+
+    <!-- Stage 4: Verification & Retrieval -->
+    <g transform="translate(955, 70)">
+      <rect width="230" height="380" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="32" rx="8" fill="#059669"/>
+      <text x="115" y="21" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">STAGE 4: VERIFY &amp; ACCESS</text>
+
+      <circle cx="115" cy="78" r="30" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="115" y="85" text-anchor="middle" fill="#10B981" font-family="'Segoe UI', system-ui, sans-serif" font-size="18">&#128269;</text>
+      <text x="115" y="126" text-anchor="middle" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">Independent Verification</text>
+
+      <text x="12" y="156" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Verifier scans QR / enters TxID.</text>
+      <text x="12" y="174" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; App queries blockchain for</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">  anchored reference hash &amp; signer.</text>
+      <text x="12" y="210" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; App fetches payload from IPFS/S3.</text>
+      <text x="12" y="228" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; App recalculates hash locally.</text>
+      
+      <rect x="12" y="254" width="206" height="42" rx="4" fill="#065F46" stroke="#10B981" stroke-width="1"/>
+      <text x="103" y="272" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">Hash(Payload) == On-Chain Hash</text>
+      <text x="103" y="287" text-anchor="middle" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#10003; 100% Tamper-Proof Authentic!</text>
+
+      <text x="12" y="322" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; If hashes match: document is</text>
+      <text x="12" y="338" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">  guaranteed authentic &amp; unmodified.</text>
+      <text x="12" y="354" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; If mismatch: Fraud alert raised!</text>
+    </g>
+  </g>
+</svg>

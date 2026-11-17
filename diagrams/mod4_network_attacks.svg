@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="honGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="eclGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="860" rx="16" fill="url(#bgGrad4)"/>
+  <rect x="2" y="2" width="1196" height="856" rx="14" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(60, 30)">
+    <rect x="0" y="0" width="1080" height="70" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <text x="540" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle">BLOCKCHAIN NETWORK ATTACKS: 51% EXPLOIT &amp; ECLIPSE TOPOLOGY</text>
+    <text x="540" y="52" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Consensus Reorganization via Majority Hashpower vs. P2P Routing Table Poisoning</text>
+  </g>
+
+  <!-- Section 1: 51% Attack / Reorganization (Top Half) -->
+  <g transform="translate(60, 120)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="1080" height="340" rx="12" fill="#1E293B" stroke="#EF4444" stroke-width="1.5"/>
+    <rect x="0" y="0" width="1080" height="34" rx="12" fill="url(#secGrad)"/>
+    <text x="24" y="22" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">1. The 51% Attack &amp; Deep Chain Reorganization (Double-Spending Mechanism)</text>
+
+    <!-- Fork Point Block -->
+    <g transform="translate(40, 130)">
+      <rect x="0" y="0" width="100" height="70" rx="8" fill="#0F172A" stroke="#94A3B8" stroke-width="2"/>
+      <text x="50" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Block N-1</text>
+      <text x="50" y="48" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">Common Root</text>
+    </g>
+
+    <!-- Branch Arrows -->
+    <path d="M 140 150 L 190 100 L 220 100" fill="none" stroke="#60A5FA" stroke-width="2.5"/>
+    <path d="M 140 180 L 190 230 L 220 230" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="6 3"/>
+
+    <!-- Upper Branch: Honest Public Chain -->
+    <g transform="translate(220, 65)">
+      <!-- Block N -->
+      <rect x="0" y="0" width="115" height="70" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+      <text x="57" y="22" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N (Honest)</text>
+      <text x="57" y="38" fill="#CBD5E1" font-family="monospace" font-size="9" text-anchor="middle">Tx: Attacker &#8594; Merch</text>
+      <text x="57" y="52" fill="#93C5FD" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">100 BTC Paid</text>
+
+      <line x1="115" y1="35" x2="145" y2="35" stroke="#3B82F6" stroke-width="2"/>
+
+      <!-- Block N+1 -->
+      <rect x="145" y="0" width="115" height="70" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+      <text x="202" y="22" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N+1</text>
+      <text x="202" y="38" fill="#CBD5E1" font-family="monospace" font-size="9" text-anchor="middle">Confirm 1</text>
+
+      <line x1="260" y1="35" x2="290" y2="35" stroke="#3B82F6" stroke-width="2"/>
+
+      <!-- Block N+2 -->
+      <rect x="290" y="0" width="115" height="70" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+      <text x="347" y="22" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N+2</text>
+      <text x="347" y="38" fill="#CBD5E1" font-family="monospace" font-size="9" text-anchor="middle">Confirm 2</text>
+      <text x="347" y="52" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">&#10003; Goods Shipped!</text>
+    </g>
+
+    <!-- Orphaned Stamp over Honest Chain -->
+    <g transform="translate(645, 80)">
+      <rect x="0" y="0" width="120" height="40" rx="6" fill="#7F1D1D" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="60" y="25" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">&#10007; ORPHANED!</text>
+    </g>
+
+    <!-- Lower Branch: Attacker Secret Chain (>51% Hashpower) -->
+    <g transform="translate(220, 195)">
+      <!-- Block N (Secret) -->
+      <rect x="0" y="0" width="115" height="70" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+      <text x="57" y="22" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N (Secret)</text>
+      <text x="57" y="38" fill="#FCA5A5" font-family="monospace" font-size="9" text-anchor="middle">Tx: Attacker &#8594; Self</text>
+      <text x="57" y="52" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">100 BTC Stolen</text>
+
+      <line x1="115" y1="35" x2="145" y2="35" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Block N+1 -->
+      <rect x="145" y="0" width="115" height="70" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+      <text x="202" y="22" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N+1</text>
+      <text x="202" y="42" fill="#94A3B8" font-family="monospace" font-size="9" text-anchor="middle">Secret Hash</text>
+
+      <line x1="260" y1="35" x2="290" y2="35" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Block N+2 -->
+      <rect x="290" y="0" width="115" height="70" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+      <text x="347" y="22" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N+2</text>
+      <text x="347" y="42" fill="#94A3B8" font-family="monospace" font-size="9" text-anchor="middle">Secret Hash</text>
+
+      <line x1="405" y1="35" x2="435" y2="35" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Block N+3 -->
+      <rect x="435" y="0" width="115" height="70" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+      <text x="492" y="22" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Block N+3</text>
+      <text x="492" y="42" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">Longer Chain!</text>
+    </g>
+
+    <!-- Broadcast Reorg Trigger -->
+    <path d="M 780 230 L 810 230 L 810 160 L 830 160" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+    <g transform="translate(830, 130)">
+      <rect x="0" y="0" width="220" height="70" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="110" y="22" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Nakamoto Consensus Reorg</text>
+      <text x="110" y="40" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Longest Chain Rule triggers!</text>
+      <text x="110" y="56" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">Merchant payment erased &#10007;</text>
+    </g>
+
+    <!-- Synthesis line -->
+    <g transform="translate(40, 285)">
+      <rect x="0" y="0" width="1000" height="40" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="500" y="25" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">51% hashrate gives the attacker the mathematical power to outmine honest nodes, secretly mine a longer private fork, and replace finalized history upon broadcast.</text>
+    </g>
+  </g>
+
+  <!-- Section 2: Eclipse Attack & Sybil Network Topology (Bottom Half) -->
+  <g transform="translate(60, 480)" filter="url(#shadow4)">
+    <rect x="0" y="0" width="1080" height="350" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="1080" height="34" rx="12" fill="url(#eclGrad)"/>
+    <text x="24" y="22" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">2. Eclipse Attack Topology &amp; P2P Isolation (Surrounding the Victim Node)</text>
+
+    <!-- Normal Topology (Left) -->
+    <g transform="translate(30, 50)">
+      <rect x="0" y="0" width="480" height="280" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="240" y="25" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Normal Honest P2P Topology</text>
+      
+      <!-- Central Honest Node -->
+      <circle cx="240" cy="140" r="28" fill="#1E40AF" stroke="#60A5FA" stroke-width="2"/>
+      <text x="240" y="144" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Node</text>
+
+      <!-- Surrounding Diverse Peers -->
+      <!-- Peer 1 (US) -->
+      <circle cx="120" cy="80" r="18" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="120" y="84" fill="#A7F3D0" font-family="monospace" font-size="8" text-anchor="middle">Peer A</text>
+      <line x1="138" y1="88" x2="216" y2="126" stroke="#10B981" stroke-width="1.5"/>
+
+      <!-- Peer 2 (EU) -->
+      <circle cx="360" cy="80" r="18" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="360" y="84" fill="#A7F3D0" font-family="monospace" font-size="8" text-anchor="middle">Peer B</text>
+      <line x1="342" y1="88" x2="264" y2="126" stroke="#10B981" stroke-width="1.5"/>
+
+      <!-- Peer 3 (Asia) -->
+      <circle cx="120" cy="200" r="18" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="120" y="204" fill="#A7F3D0" font-family="monospace" font-size="8" text-anchor="middle">Peer C</text>
+      <line x1="138" y1="192" x2="216" y2="154" stroke="#10B981" stroke-width="1.5"/>
+
+      <!-- Peer 4 (SA) -->
+      <circle cx="360" cy="200" r="18" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="360" y="204" fill="#A7F3D0" font-family="monospace" font-size="8" text-anchor="middle">Peer D</text>
+      <line x1="342" y1="192" x2="264" y2="154" stroke="#10B981" stroke-width="1.5"/>
+
+      <text x="240" y="255" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">&#10003; Diverse independent peers from different ASNs &amp; IP ranges</text>
+    </g>
+
+    <!-- Eclipsed Topology (Right) -->
+    <g transform="translate(540, 50)">
+      <rect x="0" y="0" width="510" height="280" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="255" y="25" fill="#F87171" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Eclipsed Node (Adversary Controlled Sockets)</text>
+
+      <!-- Central Victim Node -->
+      <circle cx="255" cy="140" r="28" fill="#7F1D1D" stroke="#EF4444" stroke-width="2"/>
+      <text x="255" y="137" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">VICTIM</text>
+      <text x="255" y="149" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="8" text-anchor="middle">NODE</text>
+
+      <!-- Surrounding Attacker Sybils -->
+      <!-- Sybil 1 -->
+      <circle cx="130" cy="80" r="18" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="130" y="84" fill="#FCA5A5" font-family="monospace" font-size="8" text-anchor="middle">Sybil 1</text>
+      <line x1="148" y1="88" x2="231" y2="126" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Sybil 2 -->
+      <circle cx="380" cy="80" r="18" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="380" y="84" fill="#FCA5A5" font-family="monospace" font-size="8" text-anchor="middle">Sybil 2</text>
+      <line x1="362" y1="88" x2="279" y2="126" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Sybil 3 -->
+      <circle cx="130" cy="200" r="18" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="130" y="204" fill="#FCA5A5" font-family="monospace" font-size="8" text-anchor="middle">Sybil 3</text>
+      <line x1="148" y1="192" x2="231" y2="154" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Sybil 4 -->
+      <circle cx="380" cy="200" r="18" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="380" y="204" fill="#FCA5A5" font-family="monospace" font-size="8" text-anchor="middle">Sybil 4</text>
+      <line x1="362" y1="192" x2="279" y2="154" stroke="#EF4444" stroke-width="2"/>
+
+      <!-- Threat Details -->
+      <text x="255" y="248" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">&#10007; Attacker saturates trie / peer table with spoofed IP addresses.</text>
+      <text x="255" y="264" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" text-anchor="middle">Victim receives fake view of blockchain, enabling 0-conf double spend &amp; selfish mining.</text>
+    </g>
+  </g>
+</svg>

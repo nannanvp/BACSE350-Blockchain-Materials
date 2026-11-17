@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Arrow Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#0284c7" />
+    </marker>
+    <!-- Card Header Gradient -->
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="760" height="220" rx="12" fill="#0f172a" />
+
+  <!-- BLOCK #100 -->
+  <g transform="translate(40, 25)">
+    <rect width="260" height="170" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect width="260" height="38" rx="10" fill="url(#headerGrad)"/>
+    <rect y="28" width="260" height="10" fill="url(#headerGrad)"/>
+    <text x="130" y="24" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">Block #100</text>
+    
+    <text x="15" y="65" fill="#94a3b8" font-size="11" font-weight="600">Prev Hash:</text>
+    <text x="95" y="65" fill="#e2e8f0" font-size="11" font-family="monospace">0000abc49f...</text>
+
+    <text x="15" y="95" fill="#94a3b8" font-size="11" font-weight="600">Merkle Root:</text>
+    <text x="95" y="95" fill="#e2e8f0" font-size="11" font-family="monospace">7b14d99e01...</text>
+
+    <text x="15" y="125" fill="#94a3b8" font-size="11" font-weight="600">Nonce:</text>
+    <text x="95" y="125" fill="#38bdf8" font-size="11" font-family="monospace">2083491</text>
+
+    <line x1="10" y1="138" x2="250" y2="138" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="158" fill="#10b981" font-size="11" font-weight="bold">Hash: 000001f8e4...</text>
+  </g>
+
+  <!-- LINKING ARROW (Block 101 PrevHash -> Block 100 Hash) -->
+  <path d="M 460 85 C 390 85, 390 158, 312 158" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <rect x="350" y="105" width="76" height="22" rx="4" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+  <text x="388" y="120" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Points to</text>
+
+  <!-- BLOCK #101 -->
+  <g transform="translate(460, 25)">
+    <rect width="260" height="170" rx="10" fill="#1e293b" stroke="#0284c7" stroke-width="2"/>
+    <rect width="260" height="38" rx="10" fill="url(#headerGrad)"/>
+    <rect y="28" width="260" height="10" fill="url(#headerGrad)"/>
+    <text x="130" y="24" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">Block #101</text>
+    
+    <!-- Highlighted Prev Hash -->
+    <rect x="10" y="50" width="240" height="22" rx="4" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+    <text x="15" y="65" fill="#38bdf8" font-size="11" font-weight="bold">Prev Hash:</text>
+    <text x="95" y="65" fill="#38bdf8" font-size="11" font-family="monospace" font-weight="bold">000001f8e4...</text>
+
+    <text x="15" y="95" fill="#94a3b8" font-size="11" font-weight="600">Merkle Root:</text>
+    <text x="95" y="95" fill="#e2e8f0" font-size="11" font-family="monospace">e409fa12c3...</text>
+
+    <text x="15" y="125" fill="#94a3b8" font-size="11" font-weight="600">Nonce:</text>
+    <text x="95" y="125" fill="#38bdf8" font-size="11" font-family="monospace">8491043</text>
+
+    <line x1="10" y1="138" x2="250" y2="138" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="158" fill="#10b981" font-size="11" font-weight="bold">Hash: 0000088cb2...</text>
+  </g>
+</svg>

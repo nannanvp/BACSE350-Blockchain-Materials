@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 820" width="100%" height="100%" style="background:#090e1a; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="headerGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="caGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <marker id="arrIndigo5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#818cf8" />
+    </marker>
+    <marker id="arrSky5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrAmber5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+    </marker>
+    <marker id="arrEmerald5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="40" y="20" width="1100" height="65" rx="10" fill="url(#headerGrad5)" filter="url(#shadow5)" />
+  <text x="590" y="50" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">Hyperledger Fabric Identity Management &amp; MSP Architecture</text>
+  <text x="590" y="71" fill="#ddd6fe" font-size="13" text-anchor="middle">Fabric Certificate Authority (CA), X.509 PKI, MSP Folder Structure &amp; Role-Based Governance</text>
+
+  <!-- COLUMN 1: Fabric CA (Certificate Authority) -->
+  <rect x="40" y="105" width="260" height="680" rx="12" fill="url(#caGrad)" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow5)" />
+  <rect x="55" y="120" width="230" height="36" rx="6" fill="#4f46e5" />
+  <text x="170" y="143" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">1. Fabric CA &amp; PKI Tier</text>
+
+  <!-- CA Core Engine -->
+  <rect x="55" y="170" width="230" height="150" rx="8" fill="#1e1e38" stroke="#818cf8" stroke-width="1" />
+  <text x="170" y="193" fill="#818cf8" font-size="12.5" font-weight="700" text-anchor="middle">Fabric CA Server</text>
+  <text x="65" y="215" fill="#cbd5e1" font-size="10">• RESTful HTTP API / CLI</text>
+  <text x="65" y="233" fill="#cbd5e1" font-size="10">• Backend DB: SQLite / Postgres</text>
+  <text x="65" y="251" fill="#cbd5e1" font-size="10">• LDAP / AD Federation support</text>
+  <text x="65" y="269" fill="#cbd5e1" font-size="10">• ECDSA Keys (secp256r1 / P-256)</text>
+  <text x="65" y="287" fill="#fbbf24" font-size="10">• Issues X.509 v3 Certificates</text>
+  <text x="65" y="305" fill="#34d399" font-size="9.5">Docker: `ca_org1`, `ca_orderer`</text>
+
+  <!-- Identity Lifecycle -->
+  <rect x="55" y="335" width="230" height="235" rx="8" fill="#1e1e38" stroke="#818cf8" stroke-width="1" />
+  <text x="170" y="358" fill="#818cf8" font-size="12.5" font-weight="700" text-anchor="middle">Identity Operations</text>
+  
+  <text x="65" y="380" fill="#38bdf8" font-size="11" font-weight="700">A. Registration (`fabric-ca-client`):</text>
+  <text x="65" y="398" fill="#cbd5e1" font-size="10">• Admin registers user ID</text>
+  <text x="65" y="414" fill="#cbd5e1" font-size="10">• Assigns role: peer, client, orderer</text>
+  <text x="65" y="430" fill="#cbd5e1" font-size="10">• Generates one-time enrollment secret</text>
+
+  <text x="65" y="455" fill="#34d399" font-size="11" font-weight="700">B. Enrollment (`enroll`):</text>
+  <text x="65" y="473" fill="#cbd5e1" font-size="10">• Client generates keypair locally</text>
+  <text x="65" y="489" fill="#cbd5e1" font-size="10">• Submits CSR (Cert Signing Request)</text>
+  <text x="65" y="505" fill="#cbd5e1" font-size="10">• CA issues signed X.509 certificate</text>
+  <text x="65" y="521" fill="#cbd5e1" font-size="10">• Saved into `msp/` directory</text>
+  <text x="65" y="542" fill="#fbbf24" font-size="10">C. Re-enroll &amp; Revoke (CRL)</text>
+
+  <!-- External PKI note -->
+  <rect x="55" y="585" width="230" height="180" rx="8" fill="#1e1e38" stroke="#818cf8" stroke-width="1" />
+  <text x="170" y="608" fill="#818cf8" font-size="12" font-weight="700" text-anchor="middle">PKI Alternatives</text>
+  <text x="65" y="630" fill="#cbd5e1" font-size="10">• Hyperledger Fabric does NOT</text>
+  <text x="65" y="646" fill="#cbd5e1" font-size="10">  mandate Fabric CA.</text>
+  <text x="65" y="666" fill="#cbd5e1" font-size="10">• Enterprise CAs (OpenSSL, MS CA,</text>
+  <text x="65" y="682" fill="#cbd5e1" font-size="10">  Venafi, HashiCorp Vault) can issue</text>
+  <text x="65" y="698" fill="#cbd5e1" font-size="10">  standard X.509 certs.</text>
+  <text x="65" y="720" fill="#fbbf24" font-size="9.5 font-weight=700">Cryptogen Tool (for dev):</text>
+  <text x="65" y="736" fill="#cbd5e1" font-size="9.5">Pre-generates static certs via</text>
+  <text x="65" y="750" fill="#cbd5e1" font-size="9.5">`crypto-config.yaml`</text>
+
+  <!-- Connection 1 -> 2 -->
+  <path d="M 300 450 L 340 450" stroke="#818cf8" stroke-width="2.5" marker-end="url(#arrIndigo5)" />
+  <text x="320" y="440" fill="#818cf8" font-size="10" font-weight="700" text-anchor="middle">Outputs</text>
+
+  <!-- COLUMN 2: MSP Directory & Cryptographic Material Structure -->
+  <rect x="345" y="105" width="280" height="680" rx="12" fill="url(#caGrad)" stroke="#0ea5e9" stroke-width="1.5" filter="url(#shadow5)" />
+  <rect x="360" y="120" width="250" height="36" rx="6" fill="#0284c7" />
+  <text x="485" y="143" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">2. MSP Directory Layout</text>
+
+  <rect x="360" y="170" width="250" height="595" rx="8" fill="#082f49" stroke="#38bdf8" stroke-width="1" />
+  <text x="375" y="195" fill="#38bdf8" font-size="12" font-weight="700">Directory: /msp/</text>
+
+  <!-- Folder 1: admincerts -->
+  <rect x="370" y="210" width="230" height="60" rx="5" fill="#031f33" stroke="#38bdf8" stroke-width="0.8" />
+  <text x="380" y="230" fill="#fbbf24" font-size="11" font-weight="700">📁 admincerts/</text>
+  <text x="380" y="247" fill="#cbd5e1" font-size="9.5">Certificates of org admins.</text>
+  <text x="380" y="260" fill="#94a3b8" font-size="9">Grants channel config &amp; install rights.</text>
+
+  <!-- Folder 2: cacerts -->
+  <rect x="370" y="280" width="230" height="60" rx="5" fill="#031f33" stroke="#38bdf8" stroke-width="0.8" />
+  <text x="380" y="300" fill="#34d399" font-size="11" font-weight="700">📁 cacerts/</text>
+  <text x="380" y="317" fill="#cbd5e1" font-size="9.5">Root CA Certificate (ca.crt).</text>
+  <text x="380" y="330" fill="#94a3b8" font-size="9">Root of trust for enrollment certs.</text>
+
+  <!-- Folder 3: keystore -->
+  <rect x="370" y="350" width="230" height="70" rx="5" fill="#031f33" stroke="#f43f5e" stroke-width="1" />
+  <text x="380" y="370" fill="#fb7185" font-size="11" font-weight="700">📁 keystore/ (PRIVATE)</text>
+  <text x="380" y="387" fill="#cbd5e1" font-size="9.5">Private Key (`_sk` file).</text>
+  <text x="380" y="401" fill="#fca5a5" font-size="9">Strictly guarded! Signs proposals/tx.</text>
+  <text x="380" y="414" fill="#94a3b8" font-size="8.5">(Only present in Local MSP, not Channel)</text>
+
+  <!-- Folder 4: signcerts -->
+  <rect x="370" y="430" width="230" height="60" rx="5" fill="#031f33" stroke="#38bdf8" stroke-width="0.8" />
+  <text x="380" y="450" fill="#38bdf8" font-size="11" font-weight="700">📁 signcerts/</text>
+  <text x="380" y="467" fill="#cbd5e1" font-size="9.5">Node's Enrollment X.509 Cert.</text>
+  <text x="380" y="480" fill="#94a3b8" font-size="9">Public identity sent with transactions.</text>
+
+  <!-- Folder 5: tlscacerts -->
+  <rect x="370" y="500" width="230" height="60" rx="5" fill="#031f33" stroke="#38bdf8" stroke-width="0.8" />
+  <text x="380" y="520" fill="#38bdf8" font-size="11" font-weight="700">📁 tlscacerts/</text>
+  <text x="380" y="537" fill="#cbd5e1" font-size="9.5">TLS Root CA Certificate.</text>
+  <text x="380" y="550" fill="#94a3b8" font-size="9">Secures gRPC communication (mTLS).</text>
+
+  <!-- Folder 6: intermediate & config.yaml -->
+  <rect x="370" y="570" width="230" height="60" rx="5" fill="#031f33" stroke="#38bdf8" stroke-width="0.8" />
+  <text x="380" y="590" fill="#cbd5e1" font-size="11" font-weight="700">📁 intermediatecerts/ &amp; crls/</text>
+  <text x="380" y="607" fill="#cbd5e1" font-size="9.5">Multi-tier CA trust chains.</text>
+  <text x="380" y="620" fill="#94a3b8" font-size="9">Certificate Revocation Lists.</text>
+
+  <!-- File: config.yaml (OU rules) -->
+  <rect x="370" y="640" width="230" height="110" rx="5" fill="#031f33" stroke="#fbbf24" stroke-width="1" />
+  <text x="380" y="660" fill="#fbbf24" font-size="11" font-weight="700">📄 config.yaml (NodeOUs)</text>
+  <text x="380" y="677" fill="#cbd5e1" font-size="9">• Enable: true</text>
+  <text x="380" y="692" fill="#cbd5e1" font-size="9">• ClientOU: OU="client"</text>
+  <text x="380" y="707" fill="#cbd5e1" font-size="9">• PeerOU: OU="peer"</text>
+  <text x="380" y="722" fill="#cbd5e1" font-size="9">• AdminOU: OU="admin"</text>
+  <text x="380" y="737" fill="#cbd5e1" font-size="9">• OrdererOU: OU="orderer"</text>
+
+  <!-- Connection 2 -> 3 -->
+  <path d="M 625 450 L 665 450" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#arrSky5)" />
+  <text x="645" y="440" fill="#0ea5e9" font-size="10" font-weight="700" text-anchor="middle">Binds</text>
+
+  <!-- COLUMN 3: MSP Scope & Identity Mapping -->
+  <rect x="670" y="105" width="470" height="680" rx="12" fill="url(#caGrad)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow5)" />
+  <rect x="685" y="120" width="440" height="36" rx="6" fill="#059669" />
+  <text x="905" y="143" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">3. MSP Scope &amp; Channel Governance</text>
+
+  <!-- Local MSP vs Channel MSP Comparison -->
+  <rect x="685" y="170" width="215" height="280" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="792" y="195" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">Local MSP (Node Level)</text>
+  <text x="695" y="217" fill="#ecfdf5" font-size="10" font-weight="700">• Where defined:</text>
+  <text x="695" y="233" fill="#cbd5e1" font-size="9.5">Filesystem of Peer or Orderer</text>
+  <text x="695" y="253" fill="#ecfdf5" font-size="10" font-weight="700">• Contents:</text>
+  <text x="695" y="269" fill="#cbd5e1" font-size="9.5">Contains `keystore` (private key)</text>
+  <text x="695" y="285" fill="#cbd5e1" font-size="9.5">and local node identity.</text>
+  <text x="695" y="305" fill="#ecfdf5" font-size="10" font-weight="700">• Function:</text>
+  <text x="695" y="321" fill="#cbd5e1" font-size="9.5">• Authenticates node to peers</text>
+  <text x="695" y="337" fill="#cbd5e1" font-size="9.5">• Grants local admin control</text>
+  <text x="695" y="353" fill="#cbd5e1" font-size="9.5">• Establishes mTLS tunnels</text>
+  <text x="695" y="373" fill="#fbbf24" font-size="9.5" font-weight="700">• Isolation:</text>
+  <text x="695" y="389" fill="#cbd5e1" font-size="9">Private key never leaves the node</text>
+  <text x="695" y="405" fill="#cbd5e1" font-size="9">or Docker container.</text>
+
+  <rect x="910" y="170" width="215" height="280" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" />
+  <text x="1017" y="195" fill="#34d399" font-size="12" font-weight="700" text-anchor="middle">Channel MSP (Consortium)</text>
+  <text x="920" y="217" fill="#ecfdf5" font-size="10" font-weight="700">• Where defined:</text>
+  <text x="920" y="233" fill="#cbd5e1" font-size="9.5">In Channel Genesis &amp; Config block</text>
+  <text x="920" y="253" fill="#ecfdf5" font-size="10" font-weight="700">• Contents:</text>
+  <text x="920" y="269" fill="#cbd5e1" font-size="9.5">Root certs, Admin certs, OUs.</text>
+  <text x="920" y="285" fill="#fca5a5" font-size="9.5 font-weight=700">NO private keys (Zero keystore!)</text>
+  <text x="920" y="305" fill="#ecfdf5" font-size="10" font-weight="700">• Function:</text>
+  <text x="920" y="321" fill="#cbd5e1" font-size="9.5">• Verifies transaction creators</text>
+  <text x="920" y="337" fill="#cbd5e1" font-size="9.5">• Evaluates Endorsement policies</text>
+  <text x="920" y="353" fill="#cbd5e1" font-size="9.5">• Controls channel write access</text>
+  <text x="920" y="373" fill="#fbbf24" font-size="9.5" font-weight="700">• Consensus:</text>
+  <text x="920" y="389" fill="#cbd5e1" font-size="9">Agreed upon by all consortium</text>
+  <text x="920" y="405" fill="#cbd5e1" font-size="9">organizations via config update.</text>
+
+  <!-- Access Control & Identity Mapping Pipeline -->
+  <rect x="685" y="465" width="440" height="155" rx="8" fill="#1e1b4b" stroke="#a78bfa" stroke-width="1" />
+  <text x="905" y="490" fill="#c084fc" font-size="12.5" font-weight="700" text-anchor="middle">MSP Identity Evaluation Pipeline</text>
+  
+  <rect x="695" y="505" width="130" height="42" rx="4" fill="#312e81" />
+  <text x="760" y="522" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">X.509 Certificate</text>
+  <text x="760" y="537" fill="#bae6fd" font-size="8.5" text-anchor="middle">DN: CN=user1, OU=client</text>
+
+  <path d="M 825 526 L 845 526" stroke="#c084fc" stroke-width="2" marker-end="url(#arrIndigo5)" />
+
+  <rect x="850" y="505" width="120" height="42" rx="4" fill="#312e81" />
+  <text x="910" y="522" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">MSP Verification</text>
+  <text x="910" y="537" fill="#bae6fd" font-size="8.5" text-anchor="middle">Check Root CA Trust</text>
+
+  <path d="M 970 526 L 990 526" stroke="#c084fc" stroke-width="2" marker-end="url(#arrIndigo5)" />
+
+  <rect x="995" y="505" width="120" height="42" rx="4" fill="#312e81" />
+  <text x="1055" y="522" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">MSP Principal</text>
+  <text x="1055" y="537" fill="#34d399" font-size="8.5" font-weight="700" text-anchor="middle">Org1MSP.client</text>
+
+  <text x="700" y="565" fill="#cbd5e1" font-size="9.5"><tspan font-weight="700" fill="#fbbf24">Policy Check:</tspan> Does `Org1MSP.client` satisfy Channel Writers policy?</text>
+  <text x="700" y="583" fill="#cbd5e1" font-size="9.5"><tspan font-weight="700" fill="#34d399">Endorsement Check:</tspan> Does endorsement list satisfy `AND('Org1MSP.peer', 'Org2MSP.peer')`?</text>
+  <text x="700" y="601" fill="#cbd5e1" font-size="9.5"><tspan font-weight="700" fill="#fb7185">Admin Check:</tspan> Does caller possess `Org1MSP.admin` to deploy chaincode or update channel?</text>
+
+  <!-- Organization Trust Matrix -->
+  <rect x="685" y="635" width="440" height="130" rx="8" fill="#1e1e38" stroke="#38bdf8" stroke-width="1" />
+  <text x="905" y="658" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">Multi-Organization Trust Federation</text>
+  
+  <text x="700" y="680" fill="#cbd5e1" font-size="9.5">• <tspan fill="#38bdf8" font-weight="700">Org1MSP:</tspan> Peers trust CA1 certs; Orderers recognize Org1 as channel participant.</text>
+  <text x="700" y="698" fill="#cbd5e1" font-size="9.5">• <tspan fill="#34d399" font-weight="700">Org2MSP:</tspan> Peers trust CA2 certs; completely distinct cryptographic domain.</text>
+  <text x="700" y="716" fill="#cbd5e1" font-size="9.5">• <tspan fill="#c084fc" font-weight="700">OrdererMSP:</tspan> Dedicated CA for ordering service nodes and consortium governance.</text>
+  <text x="700" y="734" fill="#cbd5e1" font-size="9.5">• <tspan fill="#fbbf24" font-weight="700">Consortium Privacy:</tspan> Org 1 cannot forge Org 2 signatures; unauthorized peers rejected at TLS handshake.</text>
+  <text x="700" y="750" fill="#94a3b8" font-size="9">Enables decentralized identity verification without revealing private data across competitor boundaries.</text>
+</svg>

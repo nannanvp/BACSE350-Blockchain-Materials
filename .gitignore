@@ -1,0 +1,8 @@
+# Intermediate build & extraction artifacts
+*.py
+*.txt
+extracted_mod4/
+extracted_slides/
+example_study_notes.md
+__pycache__/
+*.pyc

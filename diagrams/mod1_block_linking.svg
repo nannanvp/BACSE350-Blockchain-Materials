@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="merkleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 1 1 L 7 4 L 1 7 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 1 1 L 7 4 L 1 7 Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgGrad2)"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" letter-spacing="1">BLOCK STRUCTURE, MERKLE TREE &amp; CRYPTOGRAPHIC HASH CHAIN</text>
+  <text x="600" y="62" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Detailed internal composition of a block, binary Merkle tree transaction aggregation, and backward cryptographic linking</text>
+
+  <!-- BLOCK N - 1 (Previous Block) -->
+  <g transform="translate(30, 90)">
+    <rect width="250" height="520" rx="12" fill="#1e293b" fill-opacity="0.8" stroke="#475569" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="12" fill="#334155"/>
+    <text x="125" y="25" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="14" font-weight="bold">BLOCK [N - 1]</text>
+
+    <!-- Header Summary -->
+    <rect x="15" y="55" width="220" height="195" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1"/>
+    <text x="25" y="75" fill="#60a5fa" font-family="sans-serif" font-size="11" font-weight="bold">BLOCK HEADER (80 Bytes)</text>
+    <text x="25" y="98" fill="#94a3b8" font-family="monospace" font-size="10">Version: 0x20000000</text>
+    <text x="25" y="118" fill="#94a3b8" font-family="monospace" font-size="10">PrevHash: 0000...a41b</text>
+    <text x="25" y="138" fill="#94a3b8" font-family="monospace" font-size="10">MerkleRoot: 7b3e...991c</text>
+    <text x="25" y="158" fill="#94a3b8" font-family="monospace" font-size="10">Timestamp: 1698001200</text>
+    <text x="25" y="178" fill="#94a3b8" font-family="monospace" font-size="10">Bits: 0x1d00ffff</text>
+    <text x="25" y="198" fill="#94a3b8" font-family="monospace" font-size="10">Nonce: 1845920391</text>
+    <rect x="25" y="212" width="200" height="26" rx="4" fill="#1e3a8a"/>
+    <text x="125" y="229" text-anchor="middle" fill="#93c5fd" font-family="monospace" font-size="9" font-weight="bold">Block Hash: 0000...f92a</text>
+
+    <!-- Block Body -->
+    <rect x="15" y="265" width="220" height="235" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="285" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold">TRANSACTIONS BODY</text>
+    <text x="25" y="310" fill="#64748b" font-family="monospace" font-size="10">Tx Count: 2,410</text>
+    <text x="25" y="335" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; Tx 0 (Coinbase)</text>
+    <text x="25" y="355" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; Tx 1 (Alice -&gt; Bob)</text>
+    <text x="25" y="375" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; Tx 2 (Dave -&gt; Carol)</text>
+    <text x="25" y="395" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; ... (Merkle tree root)</text>
+  </g>
+
+  <!-- BLOCK N (Current Block - Expanded Architecture) -->
+  <g transform="translate(325, 90)">
+    <rect width="550" height="520" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="550" height="40" rx="14" fill="url(#headerGrad)"/>
+    <text x="275" y="26" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold">BLOCK [N] - IN-DEPTH ANATOMY</text>
+
+    <!-- Header Section -->
+    <rect x="20" y="55" width="510" height="180" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1.2"/>
+    <text x="35" y="76" fill="#93c5fd" font-family="sans-serif" font-size="12" font-weight="bold">BLOCK HEADER (Fixed 80-Byte Structure)</text>
+
+    <!-- 6 Header Fields Grid -->
+    <rect x="35" y="88" width="225" height="38" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="45" y="103" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="bold">Version (4 Bytes)</text>
+    <text x="45" y="118" fill="#e2e8f0" font-family="monospace" font-size="10">0x20000000 (v2)</text>
+
+    <rect x="270" y="88" width="260" height="38" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.2"/>
+    <text x="280" y="103" fill="#fbbf24" font-family="sans-serif" font-size="10" font-weight="bold">Previous Block Hash (32 Bytes)</text>
+    <text x="280" y="118" fill="#fef08a" font-family="monospace" font-size="10">000000000000000000f92a...</text>
+
+    <rect x="35" y="134" width="225" height="38" rx="6" fill="#0f172a" stroke="#4ade80" stroke-width="1.2"/>
+    <text x="45" y="149" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold">Merkle Root (32 Bytes)</text>
+    <text x="45" y="164" fill="#bbf7d0" font-family="monospace" font-size="10">4a5e1e4baab89f3a3251...</text>
+
+    <rect x="270" y="134" width="125" height="38" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="280" y="149" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="bold">Timestamp (4B)</text>
+    <text x="280" y="164" fill="#e2e8f0" font-family="monospace" font-size="10">1698001800</text>
+
+    <rect x="405" y="134" width="125" height="38" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="415" y="149" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="bold">Bits / Target (4B)</text>
+    <text x="415" y="164" fill="#e2e8f0" font-family="monospace" font-size="10">0x1d00ffff</text>
+
+    <rect x="35" y="180" width="495" height="38" rx="6" fill="#0f172a" stroke="#ec4899" stroke-width="1.2"/>
+    <text x="45" y="196" fill="#f472b6" font-family="sans-serif" font-size="10" font-weight="bold">Nonce (4 Bytes) - PoW Puzzle Iteration Variable</text>
+    <text x="45" y="210" fill="#fbcfe8" font-family="monospace" font-size="10">Nonce = 2,083,236,893  ==&gt;  SHA256(SHA256(Header)) &lt; Target (Success!)</text>
+
+    <!-- Merkle Tree Section (Block Body) -->
+    <rect x="20" y="248" width="510" height="255" rx="10" fill="#13231b" stroke="#16a34a" stroke-width="1.2"/>
+    <text x="35" y="270" fill="#4ade80" font-family="sans-serif" font-size="12" font-weight="bold">MERKLE TREE (Cryptographic Binary Hash Tree)</text>
+
+    <!-- Merkle Root Node -->
+    <rect x="175" y="285" width="200" height="28" rx="6" fill="#15803d" stroke="#86efac" stroke-width="1"/>
+    <text x="275" y="303" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">Root Hash: H(12+34)</text>
+
+    <!-- Merkle Tree Branches -->
+    <line x1="230" y1="313" x2="160" y2="340" stroke="#4ade80" stroke-width="1.5"/>
+    <line x1="320" y1="313" x2="390" y2="340" stroke="#4ade80" stroke-width="1.5"/>
+
+    <!-- Intermediate Nodes -->
+    <rect x="90" y="340" width="140" height="26" rx="5" fill="#166534" stroke="#4ade80"/>
+    <text x="160" y="357" text-anchor="middle" fill="#dcfce7" font-family="sans-serif" font-size="10">H(12) = SHA256(H1+H2)</text>
+
+    <rect x="320" y="340" width="140" height="26" rx="5" fill="#166534" stroke="#4ade80"/>
+    <text x="390" y="357" text-anchor="middle" fill="#dcfce7" font-family="sans-serif" font-size="10">H(34) = SHA256(H3+H4)</text>
+
+    <line x1="130" y1="366" x2="90" y2="395" stroke="#4ade80" stroke-width="1.2"/>
+    <line x1="190" y1="366" x2="210" y2="395" stroke="#4ade80" stroke-width="1.2"/>
+    <line x1="360" y1="366" x2="340" y2="395" stroke="#4ade80" stroke-width="1.2"/>
+    <line x1="420" y1="366" x2="455" y2="395" stroke="#4ade80" stroke-width="1.2"/>
+
+    <!-- Transaction Hash Nodes -->
+    <rect x="50" y="395" width="80" height="24" rx="4" fill="#052e16" stroke="#22c55e"/>
+    <text x="90" y="411" text-anchor="middle" fill="#86efac" font-family="monospace" font-size="9">H1=H(Tx1)</text>
+
+    <rect x="170" y="395" width="80" height="24" rx="4" fill="#052e16" stroke="#22c55e"/>
+    <text x="210" y="411" text-anchor="middle" fill="#86efac" font-family="monospace" font-size="9">H2=H(Tx2)</text>
+
+    <rect x="300" y="395" width="80" height="24" rx="4" fill="#052e16" stroke="#22c55e"/>
+    <text x="340" y="411" text-anchor="middle" fill="#86efac" font-family="monospace" font-size="9">H3=H(Tx3)</text>
+
+    <rect x="415" y="395" width="80" height="24" rx="4" fill="#052e16" stroke="#22c55e"/>
+    <text x="455" y="411" text-anchor="middle" fill="#86efac" font-family="monospace" font-size="9">H4=H(Tx4)</text>
+
+    <!-- Raw Transactions -->
+    <rect x="45" y="440" width="90" height="45" rx="5" fill="#022c22" stroke="#10b981"/>
+    <text x="90" y="457" text-anchor="middle" fill="#6ee7b7" font-family="sans-serif" font-size="9" font-weight="bold">Tx 1 (Coinbase)</text>
+    <text x="90" y="473" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="8">Reward: 6.25 BTC</text>
+
+    <rect x="165" y="440" width="90" height="45" rx="5" fill="#022c22" stroke="#10b981"/>
+    <text x="210" y="457" text-anchor="middle" fill="#6ee7b7" font-family="sans-serif" font-size="9" font-weight="bold">Tx 2</text>
+    <text x="210" y="473" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="8">Alice -&gt; Bob (2 BTC)</text>
+
+    <rect x="295" y="440" width="90" height="45" rx="5" fill="#022c22" stroke="#10b981"/>
+    <text x="340" y="457" text-anchor="middle" fill="#6ee7b7" font-family="sans-serif" font-size="9" font-weight="bold">Tx 3</text>
+    <text x="340" y="473" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="8">Bob -&gt; Charlie</text>
+
+    <rect x="410" y="440" width="90" height="45" rx="5" fill="#022c22" stroke="#10b981"/>
+    <text x="455" y="457" text-anchor="middle" fill="#6ee7b7" font-family="sans-serif" font-size="9" font-weight="bold">Tx 4</text>
+    <text x="455" y="473" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="8">Eve -&gt; Dave</text>
+  </g>
+
+  <!-- BLOCK N + 1 (Next Block) -->
+  <g transform="translate(915, 90)">
+    <rect width="250" height="520" rx="12" fill="#1e293b" fill-opacity="0.8" stroke="#475569" stroke-width="1.5"/>
+    <rect width="250" height="38" rx="12" fill="#334155"/>
+    <text x="125" y="25" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="14" font-weight="bold">BLOCK [N + 1]</text>
+
+    <!-- Header Summary -->
+    <rect x="15" y="55" width="220" height="195" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1"/>
+    <text x="25" y="75" fill="#60a5fa" font-family="sans-serif" font-size="11" font-weight="bold">BLOCK HEADER (80 Bytes)</text>
+    <text x="25" y="98" fill="#94a3b8" font-family="monospace" font-size="10">Version: 0x20000000</text>
+    <rect x="20" y="106" width="210" height="26" rx="4" fill="#78350f" stroke="#fbbf24" stroke-width="1"/>
+    <text x="25" y="123" fill="#fef08a" font-family="monospace" font-size="9" font-weight="bold">PrevHash: 0000...4c38</text>
+    <text x="25" y="148" fill="#94a3b8" font-family="monospace" font-size="10">MerkleRoot: 91a2...11d0</text>
+    <text x="25" y="168" fill="#94a3b8" font-family="monospace" font-size="10">Timestamp: 1698002400</text>
+    <text x="25" y="188" fill="#94a3b8" font-family="monospace" font-size="10">Bits: 0x1d00ffff</text>
+    <text x="25" y="208" fill="#94a3b8" font-family="monospace" font-size="10">Nonce: 981742013</text>
+
+    <!-- Block Body -->
+    <rect x="15" y="265" width="220" height="235" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="285" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold">TRANSACTIONS BODY</text>
+    <text x="25" y="310" fill="#64748b" font-family="monospace" font-size="10">Tx Count: 1,894</text>
+    <text x="25" y="335" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; Tx 0 (Coinbase)</text>
+    <text x="25" y="355" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; Tx 1 (Mallory -&gt; Sam)</text>
+    <text x="25" y="375" fill="#64748b" font-family="sans-serif" font-size="10">&#8226; ... (Merkle tree root)</text>
+  </g>
+
+  <!-- Cryptographic Hash Arrows Between Blocks -->
+  <!-- Block N-1 to Block N -->
+  <path d="M 240 315 C 280 315, 290 200, 595 200" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowAmber)"/>
+  <rect x="255" y="250" width="60" height="22" rx="4" fill="#451a03" stroke="#fbbf24"/>
+  <text x="285" y="265" text-anchor="middle" fill="#fde047" font-family="sans-serif" font-size="9" font-weight="bold">SHA-256</text>
+
+  <!-- Block N to Block N+1 -->
+  <path d="M 875 190 C 900 190, 895 210, 935 210" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowAmber)"/>
+
+  <!-- Bottom Explanatory Banner -->
+  <g transform="translate(30, 625)">
+    <rect width="1135" height="115" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    <text x="25" y="28" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">KEY IMMUTABILITY TAKEAWAYS FOR EXAMS:</text>
+    
+    <text x="25" y="55" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11"><tspan fill="#fbbf24" font-weight="bold">1. Cryptographic Chaining:</tspan> Each block header stores the SHA-256 double-hash of the parent block header. Altering a single bit in Block [N-1] alters its hash, breaking the link with Block [N].</text>
+    <text x="25" y="78" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11"><tspan fill="#4ade80" font-weight="bold">2. Merkle Tree Efficiency:</tspan> Merkle trees summarize thousands of transactions into a single 32-byte Merkle Root. It enables SPV (Simplified Payment Verification) in O(log N) steps without full ledger download.</text>
+    <text x="25" y="101" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11"><tspan fill="#f472b6" font-weight="bold">3. Fixed Header vs Variable Body:</tspan> Bitcoin block header is strictly 80 bytes. Mining PoW is performed exclusively over these 80 bytes by incrementing the Nonce counter until Target is met.</text>
+  </g>
+</svg>

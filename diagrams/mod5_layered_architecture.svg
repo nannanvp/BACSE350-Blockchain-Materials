@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgDark1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="gBlue1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="gPurple1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="gCyan1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E7490"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="gEmerald1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="gAmber1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="gRose1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BE123C"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <filter id="shadow1" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="920" rx="14" fill="url(#bgDark1)"/>
+  <rect x="2" y="2" width="1196" height="916" rx="13" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="600" y="44" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="0.5">BLOCKCHAIN LAYERED ARCHITECTURE: DUAL PERSPECTIVE</text>
+  <text x="600" y="70" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13">Left: Standard 6-Layer Functional Stack | Right: Enterprise Architecture Stack (EEA Reference Model)</text>
+
+  <!-- LEFT PANEL: Standard 6-Layer Stack -->
+  <g transform="translate(35, 95)">
+    <rect width="545" height="765" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="272" y="32" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700">STANDARD 6-LAYER BLOCKCHAIN STACK</text>
+    <text x="272" y="50" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">Core Protocol &amp; Algorithmic Layers (Bottom-Up View)</text>
+
+    <!-- Layer 6: Application Layer -->
+    <g transform="translate(18, 68)" filter="url(#shadow1)">
+      <rect width="510" height="100" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2"/>
+      <rect x="0" y="0" width="8" height="100" rx="4" fill="url(#gAmber1)"/>
+      <text x="20" y="24" fill="#F59E0B" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">6. APPLICATION &amp; PRESENTATION LAYER</text>
+      <text x="20" y="44" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Client DApps, Web3 Frameworks (React, Web3.js, ethers.js)</text>
+      <text x="20" y="62" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Wallets (MetaMask, Ledger), Block Explorers (Etherscan), Analytics Dashboards</text>
+      <text x="20" y="82" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">Role: User interaction, transaction generation, and smart contract invocation.</text>
+    </g>
+
+    <!-- Layer 5: Contract & Execution Layer -->
+    <g transform="translate(18, 180)" filter="url(#shadow1)">
+      <rect width="510" height="100" rx="8" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="8" height="100" rx="4" fill="url(#gPurple1)"/>
+      <text x="20" y="24" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">5. CONTRACT &amp; EXECUTION LAYER</text>
+      <text x="20" y="44" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Smart Contracts (Solidity, Vyper, Rust), Chaincode (Go, Java)</text>
+      <text x="20" y="62" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Virtual Machines: Ethereum Virtual Machine (EVM), eWASM, Docker Sandboxes</text>
+      <text x="20" y="82" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">Role: Deterministic business logic execution and decentralized state mutation.</text>
+    </g>
+
+    <!-- Layer 4: Incentive Layer -->
+    <g transform="translate(18, 292)" filter="url(#shadow1)">
+      <rect width="510" height="102" rx="8" fill="#0F172A" stroke="#F43F5E" stroke-width="1.2"/>
+      <rect x="0" y="0" width="8" height="102" rx="4" fill="url(#gRose1)"/>
+      <text x="20" y="24" fill="#F43F5E" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">4. INCENTIVE LAYER (OPTIONAL IN PRIVATE CHAINS)</text>
+      <text x="20" y="44" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Economic Cryptoeconomics: Block Rewards (Coinbase subsidy) + Gas Fees</text>
+      <text x="20" y="62" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Tokenomics: Staking yield, penalty slashing, EIP-1559 base fee burning</text>
+      <text x="20" y="82" fill="#FCA5A5" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#9888; Note: Omitted or Zero-Gas in private/consortium networks without tokens.</text>
+    </g>
+
+    <!-- Layer 3: Consensus Layer -->
+    <g transform="translate(18, 406)" filter="url(#shadow1)">
+      <rect width="510" height="114" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+      <rect x="0" y="0" width="8" height="114" rx="4" fill="url(#gEmerald1)"/>
+      <text x="20" y="24" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">3. CONSENSUS LAYER (DISTRIBUTED AGREEMENT)</text>
+      <text x="20" y="44" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Public: Proof-of-Work (PoW), Proof-of-Stake (PoS), Delegated PoS (DPoS)</text>
+      <text x="20" y="62" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Consortium / Enterprise: PBFT, Raft, IBFT 2.0, Tendermint Core</text>
+      <text x="20" y="82" fill="#6EE7B7" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#9733; 2/3rd Voting Rule: Requires &gt; 2/3 (66.7%) valid participant votes (BFT threshold f &lt; n/3)</text>
+      <text x="20" y="100" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">Role: Guarantees Byzantine fault-tolerant immutability and global ordering.</text>
+    </g>
+
+    <!-- Layer 2: Network Layer -->
+    <g transform="translate(18, 532)" filter="url(#shadow1)">
+      <rect width="510" height="100" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1.2"/>
+      <rect x="0" y="0" width="8" height="100" rx="4" fill="url(#gCyan1)"/>
+      <text x="20" y="24" fill="#22D3EE" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">2. NETWORK LAYER (P2P COMMUNICATION)</text>
+      <text x="20" y="44" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Peer-to-Peer (P2P) Topology, Gossip Broadcasts, Flooding protocols</text>
+      <text x="20" y="62" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Node Discovery: Kademlia DHT, discv4/discv5, TLS/mTLS handshakes</text>
+      <text x="20" y="82" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">Role: Peer discovery, node authentication, and mempool/block propagation.</text>
+    </g>
+
+    <!-- Layer 1: Data Layer -->
+    <g transform="translate(18, 644)" filter="url(#shadow1)">
+      <rect width="510" height="105" rx="8" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="8" height="105" rx="4" fill="url(#gBlue1)"/>
+      <text x="20" y="24" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">1. DATA LAYER (LEDGER &amp; CRYPTOGRAPHY)</text>
+      <text x="20" y="44" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Block Architecture: Block Header (PrevHash, Merkle Root, Nonce, Timestamp)</text>
+      <text x="20" y="62" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Cryptographic Primitives: SHA-256, Keccak-256, ECDSA (secp256k1), Merkle Trees</text>
+      <text x="20" y="82" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Chain Structure: Cryptographic hash pointers forming immutable ledger history</text>
+      <text x="20" y="98" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">Role: Physical and logical data storage representation across all nodes.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANEL: Enterprise Stack View (EEA Specification) -->
+  <g transform="translate(620, 95)">
+    <rect width="545" height="765" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="272" y="32" text-anchor="middle" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700">ENTERPRISE APPLICATION ARCHITECTURE (EEA)</text>
+    <text x="272" y="50" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">Enterprise Ethereum Alliance Multi-Tier Layered Framework</text>
+
+    <!-- Tier 5: Application & Standards -->
+    <g transform="translate(18, 68)">
+      <rect width="510" height="124" rx="8" fill="#0F172A" stroke="#D97706" stroke-width="1.2"/>
+      <text x="16" y="20" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="12.5" font-weight="700">APPLICATION &amp; INFRASTRUCTURE STANDARDS</text>
+      <rect x="14" y="30" width="230" height="24" rx="4" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1"/>
+      <text x="129" y="46" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Enterprise DApps &amp; Business Services</text>
+      <rect x="254" y="30" width="242" height="24" rx="4" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1"/>
+      <text x="375" y="46" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Explorers, Monitoring &amp; BI Analytics</text>
+      
+      <rect x="14" y="60" width="115" height="24" rx="4" fill="#F59E0B" fill-opacity="0.15" stroke="#D97706" stroke-width="1"/>
+      <text x="71" y="76" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Decentralized ID</text>
+      <rect x="135" y="60" width="115" height="24" rx="4" fill="#F59E0B" fill-opacity="0.15" stroke="#D97706" stroke-width="1"/>
+      <text x="192" y="76" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">RBAC &amp; Auth</text>
+      <rect x="256" y="60" width="115" height="24" rx="4" fill="#F59E0B" fill-opacity="0.15" stroke="#D97706" stroke-width="1"/>
+      <text x="313" y="76" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Governance Stds</text>
+      <rect x="377" y="60" width="119" height="24" rx="4" fill="#F59E0B" fill-opacity="0.15" stroke="#D97706" stroke-width="1"/>
+      <text x="436" y="76" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Token Standards</text>
+
+      <text x="16" y="104" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Smart Contract Tooling: Solidity / Vyper Compiler | Formal Verification &amp; Security Audits</text>
+    </g>
+
+    <!-- Tier 4: Tooling & Enterprise Integration -->
+    <g transform="translate(18, 204)">
+      <rect width="510" height="120" rx="8" fill="#0F172A" stroke="#DC2626" stroke-width="1.2"/>
+      <text x="16" y="20" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="12.5" font-weight="700">TOOLING, PERMISSIONS &amp; INTEGRATION</text>
+      <rect x="14" y="30" width="155" height="24" rx="4" fill="#DC2626" fill-opacity="0.2" stroke="#EF4444" stroke-width="1"/>
+      <text x="91" y="46" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Custodial Wallets</text>
+      <rect x="175" y="30" width="155" height="24" rx="4" fill="#8B5CF6" fill-opacity="0.25" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="252" y="46" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">HSM Key Security</text>
+      <rect x="336" y="30" width="160" height="24" rx="4" fill="#8B5CF6" fill-opacity="0.25" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="416" y="46" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">OAuth / LDAP IAM</text>
+
+      <rect x="14" y="60" width="235" height="24" rx="4" fill="#DC2626" fill-opacity="0.2" stroke="#EF4444" stroke-width="1"/>
+      <text x="131" y="76" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Client APIs: JSON-RPC, REST, GraphQL</text>
+      <rect x="255" y="60" width="241" height="24" rx="4" fill="#8B5CF6" fill-opacity="0.25" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="375" y="76" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Enterprise Oracles (Chainlink, TLS-Notary)</text>
+      <text x="16" y="104" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Integration Libs: Web3j, ethers.js, Hyperledger Caliper, Fabric Node SDK</text>
+    </g>
+
+    <!-- Tier 3: Privacy & Scaling -->
+    <g transform="translate(18, 336)">
+      <rect width="510" height="116" rx="8" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.2"/>
+      <text x="16" y="20" fill="#C084FC" font-family="'Segoe UI', system-ui, sans-serif" font-size="12.5" font-weight="700">PRIVACY, CONFIDENTIALITY &amp; SCALING</text>
+      <rect x="14" y="30" width="235" height="24" rx="4" fill="#8B5CF6" fill-opacity="0.25" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="131" y="46" text-anchor="middle" fill="#E9D5FF" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Private Transactions (ZK-SNARKs / Azimut)</text>
+      <rect x="255" y="30" width="241" height="24" rx="4" fill="#8B5CF6" fill-opacity="0.25" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="375" y="46" text-anchor="middle" fill="#E9D5FF" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Off-Chain TEE (Intel SGX Enclaves)</text>
+
+      <rect x="14" y="60" width="235" height="24" rx="4" fill="#DC2626" fill-opacity="0.2" stroke="#EF4444" stroke-width="1"/>
+      <text x="131" y="76" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Layer 2 Rollups (Optimistic &amp; ZK-Rollup)</text>
+      <rect x="255" y="60" width="241" height="24" rx="4" fill="#DC2626" fill-opacity="0.2" stroke="#EF4444" stroke-width="1"/>
+      <text x="375" y="76" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">State Channels &amp; Off-Chain Compute</text>
+      <text x="16" y="102" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Protects commercial secrecy while enabling auditable public settlement.</text>
+    </g>
+
+    <!-- Tier 2: Core Blockchain Tier -->
+    <g transform="translate(18, 464)">
+      <rect width="510" height="170" rx="8" fill="#0F172A" stroke="#059669" stroke-width="1.2"/>
+      <text x="16" y="20" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="12.5" font-weight="700">CORE BLOCKCHAIN (LEDGER, EXECUTION &amp; CONSENSUS)</text>
+      
+      <!-- Storage / Ledger -->
+      <text x="16" y="40" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Storage / Ledger:</text>
+      <rect x="110" y="28" width="115" height="20" rx="3" fill="#059669" fill-opacity="0.4" stroke="#10B981" stroke-width="1"/>
+      <text x="167" y="42" text-anchor="middle" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Public State</text>
+      <rect x="232" y="28" width="120" height="20" rx="3" fill="#DC2626" fill-opacity="0.3" stroke="#EF4444" stroke-width="1"/>
+      <text x="292" y="42" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">Off-Chain Storage</text>
+      <rect x="358" y="28" width="138" height="20" rx="3" fill="#8B5CF6" fill-opacity="0.35" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="427" y="42" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Private State Vault</text>
+
+      <!-- Executive -->
+      <text x="16" y="70" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Executive Engine:</text>
+      <rect x="110" y="58" width="85" height="20" rx="3" fill="#059669" fill-opacity="0.4" stroke="#10B981" stroke-width="1"/>
+      <text x="152" y="72" text-anchor="middle" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">EVM Engine</text>
+      <rect x="202" y="58" width="150" height="20" rx="3" fill="#DC2626" fill-opacity="0.3" stroke="#EF4444" stroke-width="1"/>
+      <text x="277" y="72" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">Precompiled Contracts</text>
+      <rect x="358" y="58" width="138" height="20" rx="3" fill="#8B5CF6" fill-opacity="0.35" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="427" y="72" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Confidential Enclave</text>
+
+      <!-- Consensus -->
+      <text x="16" y="100" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Consensus Engine:</text>
+      <rect x="110" y="88" width="180" height="20" rx="3" fill="#059669" fill-opacity="0.4" stroke="#10B981" stroke-width="1"/>
+      <text x="200" y="102" text-anchor="middle" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Public Consensus (PoW / PoS)</text>
+      <rect x="296" y="88" width="200" height="20" rx="3" fill="#8B5CF6" fill-opacity="0.35" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="396" y="102" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Enterprise Consensus (PBFT / IBFT)</text>
+
+      <line x1="16" y1="120" x2="494" y2="120" stroke="#334155" stroke-width="1"/>
+      <text x="16" y="138" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#9632; Yellow Paper Standard (Green): Foundational EVM state execution specs</text>
+      <text x="16" y="156" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#9632; Enterprise Extensions (Purple): Partitioned states, private contracts &amp; consortium peers</text>
+    </g>
+
+    <!-- Tier 1: Network Protocol Tier -->
+    <g transform="translate(18, 646)">
+      <rect width="510" height="98" rx="8" fill="#0F172A" stroke="#2563EB" stroke-width="1.2"/>
+      <text x="16" y="20" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="12.5" font-weight="700">ENTERPRISE NETWORK PROTOCOL</text>
+      <rect x="14" y="30" width="235" height="26" rx="4" fill="#DC2626" fill-opacity="0.2" stroke="#EF4444" stroke-width="1"/>
+      <text x="131" y="47" text-anchor="middle" fill="#FECACA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Public DevP2P Sub-protocols</text>
+      <rect x="255" y="30" width="241" height="26" rx="4" fill="#8B5CF6" fill-opacity="0.25" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="375" y="47" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">Enterprise P2P (mTLS, Quorum Tessera)</text>
+      <text x="16" y="80" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">Provides node identity whitelisting, firewall-friendly tunneling &amp; payload encryption.</text>
+    </g>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(100, 880)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#059669"/>
+    <text x="24" y="13" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5">Ethereum Yellow Paper Specification</text>
+
+    <rect x="260" y="0" width="16" height="16" rx="4" fill="#DC2626"/>
+    <text x="284" y="13" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5">Public Blockchain Extensions</text>
+
+    <rect x="495" y="0" width="16" height="16" rx="4" fill="#F59E0B"/>
+    <text x="519" y="13" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5">Application / Tooling Stack</text>
+
+    <rect x="715" y="0" width="16" height="16" rx="4" fill="#8B5CF6"/>
+    <text x="739" y="13" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5">Enterprise Layer (EEA Spec)</text>
+  </g>
+</svg>

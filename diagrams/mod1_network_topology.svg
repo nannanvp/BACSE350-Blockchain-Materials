@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="100%" stop-color="#1c2541"/>
+    </linearGradient>
+    <linearGradient id="cardLeftGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardRightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#132e3b" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0a1926" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="peerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="680" fill="url(#bgGrad1)"/>
+
+  <!-- Title Header -->
+  <text x="550" y="40" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" letter-spacing="1">NETWORK TOPOLOGY: CENTRALIZED VS. DECENTRALIZED P2P</text>
+  <text x="550" y="65" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Fundamental structural comparison between centralized client-server data silos and distributed peer-to-peer ledgers</text>
+
+  <!-- Left Panel: Centralized -->
+  <g transform="translate(40, 85)">
+    <rect width="490" height="440" rx="14" fill="url(#cardLeftGrad)" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.5"/>
+    
+    <rect x="20" y="16" width="220" height="28" rx="6" fill="#7f1d1d" fill-opacity="0.6" stroke="#f87171" stroke-width="1"/>
+    <text x="130" y="35" text-anchor="middle" fill="#fca5a5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold">CENTRALIZED ARCHITECTURE</text>
+    <text x="20" y="66" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Single central authority controls database access and state</text>
+
+    <!-- Connections -->
+    <line x1="245" y1="200" x2="110" y2="130" stroke="#f87171" stroke-width="1.8" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="245" y1="200" x2="245" y2="105" stroke="#f87171" stroke-width="1.8" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="245" y1="200" x2="380" y2="130" stroke="#f87171" stroke-width="1.8" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="245" y1="200" x2="385" y2="270" stroke="#f87171" stroke-width="1.8" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="245" y1="200" x2="245" y2="295" stroke="#f87171" stroke-width="1.8" stroke-dasharray="4,3" opacity="0.7"/>
+    <line x1="245" y1="200" x2="105" y2="270" stroke="#f87171" stroke-width="1.8" stroke-dasharray="4,3" opacity="0.7"/>
+
+    <!-- Central Node -->
+    <circle cx="245" cy="200" r="42" fill="url(#serverGrad)" filter="url(#glowRed)" stroke="#ffffff" stroke-width="2"/>
+    <text x="245" y="196" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold">CENTRAL</text>
+    <text x="245" y="212" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="10">SERVER</text>
+
+    <!-- Peripheral Clients -->
+    <circle cx="110" cy="130" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="110" y="135" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">C1</text>
+
+    <circle cx="245" cy="105" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="245" y="110" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">C2</text>
+
+    <circle cx="380" cy="130" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="380" y="135" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">C3</text>
+
+    <circle cx="385" cy="270" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="385" y="275" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">C4</text>
+
+    <circle cx="245" cy="295" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="245" y="300" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">C5</text>
+
+    <circle cx="105" cy="270" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="105" y="275" text-anchor="middle" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">C6</text>
+
+    <!-- Limitations -->
+    <rect x="20" y="340" width="450" height="85" rx="8" fill="#450a0a" fill-opacity="0.7" stroke="#ef4444" stroke-width="1"/>
+    <text x="32" y="362" fill="#fca5a5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold">Limitations of Centralized Setup:</text>
+    <text x="32" y="381" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Single Point of Failure (SPOF): Hardware or power failure halts entire service.</text>
+    <text x="32" y="398" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Censorship &amp; Manipulation: Administrator has unilateral power to alter or delete data.</text>
+    <text x="32" y="415" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; High Trust Requirement: Clients must completely trust central intermediary security.</text>
+  </g>
+
+  <!-- Right Panel: Decentralized -->
+  <g transform="translate(570, 85)">
+    <rect width="490" height="440" rx="14" fill="url(#cardRightGrad)" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.5"/>
+
+    <rect x="20" y="16" width="240" height="28" rx="6" fill="#083344" fill-opacity="0.7" stroke="#38bdf8" stroke-width="1"/>
+    <text x="140" y="35" text-anchor="middle" fill="#7dd3fc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold">DECENTRALIZED P2P MESH</text>
+    <text x="20" y="66" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Direct peer-to-peer interconnectivity with distributed ledger replication</text>
+
+    <!-- Mesh Lines -->
+    <line x1="120" y1="135" x2="245" y2="105" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    <line x1="245" y1="105" x2="370" y2="135" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    <line x1="370" y1="135" x2="395" y2="250" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    <line x1="395" y1="250" x2="310" y2="305" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    <line x1="310" y1="305" x2="180" y2="305" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    <line x1="180" y1="305" x2="95" y2="240" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    <line x1="95" y1="240" x2="120" y2="135" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+    
+    <line x1="120" y1="135" x2="310" y2="305" stroke="#06b6d4" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.5"/>
+    <line x1="245" y1="105" x2="245" y2="205" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+    <line x1="245" y1="205" x2="395" y2="250" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+    <line x1="245" y1="205" x2="95" y2="240" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+    <line x1="370" y1="135" x2="180" y2="305" stroke="#06b6d4" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Peers -->
+    <circle cx="120" cy="135" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="120" y="140" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P1</text>
+
+    <circle cx="245" cy="105" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="245" y="110" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P2</text>
+
+    <circle cx="370" cy="135" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="370" y="140" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P3</text>
+
+    <circle cx="245" cy="205" r="27" fill="#0284c7" filter="url(#glowCyan)" stroke="#67e8f9" stroke-width="2"/>
+    <text x="245" y="202" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P4</text>
+    <text x="245" y="217" text-anchor="middle" fill="#bae6fd" font-family="sans-serif" font-size="8">[Ledger]</text>
+
+    <circle cx="395" cy="250" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="395" y="255" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P5</text>
+
+    <circle cx="310" cy="305" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="310" y="310" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P6</text>
+
+    <circle cx="180" cy="305" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="180" y="310" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P7</text>
+
+    <circle cx="95" cy="240" r="22" fill="url(#peerGrad)" filter="url(#glowCyan)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="95" y="245" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">P8</text>
+
+    <!-- Strengths -->
+    <rect x="20" y="340" width="450" height="85" rx="8" fill="#082f49" fill-opacity="0.7" stroke="#0284c7" stroke-width="1"/>
+    <text x="32" y="362" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold">Strengths of Decentralized P2P:</text>
+    <text x="32" y="381" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Zero SPOF: Network continues operating flawlessly even if 50% of nodes disconnect.</text>
+    <text x="32" y="398" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Immutability: Cryptographic chaining &amp; consensus prevent retroactive alterations.</text>
+    <text x="32" y="415" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11">&#8226; Censorship Resistance: Open participation; no central entity can blacklist valid users.</text>
+  </g>
+
+  <!-- Bottom Comparison Table -->
+  <g transform="translate(40, 540)">
+    <rect width="1020" height="115" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 1010 0 Q 1020 0 1020 10 L 1020 30 L 0 30 Z" fill="#1e293b"/>
+    <text x="20" y="20" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold">CRITERIA</text>
+    <text x="200" y="20" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">CENTRALIZED CLIENT-SERVER</text>
+    <text x="520" y="20" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold">DECENTRALIZED PEER-TO-PEER (BLOCKCHAIN)</text>
+    <text x="870" y="20" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">EXAM TAKEAWAY</text>
+    <line x1="0" y1="30" x2="1020" y2="30" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="52" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Authority &amp; Control</text>
+    <text x="200" y="52" fill="#e2e8f0" font-family="sans-serif" font-size="11">Monopolistic central administrator</text>
+    <text x="520" y="52" fill="#e2e8f0" font-family="sans-serif" font-size="11">Distributed consensus across autonomous equal peers</text>
+    <text x="870" y="52" fill="#34d399" font-family="sans-serif" font-size="11">Removes trusted 3rd party</text>
+    <line x1="0" y1="58" x2="1020" y2="58" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="20" y="78" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Fault Tolerance</text>
+    <text x="200" y="78" fill="#e2e8f0" font-family="sans-serif" font-size="11">Vulnerable to Single Point of Failure (SPOF)</text>
+    <text x="520" y="78" fill="#e2e8f0" font-family="sans-serif" font-size="11">Byzantine fault tolerant mesh; high redundancy</text>
+    <text x="870" y="78" fill="#34d399" font-family="sans-serif" font-size="11">Near-zero downtime</text>
+    <line x1="0" y1="84" x2="1020" y2="84" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="20" y="104" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Transparency &amp; Trust</text>
+    <text x="200" y="104" fill="#e2e8f0" font-family="sans-serif" font-size="11">Opaque black box; mutable database records</text>
+    <text x="520" y="104" fill="#e2e8f0" font-family="sans-serif" font-size="11">Publicly auditable, cryptographic proofs, immutable</text>
+    <text x="870" y="104" fill="#34d399" font-family="sans-serif" font-size="11">Trustless verification</text>
+  </g>
+</svg>

@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 880" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgDark4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="gIpfs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="880" rx="14" fill="url(#bgDark4)"/>
+  <rect x="2" y="2" width="1276" height="876" rx="13" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="640" y="44" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="0.5">IPFS ARCHITECTURE &amp; CONTENT ADDRESSING (CID)</text>
+  <text x="640" y="70" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13">Peer-to-Peer Distributed Storage, Merkle DAG, Bitswap Protocol, Kademlia DHT &amp; Blockchain Pinning</text>
+
+  <!-- GRID: 4 Main Sub-systems -->
+  <g transform="translate(35, 95)">
+    <!-- Quadrant 1: Location vs. Content Addressing & CID Structure -->
+    <g transform="translate(0, 0)" filter="url(#shadow4)">
+      <rect width="585" height="360" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#06B6D4" stroke-width="1.2"/>
+      <rect x="0" y="0" width="585" height="32" rx="8" fill="url(#gIpfs)"/>
+      <text x="20" y="21" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">1. LOCATION ADDRESSING (HTTP) vs. CONTENT ADDRESSING (IPFS CID)</text>
+
+      <!-- HTTP Panel -->
+      <rect x="18" y="46" width="549" height="74" rx="6" fill="#0F172A" stroke="#EF4444" stroke-width="1"/>
+      <text x="28" y="66" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">TRADITIONAL WEB (LOCATION-BASED):</text>
+      <text x="28" y="84" fill="#CBD5E1" font-family="'Consolas', monospace" font-size="10.5">https://university.edu/degrees/2026/certificate_alice.pdf</text>
+      <text x="28" y="104" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Vulnerable: If university domain expires, server moves, or admin alters file, link breaks or serves tampered data.</text>
+
+      <!-- IPFS Panel -->
+      <rect x="18" y="130" width="549" height="96" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+      <text x="28" y="150" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">IPFS (CONTENT-BASED ADDRESSING):</text>
+      <text x="28" y="168" fill="#CBD5E1" font-family="'Consolas', monospace" font-size="10.5">ipfs://bafybeic7...xyz / QmZ4tDuvesekSs4qM5ZBKpXiZGun7S2CYtEZRB3DYXkjGx</text>
+      <text x="28" y="188" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Cryptographic Guarantee: Address is derived directly from cryptographic hash of the content.</text>
+      <text x="28" y="206" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Anyone who modifies 1 character generates a completely different CID. Retrievable from ANY peer.</text>
+
+      <!-- CID Anatomy -->
+      <rect x="18" y="236" width="549" height="106" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="28" y="254" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">ANATOMY OF IPFS CONTENT IDENTIFIER (CIDv1):</text>
+      
+      <g transform="translate(28, 266)">
+        <rect x="0" y="0" width="115" height="30" rx="4" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1"/>
+        <text x="57" y="15" text-anchor="middle" fill="#93C5FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="700">Multibase</text>
+        <text x="57" y="26" text-anchor="middle" fill="#E2E8F0" font-family="'Consolas', monospace" font-size="8">base32 / base58</text>
+
+        <rect x="125" y="0" width="115" height="30" rx="4" fill="#5B21B6" stroke="#8B5CF6" stroke-width="1"/>
+        <text x="182" y="15" text-anchor="middle" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="700">CID Version</text>
+        <text x="182" y="26" text-anchor="middle" fill="#E2E8F0" font-family="'Consolas', monospace" font-size="8">0x01 (CIDv1)</text>
+
+        <rect x="250" y="0" width="125" height="30" rx="4" fill="#065F46" stroke="#10B981" stroke-width="1"/>
+        <text x="312" y="15" text-anchor="middle" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="700">Multicodec</text>
+        <text x="312" y="26" text-anchor="middle" fill="#E2E8F0" font-family="'Consolas', monospace" font-size="8">dag-pb (0x70) / raw</text>
+
+        <rect x="385" y="0" width="150" height="30" rx="4" fill="#831843" stroke="#F43F5E" stroke-width="1"/>
+        <text x="460" y="15" text-anchor="middle" fill="#FFE4E6" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="700">Multihash (Hash + Len)</text>
+        <text x="460" y="26" text-anchor="middle" fill="#E2E8F0" font-family="'Consolas', monospace" font-size="8">sha2-256 / blake2b</text>
+      </g>
+      <text x="28" y="328" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#9733; Self-describing standards ensure future-proof algorithmic upgrades without breaking references.</text>
+    </g>
+
+    <!-- Quadrant 2: Merkle DAG & Data Chunking -->
+    <g transform="translate(620, 0)" filter="url(#shadow4)">
+      <rect width="590" height="360" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#8B5CF6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="590" height="32" rx="8" fill="#6D28D9"/>
+      <text x="20" y="21" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">2. MERKLE DIRECTED ACYCLIC GRAPH (DAG) CHUNKING</text>
+
+      <text x="20" y="54" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Files larger than 256 KB are split into 256 KB raw chunks.</text>
+      <text x="20" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11">&#8226; Each chunk is hashed into a leaf node, and organized into a UnixFS Merkle DAG tree.</text>
+      <text x="20" y="90" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="600">&#9733; Result: Root CID mathematically represents the ENTIRE document structure.</text>
+
+      <!-- Visual DAG Tree -->
+      <g transform="translate(50, 110)">
+        <!-- Root Node -->
+        <rect x="180" y="0" width="130" height="36" rx="6" fill="#4C1D95" stroke="#A78BFA" stroke-width="1.5"/>
+        <text x="245" y="16" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">Root Node (CID)</text>
+        <text x="245" y="28" text-anchor="middle" fill="#DDD6FE" font-family="'Consolas', monospace" font-size="8">bafy...RootHash</text>
+
+        <!-- Lines to Intermediate -->
+        <line x1="215" y1="36" x2="110" y2="70" stroke="#8B5CF6" stroke-width="1.5"/>
+        <line x1="275" y1="36" x2="380" y2="70" stroke="#8B5CF6" stroke-width="1.5"/>
+
+        <!-- Intermediate Nodes -->
+        <rect x="50" y="70" width="120" height="32" rx="5" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.2"/>
+        <text x="110" y="85" text-anchor="middle" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Branch Node A</text>
+        <text x="110" y="96" text-anchor="middle" fill="#94A3B8" font-family="'Consolas', monospace" font-size="7.5">Hash(Chunk 1 + 2)</text>
+
+        <rect x="320" y="70" width="120" height="32" rx="5" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.2"/>
+        <text x="380" y="85" text-anchor="middle" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" font-weight="600">Branch Node B</text>
+        <text x="380" y="96" text-anchor="middle" fill="#94A3B8" font-family="'Consolas', monospace" font-size="7.5">Hash(Chunk 3 + 4)</text>
+
+        <!-- Lines to Leaves -->
+        <line x1="90" y1="102" x2="50" y2="135" stroke="#64748B" stroke-width="1.2"/>
+        <line x1="130" y1="102" x2="160" y2="135" stroke="#64748B" stroke-width="1.2"/>
+        <line x1="360" y1="102" x2="330" y2="135" stroke="#64748B" stroke-width="1.2"/>
+        <line x1="400" y1="102" x2="440" y2="135" stroke="#64748B" stroke-width="1.2"/>
+
+        <!-- Leaf Chunks (256KB) -->
+        <rect x="10" y="135" width="85" height="32" rx="4" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+        <text x="52" y="149" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5" font-weight="700">Chunk 1 (256KB)</text>
+        <text x="52" y="160" text-anchor="middle" fill="#94A3B8" font-family="'Consolas', monospace" font-size="7">Hash: 0x7fa1...</text>
+
+        <rect x="115" y="135" width="85" height="32" rx="4" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+        <text x="157" y="149" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5" font-weight="700">Chunk 2 (256KB)</text>
+        <text x="157" y="160" text-anchor="middle" fill="#94A3B8" font-family="'Consolas', monospace" font-size="7">Hash: 0x3bc2...</text>
+
+        <rect x="285" y="135" width="85" height="32" rx="4" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+        <text x="327" y="149" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5" font-weight="700">Chunk 3 (256KB)</text>
+        <text x="327" y="160" text-anchor="middle" fill="#94A3B8" font-family="'Consolas', monospace" font-size="7">Hash: 0x8ef4...</text>
+
+        <rect x="395" y="135" width="85" height="32" rx="4" fill="#0F172A" stroke="#059669" stroke-width="1"/>
+        <text x="437" y="149" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5" font-weight="700">Chunk 4 (110KB)</text>
+        <text x="437" y="160" text-anchor="middle" fill="#94A3B8" font-family="'Consolas', monospace" font-size="7">Hash: 0x5da8...</text>
+      </g>
+
+      <rect x="18" y="295" width="554" height="48" rx="5" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="28" y="313" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEDUPLICATION &amp; INCREMENTAL TRANSFER:</text>
+      <text x="28" y="330" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">If only Chunk 4 changes, only 110 KB is re-uploaded; Chunks 1-3 are reused across the entire network.</text>
+    </g>
+
+    <!-- Quadrant 3: P2P Network, Bitswap & Kademlia DHT -->
+    <g transform="translate(0, 380)" filter="url(#shadow4)">
+      <rect width="585" height="360" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="585" height="32" rx="8" fill="#1D4ED8"/>
+      <text x="20" y="21" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">3. P2P ROUTING (DHT) &amp; BITSWAP EXCHANGE</text>
+
+      <text x="18" y="54" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">A. Kademlia Distributed Hash Table (DHT):</text>
+      <text x="18" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Answers two fundamental questions: "Who has CID X?" and "Where is Peer Y?"</text>
+      <text x="18" y="90" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Routing table with XOR distance metric organizes peers into k-buckets (O(log N) lookup).</text>
+
+      <text x="18" y="122" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">B. Bitswap Protocol (Data Exchange Engine):</text>
+      <text x="18" y="140" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Nodes maintain a "Wantlist" (blocks desired) and a credit/debit ledger with peers.</text>
+      <text x="18" y="158" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; Tit-for-Tat game theory prevents freeriding and rewards nodes that contribute bandwidth.</text>
+
+      <!-- Protocol Flow Diagram -->
+      <g transform="translate(18, 175)">
+        <rect width="549" height="165" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+        
+        <!-- Requester Node -->
+        <rect x="20" y="20" width="130" height="50" rx="5" fill="#1E293B" stroke="#38BDF8" stroke-width="1.2"/>
+        <text x="85" y="42" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">Client Node</text>
+        <text x="85" y="57" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">Looking for CID</text>
+
+        <!-- DHT Query -->
+        <path d="M 152 35 L 238 35" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="195" y="28" text-anchor="middle" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="8">1. DHT Query</text>
+
+        <!-- DHT Node -->
+        <rect x="240" y="15" width="120" height="55" rx="5" fill="#1E293B" stroke="#F59E0B" stroke-width="1.2"/>
+        <text x="300" y="37" text-anchor="middle" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="700">Kademlia DHT</text>
+        <text x="300" y="52" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8">Peer Routing Table</text>
+
+        <!-- Response -->
+        <path d="M 238 52 L 152 52" stroke="#F59E0B" stroke-width="1.5"/>
+        <text x="195" y="65" text-anchor="middle" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="8">2. Peer Address</text>
+
+        <!-- Peer with Data -->
+        <rect x="400" y="20" width="130" height="50" rx="5" fill="#1E293B" stroke="#10B981" stroke-width="1.2"/>
+        <text x="465" y="42" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">Provider Node</text>
+        <text x="465" y="57" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">Holds CID Block</text>
+
+        <!-- Bitswap Request -->
+        <path d="M 85 72 L 85 110 L 465 110 L 465 72" fill="none" stroke="#38BDF8" stroke-width="1.5"/>
+        <text x="275" y="104" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">3. Bitswap Wantlist Sent directly to Provider Node</text>
+        
+        <path d="M 465 72 L 465 140 L 85 140 L 85 72" fill="none" stroke="#10B981" stroke-width="1.5"/>
+        <text x="275" y="134" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">4. Raw Block Data Streamed &amp; Recalculated locally</text>
+      </g>
+    </g>
+
+    <!-- Quadrant 4: Pinning & Blockchain Persistence -->
+    <g transform="translate(620, 380)" filter="url(#shadow4)">
+      <rect width="590" height="360" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#F59E0B" stroke-width="1.2"/>
+      <rect x="0" y="0" width="590" height="32" rx="8" fill="#D97706"/>
+      <text x="20" y="21" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">4. PINNING MECHANISM &amp; BLOCKCHAIN HYBRID INTEGRATION</text>
+
+      <text x="20" y="54" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">&#9888; THE IPFS AVAILABILITY CAVEAT:</text>
+      <text x="20" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; IPFS does NOT guarantee perpetual storage by itself. Unpinned files are pruned during</text>
+      <text x="20" y="90" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">  routine Garbage Collection (GC) when node disk thresholds are reached.</text>
+      <text x="20" y="108" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="600">&#9733; "Someone must PIN the content to guarantee 24/7 availability."</text>
+
+      <!-- Pinning Solutions Grid -->
+      <g transform="translate(20, 126)">
+        <rect x="0" y="0" width="170" height="85" rx="5" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+        <text x="85" y="22" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">Local Pinning</text>
+        <text x="10" y="42" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; <tspan font-family="'Consolas', monospace">ipfs pin add &lt;CID&gt;</tspan></text>
+        <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#8226; Keeps file on private</text>
+        <text x="10" y="72" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">  enterprise IPFS nodes.</text>
+
+        <rect x="185" y="0" width="175" height="85" rx="5" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+        <text x="272" y="22" text-anchor="middle" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">IPFS Cluster</text>
+        <text x="195" y="42" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Coordinated pinning</text>
+        <text x="195" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#8226; CRDT / Raft consensus</text>
+        <text x="195" y="72" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">  across consortium servers.</text>
+
+        <rect x="375" y="0" width="175" height="85" rx="5" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+        <text x="462" y="22" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">Pinning Services</text>
+        <text x="385" y="42" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Commercial SLA nodes</text>
+        <text x="385" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#8226; Pinata, Web3.Storage,</text>
+        <text x="385" y="72" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">  Filecoin incentivized deals.</text>
+      </g>
+
+      <!-- Smart Contract Bind -->
+      <rect x="20" y="226" width="550" height="118" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+      <text x="30" y="246" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">BLOCKCHAIN SMART CONTRACT BINDING PATTERN:</text>
+      <text x="30" y="266" fill="#CBD5E1" font-family="'Consolas', monospace" font-size="9.5">struct Document { address issuer; string ipfsCID; uint256 timestamp; }</text>
+      <text x="30" y="284" fill="#CBD5E1" font-family="'Consolas', monospace" font-size="9.5">mapping(bytes32 =&gt; Document) public registry;</text>
+      <text x="30" y="306" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Smart contract retains immutable audit proof and cryptographic signature.</text>
+      <text x="30" y="324" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; IPFS network distributes heavy document payloads freely at zero gas cost!</text>
+    </g>
+  </g>
+</svg>

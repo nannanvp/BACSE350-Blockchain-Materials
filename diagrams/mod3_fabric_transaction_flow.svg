@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" style="background:#090d16; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="headerGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+    </marker>
+    <marker id="arrPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc" />
+    </marker>
+    <marker id="arrAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+    </marker>
+    <marker id="arrRose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fb7185" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="40" y="20" width="1120" height="65" rx="10" fill="url(#headerGrad4)" filter="url(#shadow4)" />
+  <text x="600" y="50" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">Hyperledger Fabric 6-Stage Transaction Lifecycle</text>
+  <text x="600" y="71" fill="#bae6fd" font-size="13" text-anchor="middle">Execute-Order-Validate Architecture: Proposal, Simulation (RWSet), Endorsement, Ordering &amp; MVCC Commit</text>
+
+  <!-- ACTORS (COLUMNS) -->
+  <!-- Actor 1: Client App -->
+  <rect x="60" y="105" width="170" height="48" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="145" y="127" fill="#38bdf8" font-size="12.5" font-weight="700" text-anchor="middle">Client Application</text>
+  <text x="145" y="143" fill="#cbd5e1" font-size="10" text-anchor="middle">Fabric SDK / Gateway</text>
+  <line x1="145" y1="153" x2="145" y2="850" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" />
+
+  <!-- Actor 2: Endorsing Peers -->
+  <rect x="290" y="105" width="180" height="48" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5" />
+  <text x="380" y="127" fill="#34d399" font-size="12.5" font-weight="700" text-anchor="middle">Endorsing Peers</text>
+  <text x="380" y="143" fill="#cbd5e1" font-size="10" text-anchor="middle">Org1 &amp; Org2 (Chaincode)</text>
+  <line x1="380" y1="153" x2="380" y2="850" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" />
+
+  <!-- Actor 3: Ordering Service -->
+  <rect x="530" y="105" width="180" height="48" rx="8" fill="#312e81" stroke="#c084fc" stroke-width="1.5" />
+  <text x="620" y="127" fill="#c084fc" font-size="12.5" font-weight="700" text-anchor="middle">Ordering Service</text>
+  <text x="620" y="143" fill="#cbd5e1" font-size="10" text-anchor="middle">Raft Consensus Cluster</text>
+  <line x1="620" y1="153" x2="620" y2="850" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" />
+
+  <!-- Actor 4: Committing Peers -->
+  <rect x="765" y="105" width="180" height="48" rx="8" fill="#451a03" stroke="#fbbf24" stroke-width="1.5" />
+  <text x="855" y="127" fill="#fbbf24" font-size="12.5" font-weight="700" text-anchor="middle">Committing Peers</text>
+  <text x="855" y="143" fill="#cbd5e1" font-size="10" text-anchor="middle">All Channel Nodes</text>
+  <line x1="855" y1="153" x2="855" y2="850" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" />
+
+  <!-- Actor 5: StateDB / Ledger -->
+  <rect x="990" y="105" width="165" height="48" rx="8" fill="#4c0519" stroke="#fb7185" stroke-width="1.5" />
+  <text x="1072" y="127" fill="#fb7185" font-size="12.5" font-weight="700" text-anchor="middle">StateDB &amp; Ledger</text>
+  <text x="1072" y="143" fill="#cbd5e1" font-size="10" text-anchor="middle">CouchDB / LevelDB + Blocks</text>
+  <line x1="1072" y1="153" x2="1072" y2="850" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4" />
+
+  <!-- STEP 1: PROPOSAL -->
+  <rect x="155" y="170" width="215" height="45" rx="5" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+  <text x="262" y="188" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">1. PROPOSE TRANSACTION</text>
+  <text x="262" y="204" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Signed Proposal (fn, args, Client cert)</text>
+  <line x1="145" y1="215" x2="370" y2="215" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrBlue)" />
+
+  <!-- STEP 2: SIMULATION & ENDORSEMENT -->
+  <!-- Simulation Box on Endorser Lifeline -->
+  <rect x="365" y="230" width="30" height="155" rx="4" fill="#065f46" stroke="#34d399" stroke-width="1" />
+  <rect x="405" y="235" width="220" height="85" rx="5" fill="#022c22" stroke="#34d399" stroke-width="1" />
+  <text x="515" y="253" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">2. SIMULATE IN DOCKER</text>
+  <text x="415" y="271" fill="#cbd5e1" font-size="9.5">• Verify Client Identity &amp; MSP Signature</text>
+  <text x="415" y="287" fill="#cbd5e1" font-size="9.5">• Simulate Chaincode on local StateDB</text>
+  <text x="415" y="303" fill="#fde68a" font-size="9.5">• Produce RWSet: Read{Key, Ver}, Write{Key, Val}</text>
+  <text x="415" y="318" fill="#fb7185" font-size="9" font-weight="700">NO ledger update occurs at this stage!</text>
+
+  <!-- Endorsement response arrow (Right to Left) -->
+  <rect x="155" y="340" width="215" height="45" rx="5" fill="#022c22" stroke="#34d399" stroke-width="1" />
+  <text x="262" y="358" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">PROPOSAL RESPONSE (ENDORSEMENT)</text>
+  <text x="262" y="374" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Payload + RWSet + Endorser Digital Signature</text>
+  <line x1="365" y1="385" x2="155" y2="385" stroke="#34d399" stroke-width="2" marker-end="url(#arrGreen)" />
+
+  <!-- STEP 3: ENDORSEMENT INSPECTION -->
+  <rect x="65" y="405" width="160" height="95" rx="6" fill="#1e1b4b" stroke="#c084fc" stroke-width="1" />
+  <text x="145" y="425" fill="#c084fc" font-size="11" font-weight="700" text-anchor="middle">3. INSPECT ENDORSEMENTS</text>
+  <text x="75" y="443" fill="#cbd5e1" font-size="9.5">• Verify peer signatures</text>
+  <text x="75" y="459" fill="#cbd5e1" font-size="9.5">• Check RWSet deterministic</text>
+  <text x="75" y="475" fill="#fde68a" font-size="9.5">• Check Endorsement Policy:</text>
+  <text x="75" y="490" fill="#a7f3d0" font-size="9" font-family="monospace">AND(Org1.peer, Org2.peer)</text>
+
+  <!-- STEP 4: BROADCAST TO ORDERER -->
+  <rect x="160" y="515" width="445" height="45" rx="5" fill="#1e1b4b" stroke="#c084fc" stroke-width="1" />
+  <text x="382" y="533" fill="#c084fc" font-size="11" font-weight="700" text-anchor="middle">4. BROADCAST ENDORSED TRANSACTION</text>
+  <text x="382" y="549" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Envelope: Channel Header + Proposal + RWSet + Endorsement Signatures</text>
+  <line x1="145" y1="560" x2="610" y2="560" stroke="#c084fc" stroke-width="2" marker-end="url(#arrPurple)" />
+
+  <!-- STEP 5: ORDERING & BLOCK PACKAGING -->
+  <rect x="605" y="575" width="30" height="110" rx="4" fill="#312e81" stroke="#c084fc" stroke-width="1" />
+  <rect x="645" y="580" width="210" height="90" rx="5" fill="#1e1b4b" stroke="#c084fc" stroke-width="1" />
+  <text x="750" y="598" fill="#c084fc" font-size="11" font-weight="700" text-anchor="middle">5. ORDER &amp; CUT BLOCKS</text>
+  <text x="655" y="616" fill="#cbd5e1" font-size="9.5">• Sequence tx chronologically</text>
+  <text x="655" y="632" fill="#cbd5e1" font-size="9.5">• Raft consensus log agreement</text>
+  <text x="655" y="648" fill="#cbd5e1" font-size="9.5">• BatchSize: MaxMsg / Timeout</text>
+  <text x="655" y="663" fill="#fde68a" font-size="9.5">• Sign cryptographically sealed block</text>
+
+  <!-- Deliver Block to Committing Peers -->
+  <line x1="635" y1="685" x2="845" y2="685" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrAmber)" />
+  <text x="740" y="680" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">DELIVER BLOCK (gRPC Stream)</text>
+
+  <!-- STEP 6: VALIDATION & COMMIT -->
+  <rect x="840" y="700" width="30" height="135" rx="4" fill="#78350f" stroke="#fbbf24" stroke-width="1" />
+  <rect x="710" y="710" width="260" height="110" rx="5" fill="#451a03" stroke="#fbbf24" stroke-width="1" />
+  <text x="840" y="728" fill="#fbbf24" font-size="11" font-weight="700" text-anchor="middle">6. VALIDATION &amp; COMMIT PHASE</text>
+  <text x="720" y="746" fill="#cbd5e1" font-size="9.5">• <tspan font-weight="700">VSCC Validation:</tspan> Verify Endorsement Policy</text>
+  <text x="720" y="763" fill="#cbd5e1" font-size="9.5">• <tspan font-weight="700">MVCC Check:</tspan> Read key versions == Current DB</text>
+  <text x="730" y="778" fill="#fca5a5" font-size="9">If version changed =&gt; Marked INVALID in bitmask</text>
+  <text x="720" y="794" fill="#34d399" font-size="9.5">• <tspan font-weight="700">Commit:</tspan> Append block to blockchain</text>
+  <text x="720" y="810" fill="#34d399" font-size="9.5">• <tspan font-weight="700">Write State:</tspan> Update StateDB for VALID tx only</text>
+
+  <!-- Update StateDB Arrow -->
+  <line x1="870" y1="780" x2="1060" y2="780" stroke="#fb7185" stroke-width="2" marker-end="url(#arrRose)" />
+  <text x="965" y="772" fill="#fb7185" font-size="10" font-weight="700" text-anchor="middle">PUT / DEL STATE</text>
+
+  <!-- Event Notification back to Client -->
+  <path d="M 840 820 L 155 820" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4,4" marker-end="url(#arrBlue)" />
+  <text x="500" y="813" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">EVENT HUB: Tx Committed Notification (Status: VALID / INVALID)</text>
+</svg>

@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 840" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgDark5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="gHeader5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="840" rx="14" fill="url(#bgDark5)"/>
+  <rect x="2" y="2" width="1276" height="836" rx="13" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="640" y="44" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="0.5">PHARMACEUTICAL SUPPLY CHAIN TRACEABILITY &amp; COLD CHAIN</text>
+  <text x="640" y="70" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13">End-to-End Serialization, IoT Cold Chain Monitoring, Counterfeit Prevention &amp; Patient Verification</text>
+
+  <!-- TOP 4 HORIZONTAL STAGES -->
+  <g transform="translate(35, 95)">
+    <!-- Stage 1: Pharma Manufacturer -->
+    <g transform="translate(0, 0)" filter="url(#shadow5)">
+      <rect width="280" height="350" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="280" height="34" rx="8" fill="#1D4ED8"/>
+      <text x="140" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">1. PHARMA MANUFACTURER</text>
+
+      <circle cx="140" cy="75" r="28" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="140" y="82" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">&#127981;</text>
+      <text x="140" y="122" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="600">Batch Creation &amp; Serialization</text>
+
+      <text x="14" y="148" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Active Ingredient formulation</text>
+      <text x="14" y="166" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Generates unique GS1 2D DataMatrix</text>
+      <text x="14" y="184" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Embeds encrypted RFID on carton</text>
+      <text x="14" y="202" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Patent &amp; license metadata verified</text>
+      
+      <rect x="14" y="225" width="252" height="105" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1"/>
+      <text x="22" y="245" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">BLOCKCHAIN ACTION:</text>
+      <text x="22" y="263" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Invokes API: <tspan font-family="'Consolas', monospace">mintBatch(ID, CID)</tspan></text>
+      <text x="22" y="279" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Anchors production timestamp,</text>
+      <text x="22" y="295" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">  formulation hash &amp; expiry date.</text>
+      <text x="22" y="315" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#10003; Origin immutably sealed on-chain</text>
+    </g>
+
+    <!-- Arrow 1->2 -->
+    <path d="M 285 175 L 305 175" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Stage 2: Cold Chain Logistics -->
+    <g transform="translate(310, 0)" filter="url(#shadow5)">
+      <rect width="280" height="350" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#06B6D4" stroke-width="1.2"/>
+      <rect x="0" y="0" width="280" height="34" rx="8" fill="#0E7490"/>
+      <text x="140" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">2. COLD CHAIN LOGISTICS</text>
+
+      <circle cx="140" cy="75" r="28" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5"/>
+      <text x="140" y="82" text-anchor="middle" fill="#06B6D4" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">&#128666;</text>
+      <text x="140" y="122" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="600">IoT Telemetry &amp; Handshake</text>
+
+      <text x="14" y="148" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Refrigerated transport (2°C - 8°C)</text>
+      <text x="14" y="166" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; IoT sensors log temp, humidity, GPS</text>
+      <text x="14" y="184" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Handshake scans between hubs</text>
+      <text x="14" y="202" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Smart contract validates custody transfer</text>
+      
+      <rect x="14" y="225" width="252" height="105" rx="6" fill="#0F172A" stroke="#06B6D4" stroke-width="1"/>
+      <text x="22" y="245" fill="#22D3EE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">SMART ORACLE CHECK:</text>
+      <text x="22" y="263" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; If Temp &gt; 8°C for &gt; 30 mins:</text>
+      <text x="22" y="279" fill="#FCA5A5" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">  Contract auto-flags batch: SPOILED</text>
+      <text x="22" y="295" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Multi-sig custody handoff signed</text>
+      <text x="22" y="315" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#10003; Prevents temperature fraud / spoilage</text>
+    </g>
+
+    <!-- Arrow 2->3 -->
+    <path d="M 595 175 L 615 175" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Stage 3: Hospital & Pharmacy -->
+    <g transform="translate(620, 0)" filter="url(#shadow5)">
+      <rect width="280" height="350" rx="8" fill="#1E293B" fill-opacity="0.7" stroke="#10B981" stroke-width="1.2"/>
+      <rect x="0" y="0" width="280" height="34" rx="8" fill="#047857"/>
+      <text x="140" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">3. PHARMACY &amp; HOSPITALS</text>
+
+      <circle cx="140" cy="75" r="28" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+      <text x="140" y="82" text-anchor="middle" fill="#10B981" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">&#127973;</text>
+      <text x="140" y="122" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="600">Verification &amp; Dispensing</text>
+
+      <text x="14" y="148" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Pharmacist scans package via App</text>
+      <text x="14" y="166" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Cross-references government registry</text>
+      <text x="14" y="184" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Verifies cold chain integrity history</text>
+      <text x="14" y="202" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Dual channels: Physical &amp; Online rx</text>
+      
+      <rect x="14" y="225" width="252" height="105" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+      <text x="22" y="245" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DISPENSING AUDIT:</text>
+      <text x="22" y="263" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; App checks: Valid manufacturer?</text>
+      <text x="22" y="279" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Recall alert active? Expiry passed?</text>
+      <text x="22" y="295" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Updates status to "DISPENSED"</text>
+      <text x="22" y="315" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#10003; Halts unauthorized gray-market resale</text>
+    </g>
+
+    <!-- Arrow 3->4 -->
+    <path d="M 905 175 L 925 175" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Stage 4: End Patient Consumer -->
+    <g transform="translate(930, 0)" filter="url(#shadow5)">
+      <rect width="280" height="350" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5"/>
+      <rect x="0" y="0" width="280" height="34" rx="8" fill="#B45309"/>
+      <text x="140" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">4. PATIENT / END CONSUMER</text>
+
+      <circle cx="140" cy="75" r="28" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="140" y="82" text-anchor="middle" fill="#F59E0B" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">&#128100;</text>
+      <text x="140" y="122" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="600">Consumer Authentication</text>
+
+      <text x="14" y="148" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Patient scans QR code using phone</text>
+      <text x="14" y="166" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Zero specialized equipment needed</text>
+      <text x="14" y="184" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Instant cryptographic validation</text>
+      <text x="14" y="202" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Access clinical usage instructions</text>
+      
+      <rect x="14" y="225" width="252" height="105" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="22" y="245" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">MOBILE APP VERIFICATION:</text>
+      <text x="22" y="263" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="700">&#10003; 100% GENUINE CERTIFIED</text>
+      <text x="22" y="281" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Manufacturer: Pfizer BioLabs</text>
+      <text x="22" y="297" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">&#8226; Cold Chain: PASSED (Avg 4.2°C)</text>
+      <text x="22" y="315" fill="#93C5FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">&#9733; Complete peace of mind for patient</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM PANEL: ARCHITECTURE & VALUE-ADD COMPARISON -->
+  <g transform="translate(35, 470)">
+    <rect width="1210" height="340" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="30" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700">SYSTEM ARCHITECTURE &amp; KEY STAKEHOLDER BENEFITS</text>
+
+    <!-- Left Box: The Shared Consortium Ledger -->
+    <g transform="translate(25, 48)">
+      <rect width="570" height="268" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+      <rect x="0" y="0" width="570" height="28" rx="8" fill="#065F46"/>
+      <text x="20" y="19" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">CONSORTIUM BLOCKCHAIN NETWORK (HYPERLEDGER FABRIC / QUORUM)</text>
+      
+      <text x="18" y="52" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">Immutable Ledger State &amp; Private Channels:</text>
+      <text x="18" y="72" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; <tspan fill="#38BDF8" font-weight="600">Regulators (FDA, EMA, CDSCO):</tspan> Read-only audit node; instant batch compliance oversight.</text>
+      <text x="18" y="92" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; <tspan fill="#38BDF8" font-weight="600">Smart Contract Policies:</tspan> Auto-enforce Drug Supply Chain Security Act (DSCSA) laws.</text>
+      <text x="18" y="112" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; <tspan fill="#38BDF8" font-weight="600">Confidential Channels:</tspan> Commercial pricing &amp; volume hidden between competing suppliers.</text>
+      <text x="18" y="132" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5">&#8226; <tspan fill="#38BDF8" font-weight="600">Off-Chain IPFS Hybrid Storage:</tspan> Lab assay certificates, chemical purity HPLC charts.</text>
+
+      <rect x="18" y="152" width="534" height="98" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="28" y="174" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">THE COUNTERFEIT PROBLEM SOLVED:</text>
+      <text x="28" y="194" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">Traditional paper manifests are easily forged or cloned. With blockchain serialization,</text>
+      <text x="28" y="210" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">if a counterfeiter copies a QR barcode, the first scan succeeds but subsequent</text>
+      <text x="28" y="228" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">scans immediately flag a "DUPLICATE CLONE DETECTED" fraud alarm!</text>
+    </g>
+
+    <!-- Right Box: Key Quantitative Benefits -->
+    <g transform="translate(615, 48)">
+      <rect width="570" height="268" rx="8" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="570" height="28" rx="8" fill="#1E3A8A"/>
+      <text x="20" y="19" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700">BUSINESS IMPACT &amp; QUANTITATIVE BENEFITS</text>
+
+      <g transform="translate(18, 42)">
+        <rect x="0" y="0" width="258" height="98" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="22" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">Counterfeit Mitigation</text>
+        <text x="14" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Eliminates $200B+ annual fake</text>
+        <text x="14" y="58" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  pharmaceuticals black market.</text>
+        <text x="14" y="78" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="600">&#9733; Saves &gt; 1,000,000 lives yearly</text>
+
+        <rect x="276" y="0" width="258" height="98" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+        <text x="290" y="22" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">Instant Recall Precision</text>
+        <text x="290" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Targeted batch recalls in seconds</text>
+        <text x="290" y="58" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  instead of 4 to 8 weeks.</text>
+        <text x="290" y="78" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="600">&#9733; Reduces recall costs by 80%</text>
+
+        <rect x="0" y="112" width="258" height="98" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="134" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">Cold Chain Accountability</text>
+        <text x="14" y="154" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Precise liability attribution</text>
+        <text x="14" y="170" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  between carrier &amp; warehouse.</text>
+        <text x="14" y="190" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="600">&#9733; 35% less biological drug waste</text>
+
+        <rect x="276" y="112" width="258" height="98" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+        <text x="290" y="134" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">Regulatory Automation</text>
+        <text x="290" y="154" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Real-time audit logs ready for FDA,</text>
+        <text x="290" y="170" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">  WHO &amp; EU FMD mandates.</text>
+        <text x="290" y="190" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="600">&#9733; Zero manual paper filing audits</text>
+      </g>
+    </g>
+  </g>
+</svg>

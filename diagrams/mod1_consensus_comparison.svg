@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="powGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="posGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="dposGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bgGrad5)"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" letter-spacing="1">BLOCKCHAIN CONSENSUS TAXONOMY: PoW vs. PoS vs. DPoS</text>
+  <text x="600" y="62" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Comparative architecture of major distributed consensus algorithms: Resource requirements, election mechanics, and security trade-offs</text>
+
+  <!-- COLUMN 1: Proof of Work (PoW) -->
+  <g transform="translate(30, 85)">
+    <rect width="360" height="475" rx="14" fill="url(#powGrad)" stroke="#f97316" stroke-width="1.5"/>
+    <rect width="360" height="38" rx="14" fill="#c2410c"/>
+    <text x="180" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">PROOF OF WORK (PoW)</text>
+
+    <!-- Badge -->
+    <rect x="20" y="50" width="320" height="30" rx="6" fill="#431407" stroke="#ea580c"/>
+    <text x="180" y="69" text-anchor="middle" fill="#fdba74" font-family="sans-serif" font-size="10" font-weight="bold">Core Metric: Hardware Hashrate &amp; Electricity</text>
+
+    <!-- Diagram / Graphic -->
+    <rect x="20" y="90" width="320" height="100" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="180" y="112" text-anchor="middle" fill="#f97316" font-family="sans-serif" font-size="11" font-weight="bold">Hashcash Puzzle Competition</text>
+    <text x="180" y="132" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="9">SHA256(SHA256(Header + Nonce)) &lt; Target</text>
+    <text x="180" y="152" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Miners brute-force billions of nonces/sec</text>
+    <text x="180" y="172" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-size="9" font-weight="bold">First to solve wins block creation right!</text>
+
+    <!-- Details -->
+    <text x="25" y="212" fill="#fed7aa" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Block Creator: <tspan fill="#e2e8f0" font-weight="normal">Miner</tspan></text>
+    <text x="25" y="234" fill="#fed7aa" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Incentive: <tspan fill="#e2e8f0" font-weight="normal">Block Subsidy + Transaction Fees</tspan></text>
+    <text x="25" y="256" fill="#fed7aa" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Security Vulnerability: <tspan fill="#e2e8f0" font-weight="normal">51% Hashrate Dominance</tspan></text>
+    <text x="25" y="278" fill="#fed7aa" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Energy Footprint: <tspan fill="#f87171" font-weight="normal">Extremely High (Gigawatt scale)</tspan></text>
+    <text x="25" y="300" fill="#fed7aa" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Throughput: <tspan fill="#e2e8f0" font-weight="normal">Low (~7 TPS in Bitcoin, 10 min block)</tspan></text>
+    <text x="25" y="322" fill="#fed7aa" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Finality: <tspan fill="#e2e8f0" font-weight="normal">Probabilistic (6 blocks ~ 60 mins)</tspan></text>
+
+    <!-- Pros & Cons Box -->
+    <rect x="20" y="340" width="320" height="115" rx="8" fill="#2c1409" stroke="#f97316" stroke-width="1"/>
+    <text x="30" y="360" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold">&#10004; PROS:</text>
+    <text x="40" y="375" fill="#e2e8f0" font-family="sans-serif" font-size="9">Battle-tested security (15+ yrs), complete permissionless access, objective historical verification.</text>
+    <text x="30" y="400" fill="#f87171" font-family="sans-serif" font-size="10" font-weight="bold">&#10008; CONS:</text>
+    <text x="40" y="415" fill="#e2e8f0" font-family="sans-serif" font-size="9">Immense energy waste, hardware centralization (ASIC manufacturing monopolies), slow confirmation times.</text>
+  </g>
+
+  <!-- COLUMN 2: Proof of Stake (PoS) -->
+  <g transform="translate(420, 85)">
+    <rect width="360" height="475" rx="14" fill="url(#posGrad)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="360" height="38" rx="14" fill="#047857"/>
+    <text x="180" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">PROOF OF STAKE (PoS)</text>
+
+    <!-- Badge -->
+    <rect x="20" y="50" width="320" height="30" rx="6" fill="#062e24" stroke="#059669"/>
+    <text x="180" y="69" text-anchor="middle" fill="#6ee7b7" font-family="sans-serif" font-size="10" font-weight="bold">Core Metric: Locked Native Capital &amp; Coin-Age</text>
+
+    <!-- Diagram / Graphic -->
+    <rect x="20" y="90" width="320" height="100" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="180" y="112" text-anchor="middle" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="bold">Validator Selection Algorithm</text>
+    <text x="180" y="132" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="9">Selection = f(Stake Size, Coin-Age, VRF Seed)</text>
+    <text x="180" y="152" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Coin Age = Coins Staked &#215; Days Held (resets to 0)</text>
+    <text x="180" y="172" text-anchor="middle" fill="#ef4444" font-family="sans-serif" font-size="9" font-weight="bold">Slashing: Fraudulent blocks burn validator's deposit!</text>
+
+    <!-- Details -->
+    <text x="25" y="212" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Block Creator: <tspan fill="#e2e8f0" font-weight="normal">Validator / Forger</tspan></text>
+    <text x="25" y="234" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Incentive: <tspan fill="#e2e8f0" font-weight="normal">Transaction Fees + Annual Staking Yield</tspan></text>
+    <text x="25" y="256" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Security Vulnerability: <tspan fill="#e2e8f0" font-weight="normal">51% Capital / Nothing-at-Stake</tspan></text>
+    <text x="25" y="278" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Energy Footprint: <tspan fill="#4ade80" font-weight="normal">99.95% Less Energy than PoW</tspan></text>
+    <text x="25" y="300" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Throughput: <tspan fill="#e2e8f0" font-weight="normal">Moderate-High (~15-100+ TPS)</tspan></text>
+    <text x="25" y="322" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Finality: <tspan fill="#e2e8f0" font-weight="normal">Deterministic via 2/3 Supermajority</tspan></text>
+
+    <!-- Pros & Cons Box -->
+    <rect x="20" y="340" width="320" height="115" rx="8" fill="#03251c" stroke="#10b981" stroke-width="1"/>
+    <text x="30" y="360" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold">&#10004; PROS:</text>
+    <text x="40" y="375" fill="#e2e8f0" font-family="sans-serif" font-size="9">Eco-friendly, fast settlement, economic penalties (slashing) make 51% attacks economically suicidal.</text>
+    <text x="30" y="400" fill="#f87171" font-family="sans-serif" font-size="10" font-weight="bold">&#10008; CONS:</text>
+    <text x="40" y="415" fill="#e2e8f0" font-family="sans-serif" font-size="9">Oligopoly risk ("rich get richer"), initial coin distribution centralization, complex slashing mechanics.</text>
+  </g>
+
+  <!-- COLUMN 3: Delegated Proof of Stake (DPoS) -->
+  <g transform="translate(810, 85)">
+    <rect width="360" height="475" rx="14" fill="url(#dposGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="360" height="38" rx="14" fill="#0284c7"/>
+    <text x="180" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">DELEGATED PROOF OF STAKE (DPoS)</text>
+
+    <!-- Badge -->
+    <rect x="20" y="50" width="320" height="30" rx="6" fill="#082f49" stroke="#0284c7"/>
+    <text x="180" y="69" text-anchor="middle" fill="#7dd3fc" font-family="sans-serif" font-size="10" font-weight="bold">Core Metric: Democratic Votes &amp; Elected Delegates</text>
+
+    <!-- Diagram / Graphic -->
+    <rect x="20" y="90" width="320" height="100" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="180" y="112" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold">Representative Digital Democracy</text>
+    <text x="180" y="132" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="9">Token holders vote for 21 - 101 Witnesses</text>
+    <text x="180" y="152" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Witnesses take turns in round-robin block minting</text>
+    <text x="180" y="172" text-anchor="middle" fill="#fde047" font-family="sans-serif" font-size="9" font-weight="bold">Standby witness instantly replaces misbehaving node!</text>
+
+    <!-- Details -->
+    <text x="25" y="212" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Block Creator: <tspan fill="#e2e8f0" font-weight="normal">Elected Witness / Delegate</tspan></text>
+    <text x="25" y="234" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Incentive: <tspan fill="#e2e8f0" font-weight="normal">Shared Block Rewards with Voters</tspan></text>
+    <text x="25" y="256" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Security Vulnerability: <tspan fill="#e2e8f0" font-weight="normal">Cartel Collusion / Voter Bribery</tspan></text>
+    <text x="25" y="278" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Energy Footprint: <tspan fill="#4ade80" font-weight="normal">Negligible (Standard data center nodes)</tspan></text>
+    <text x="25" y="300" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Throughput: <tspan fill="#34d399" font-weight="normal">Massive (2,000 - 10,000+ TPS)</tspan></text>
+    <text x="25" y="322" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="bold">&#8226; Finality: <tspan fill="#e2e8f0" font-weight="normal">Sub-second / 1-2 seconds</tspan></text>
+
+    <!-- Pros & Cons Box -->
+    <rect x="20" y="340" width="320" height="115" rx="8" fill="#082f49" stroke="#0284c7" stroke-width="1"/>
+    <text x="30" y="360" fill="#4ade80" font-family="sans-serif" font-size="10" font-weight="bold">&#10004; PROS:</text>
+    <text x="40" y="375" fill="#e2e8f0" font-family="sans-serif" font-size="9">Extreme scalability, zero fee model possible, real-time voting governance, immediate replacement of offline nodes.</text>
+    <text x="30" y="400" fill="#f87171" font-family="sans-serif" font-size="10" font-weight="bold">&#10008; CONS:</text>
+    <text x="40" y="415" fill="#e2e8f0" font-family="sans-serif" font-size="9">Semi-centralized (only 21 active witnesses), low voter turnout, vulnerability to delegate bribery cartels.</text>
+  </g>
+
+  <!-- BOTTOM SUMMARY TABLE -->
+  <g transform="translate(30, 580)">
+    <rect width="1140" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 1130 0 Q 1140 0 1140 10 L 1140 30 L 0 30 Z" fill="#1e293b"/>
+    <text x="20" y="20" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold">PARAMETER</text>
+    <text x="200" y="20" fill="#f97316" font-family="sans-serif" font-size="11" font-weight="bold">PROOF OF WORK (PoW)</text>
+    <text x="500" y="20" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="bold">PROOF OF STAKE (PoS)</text>
+    <text x="820" y="20" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold">DELEGATED PROOF OF STAKE (DPoS)</text>
+    <line x1="0" y1="30" x2="1140" y2="30" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="52" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Block Time</text>
+    <text x="200" y="52" fill="#e2e8f0" font-family="sans-serif" font-size="11">10 Minutes (Bitcoin)</text>
+    <text x="500" y="52" fill="#e2e8f0" font-family="sans-serif" font-size="11">12 Seconds (Ethereum 2.0)</text>
+    <text x="820" y="52" fill="#e2e8f0" font-family="sans-serif" font-size="11">0.5 - 3 Seconds (EOS, Tron)</text>
+    <line x1="0" y1="60" x2="1140" y2="60" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="20" y="80" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Throughput (TPS)</text>
+    <text x="200" y="80" fill="#e2e8f0" font-family="sans-serif" font-size="11">~7 transactions / sec</text>
+    <text x="500" y="80" fill="#e2e8f0" font-family="sans-serif" font-size="11">~30 - 100 transactions / sec</text>
+    <text x="820" y="80" fill="#e2e8f0" font-family="sans-serif" font-size="11">3,000 - 10,000+ transactions / sec</text>
+    <line x1="0" y1="88" x2="1140" y2="88" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="20" y="108" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Active Validators</text>
+    <text x="200" y="108" fill="#e2e8f0" font-family="sans-serif" font-size="11">Thousands of anonymous miners</text>
+    <text x="500" y="108" fill="#e2e8f0" font-family="sans-serif" font-size="11">Hundreds of thousands of validators</text>
+    <text x="820" y="108" fill="#e2e8f0" font-family="sans-serif" font-size="11">Fixed 21 to 101 elected witnesses</text>
+    <line x1="0" y1="116" x2="1140" y2="116" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="20" y="136" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="bold">Prominent Implementations</text>
+    <text x="200" y="136" fill="#e2e8f0" font-family="sans-serif" font-size="11">Bitcoin, Litecoin, Dogecoin, Monero</text>
+    <text x="500" y="136" fill="#e2e8f0" font-family="sans-serif" font-size="11">Ethereum, Cardano, Polkadot, Avalanche</text>
+    <text x="820" y="136" fill="#e2e8f0" font-family="sans-serif" font-size="11">EOS, TRON, BitShares, Steem, Lisk</text>
+  </g>
+</svg>

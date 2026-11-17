@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="100%" height="100%" style="background-color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="30" y="20" width="1090" height="65" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#glow)"/>
+  <text x="575" y="48" fill="#f8fafc" font-size="20" font-weight="bold" text-anchor="middle">Bitcoin Address Generation Pipeline (SECP256k1 to Base58Check)</text>
+  <text x="575" y="72" fill="#94a3b8" font-size="13" text-anchor="middle">Mathematical derivation from 256-bit Private Key to Legacy (P2PKH) Address format</text>
+
+  <!-- Stage 1: Private Key -->
+  <g transform="translate(50, 110)" filter="url(#glow)">
+    <rect width="280" height="110" rx="8" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="2"/>
+    <rect x="12" y="12" width="256" height="24" rx="4" fill="#ef4444" fill-opacity="0.2"/>
+    <text x="140" y="29" fill="#fca5a5" font-size="13" font-weight="bold" text-anchor="middle">1. PRIVATE KEY (k)</text>
+    <text x="20" y="58" fill="#f8fafc" font-size="12">&#8226; 256-bit secure random integer</text>
+    <text x="20" y="76" fill="#94a3b8" font-size="11">&#8226; 32 bytes (1 to n-1 on curve)</text>
+    <text x="20" y="94" fill="#fca5a5" font-family="monospace" font-size="10">0x1c2a6835a69a344d... (32B)</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 330 165 L 400 165" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="365" y="155" fill="#38bdf8" font-size="10" text-anchor="middle">K = k &#215; G</text>
+
+  <!-- Stage 2: Public Key Generation (SECP256k1) -->
+  <g transform="translate(410, 100)" filter="url(#glow)">
+    <rect width="360" height="135" rx="8" fill="url(#cardGrad)" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="12" y="10" width="336" height="24" rx="4" fill="#3b82f6" fill-opacity="0.2"/>
+    <text x="180" y="27" fill="#93c5fd" font-size="13" font-weight="bold" text-anchor="middle">2. ELLIPTIC CURVE POINT P(x, y)</text>
+    <text x="15" y="52" fill="#94a3b8" font-size="11">SECP256k1: y&#178; mod p = (x&#179; + 7) mod p</text>
+    
+    <!-- Uncompressed Box -->
+    <rect x="15" y="62" width="330" height="30" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="81" fill="#cbd5e1" font-size="11"><tspan fill="#f59e0b" font-weight="bold">Uncompressed (520b/65B):</tspan> 04 || X (32B) || Y (32B)</text>
+    
+    <!-- Compressed Box -->
+    <rect x="15" y="96" width="330" height="30" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="115" fill="#cbd5e1" font-size="11"><tspan fill="#10b981" font-weight="bold">Compressed (258b/33B):</tspan> 02/03 || X (32B) [even/odd y]</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 770 165 L 830 165" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: Two Cryptographic Hashes (HASH160) -->
+  <g transform="translate(840, 95)" filter="url(#glow)">
+    <rect width="260" height="150" rx="8" fill="url(#cardGrad)" stroke="#8b5cf6" stroke-width="2"/>
+    <rect x="12" y="10" width="236" height="24" rx="4" fill="#8b5cf6" fill-opacity="0.2"/>
+    <text x="130" y="27" fill="#c4b5fd" font-size="13" font-weight="bold" text-anchor="middle">3. HASH160 PIPELINE</text>
+    
+    <!-- SHA-256 -->
+    <rect x="15" y="42" width="230" height="32" rx="4" fill="#1e293b" stroke="#6d28d9" stroke-width="1"/>
+    <text x="25" y="62" fill="#e2e8f0" font-size="11">1. SHA-256(PubKey) &#8594; 256 bits</text>
+    
+    <!-- RIPEMD-160 -->
+    <rect x="15" y="80" width="230" height="32" rx="4" fill="#1e293b" stroke="#6d28d9" stroke-width="1"/>
+    <text x="25" y="100" fill="#e2e8f0" font-size="11">2. RIPEMD160(SHA256) &#8594; 160 bits</text>
+    
+    <text x="130" y="132" fill="#a78bfa" font-size="11" font-weight="bold" text-anchor="middle">= 20-byte Public Key Hash</text>
+  </g>
+
+  <!-- Arrow 3 down to Stage 4 -->
+  <path d="M 970 245 L 970 285 L 575 285 L 575 320" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="770" y="280" fill="#38bdf8" font-size="11" text-anchor="middle">Payload: 20 Bytes (160 bits)</text>
+
+  <!-- Stage 4: Version Prefix & Assembly -->
+  <g transform="translate(200, 325)" filter="url(#glow)">
+    <rect width="750" height="120" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="2"/>
+    <rect x="15" y="10" width="720" height="24" rx="4" fill="#10b981" fill-opacity="0.2"/>
+    <text x="375" y="27" fill="#6ee7b7" font-size="13" font-weight="bold" text-anchor="middle">4. ADD MAINNET VERSION PREFIX (0x00)</text>
+    
+    <!-- Byte components breakdown -->
+    <g transform="translate(50, 48)">
+      <!-- Version Byte -->
+      <rect x="0" y="0" width="120" height="45" rx="4" fill="#047857" stroke="#10b981" stroke-width="1.5"/>
+      <text x="60" y="20" fill="#ecfdf5" font-size="11" font-weight="bold" text-anchor="middle">Version Byte</text>
+      <text x="60" y="37" fill="#a7f3d0" font-family="monospace" font-size="11" text-anchor="middle">0x00 (1 Byte)</text>
+
+      <text x="135" y="28" fill="#94a3b8" font-size="18" font-weight="bold" text-anchor="middle">+</text>
+
+      <!-- HASH160 -->
+      <rect x="150" y="0" width="360" height="45" rx="4" fill="#4c1d95" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="330" y="20" fill="#ede9fe" font-size="11" font-weight="bold" text-anchor="middle">RIPEMD-160(SHA-256(PubKey))</text>
+      <text x="330" y="37" fill="#c4b5fd" font-family="monospace" font-size="11" text-anchor="middle">20 Bytes (160-bit Key Hash)</text>
+
+      <text x="525" y="28" fill="#94a3b8" font-size="14" text-anchor="middle">=</text>
+
+      <!-- 21-byte Payload -->
+      <rect x="540" y="0" width="110" height="45" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="595" y="20" fill="#e0f2fe" font-size="11" font-weight="bold" text-anchor="middle">Payload</text>
+      <text x="595" y="37" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">21 Bytes</text>
+    </g>
+    <text x="375" y="110" fill="#94a3b8" font-size="11" text-anchor="middle">Version 0x00 designates Bitcoin Mainnet P2PKH (yields leading character &apos;1&apos; in Base58)</text>
+  </g>
+
+  <!-- Arrow 4 to Checksum Calculation -->
+  <path d="M 575 445 L 575 475" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 5: Double SHA-256 Checksum Calculation -->
+  <g transform="translate(150, 480)" filter="url(#glow)">
+    <rect width="850" height="95" rx="8" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="15" y="8" width="820" height="22" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="425" y="24" fill="#fde68a" font-size="12" font-weight="bold" text-anchor="middle">5. CHECKSUM CALCULATION (DOUBLE SHA-256)</text>
+    
+    <text x="30" y="50" fill="#f8fafc" font-size="12">Hash Step: <tspan fill="#f59e0b" font-family="monospace">hash_round2 = SHA256( SHA256( 0x00 || RIPEMD160 ) )</tspan></text>
+    <text x="30" y="72" fill="#f8fafc" font-size="12">Checksum Extraction: <tspan fill="#10b981" font-family="monospace">checksum = hash_round2[0:4]</tspan> (First 4 Bytes of 32-byte digest)</text>
+    <text x="30" y="90" fill="#94a3b8" font-size="11">Checksum guarantees 99.99999% detection of accidental typo / miscopied characters.</text>
+  </g>
+
+  <!-- Arrow to Final Assembly -->
+  <path d="M 575 575 L 575 605" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 6: Base58Check Encoding -->
+  <g transform="translate(100, 610)" filter="url(#glow)">
+    <rect width="950" height="95" rx="8" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="2"/>
+    
+    <!-- 25-byte concatenation box -->
+    <g transform="translate(20, 15)">
+      <rect x="0" y="0" width="80" height="35" fill="#047857" rx="3"/>
+      <text x="40" y="22" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">0x00 (1B)</text>
+      
+      <rect x="85" y="0" width="280" height="35" fill="#4c1d95" rx="3"/>
+      <text x="225" y="22" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">RIPEMD-160 Public Key Hash (20 Bytes)</text>
+      
+      <rect x="370" y="0" width="120" height="35" fill="#d97706" rx="3"/>
+      <text x="430" y="22" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">Checksum (4B)</text>
+
+      <path d="M 500 17 L 535 17" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- Base58 Box -->
+      <rect x="545" y="-5" width="380" height="45" rx="4" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="735" y="15" fill="#67e8f9" font-size="11" font-weight="bold" text-anchor="middle">BASE58CHECK ENCODING (Base58(25 Bytes))</text>
+      <text x="735" y="32" fill="#22d3ee" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">1C8eYPC8roxRPCmpGw7V1cMD2eJCFB3WWD</text>
+    </g>
+
+    <text x="475" y="78" fill="#94a3b8" font-size="11" text-anchor="middle">Alphabet excludes easily confused characters: 0 (zero), O (capital o), I (capital i), and l (lowercase L).</text>
+  </g>
+
+</svg>

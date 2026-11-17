@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 780" width="100%" height="100%" style="background-color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arr4-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arr4-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arr4-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a78bfa" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="30" y="20" width="1090" height="65" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#glow4)"/>
+  <text x="575" y="48" fill="#f8fafc" font-size="20" font-weight="bold" text-anchor="middle">Bitcoin Network: Bootstrap Node Discovery &amp; Handshake Protocol</text>
+  <text x="575" y="72" fill="#94a3b8" font-size="13" text-anchor="middle">How a new node discovers peers via DNS Seeds, performs the version/verack handshake, and requests peer addresses</text>
+
+  <!-- Left: Phase 1 DNS Seed Discovery -->
+  <g transform="translate(40, 105)" filter="url(#glow4)">
+    <rect width="320" height="640" rx="10" fill="url(#cardGrad4)" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="15" y="12" width="290" height="28" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="160" y="31" fill="#fde68a" font-size="12" font-weight="bold" text-anchor="middle">PHASE 1: NODE DISCOVERY</text>
+
+    <!-- Step 1.1 -->
+    <rect x="15" y="55" width="290" height="110" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="75" fill="#38bdf8" font-size="11" font-weight="bold">1. Bootstrap Node Initialization</text>
+    <text x="25" y="95" fill="#cbd5e1" font-size="10">&#8226; Software launches with zero peers</text>
+    <text x="25" y="113" fill="#cbd5e1" font-size="10">&#8226; Local chain height: 0 (Genesis)</text>
+    <text x="25" y="131" fill="#cbd5e1" font-size="10">&#8226; Reads hardcoded DNS Seed list</text>
+    <text x="25" y="149" fill="#94a3b8" font-family="monospace" font-size="9">seed.bitcoin.sipa.be, etc.</text>
+
+    <!-- Arrow down -->
+    <path d="M 160 170 L 160 195" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arr4-blue)"/>
+
+    <!-- Step 1.2 -->
+    <rect x="15" y="200" width="290" height="120" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="220" fill="#38bdf8" font-size="11" font-weight="bold">2. DNS Query Lookup</text>
+    <text x="25" y="240" fill="#cbd5e1" font-size="10">&#8226; Sends standard DNS query to seeds</text>
+    <text x="25" y="258" fill="#cbd5e1" font-size="10">&#8226; DNS seeds return dynamic list of</text>
+    <text x="33" y="274" fill="#10b981" font-size="10" font-weight="bold">active, stable Bitcoin full nodes</text>
+    <text x="25" y="295" fill="#94a3b8" font-family="monospace" font-size="9">Returns: [IP_B, IP_C, IP_D, ...]</text>
+
+    <!-- Arrow down -->
+    <path d="M 160 325 L 160 350" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arr4-blue)"/>
+
+    <!-- Step 1.3 -->
+    <rect x="15" y="355" width="290" height="120" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="375" fill="#38bdf8" font-size="11" font-weight="bold">3. Fallback Hardcoded IP Seeds</text>
+    <text x="25" y="395" fill="#cbd5e1" font-size="10">&#8226; If DNS lookup fails (firewall/offline):</text>
+    <text x="25" y="413" fill="#cbd5e1" font-size="10">&#8226; Bitcoin Core falls back to hardcoded</text>
+    <text x="33" y="431" fill="#cbd5e1" font-size="10">seed node IP addresses in source code</text>
+    <text x="25" y="452" fill="#94a3b8" font-size="9">&#8226; User can manually pass <tspan fill="#f59e0b" font-family="monospace">-addnode</tspan></text>
+
+    <!-- Step 1.4 -->
+    <rect x="15" y="490" width="290" height="130" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="510" fill="#38bdf8" font-size="11" font-weight="bold">4. Initiates TCP Connection</text>
+    <text x="25" y="530" fill="#cbd5e1" font-size="10">&#8226; Picks IP of Node B from seed list</text>
+    <text x="25" y="548" fill="#cbd5e1" font-size="10">&#8226; Establishes TCP 3-way handshake</text>
+    <text x="33" y="566" fill="#a78bfa" font-size="10" font-weight="bold">Standard Bitcoin Port: 8333</text>
+    <text x="25" y="588" fill="#94a3b8" font-size="10">&#8226; Ready for P2P Handshake</text>
+  </g>
+
+  <!-- Right: Phase 2 & 3 Peer Handshake & Address Exchange -->
+  <g transform="translate(390, 105)" filter="url(#glow4)">
+    <rect width="720" height="640" rx="10" fill="url(#cardGrad4)" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="12" width="690" height="28" rx="4" fill="#0284c7" fill-opacity="0.2"/>
+    <text x="360" y="31" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">PHASE 2 &amp; 3: P2P HANDSHAKE &amp; PEER ADDRESS DISCOVERY</text>
+
+    <!-- Node Columns -->
+    <g transform="translate(50, 55)">
+      <!-- Node A Box -->
+      <rect x="30" y="0" width="160" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="110" y="24" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Node A (Bootstrap)</text>
+      <text x="110" y="40" fill="#94a3b8" font-size="9" text-anchor="middle">New Joining Node</text>
+
+      <!-- Node B Box -->
+      <rect x="430" y="0" width="160" height="50" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+      <text x="510" y="24" fill="#10b981" font-size="12" font-weight="bold" text-anchor="middle">Node B (Existing)</text>
+      <text x="510" y="40" fill="#94a3b8" font-size="9" text-anchor="middle">Mainnet Full Node</text>
+
+      <!-- Lifelines -->
+      <line x1="110" y1="50" x2="110" y2="550" stroke="#334155" stroke-width="2" stroke-dasharray="4 4"/>
+      <line x1="510" y1="50" x2="510" y2="550" stroke="#334155" stroke-width="2" stroke-dasharray="4 4"/>
+
+      <!-- Message 1: version (A -> B) -->
+      <path d="M 110 90 L 510 90" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arr4-blue)"/>
+      <rect x="160" y="65" width="300" height="50" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+      <text x="310" y="82" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">1. &apos;version&apos; message</text>
+      <text x="310" y="98" fill="#94a3b8" font-size="9" text-anchor="middle">proto_ver: 70016, services: NODE_NETWORK, IP_B, IP_A,</text>
+      <text x="310" y="110" fill="#94a3b8" font-size="9" text-anchor="middle">subver: &quot;/Satoshi:25.0.0/&quot;, start_height: 0</text>
+
+      <!-- Message 2: verack (B -> A) -->
+      <path d="M 510 160 L 110 160" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arr4-green)"/>
+      <rect x="220" y="142" width="180" height="35" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+      <text x="310" y="159" fill="#10b981" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">2. &apos;verack&apos; message</text>
+      <text x="310" y="172" fill="#94a3b8" font-size="9" text-anchor="middle">(Version Acknowledged)</text>
+
+      <!-- Message 3: version (B -> A) -->
+      <path d="M 510 220 L 110 220" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arr4-green)"/>
+      <rect x="160" y="195" width="300" height="50" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+      <text x="310" y="212" fill="#10b981" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">3. &apos;version&apos; message</text>
+      <text x="310" y="228" fill="#94a3b8" font-size="9" text-anchor="middle">proto_ver: 70016, services: NODE_NETWORK | WITNESS,</text>
+      <text x="310" y="240" fill="#94a3b8" font-size="9" text-anchor="middle">subver: &quot;/Satoshi:26.0.0/&quot;, start_height: 840,000</text>
+
+      <!-- Message 4: verack (A -> B) -->
+      <path d="M 110 290 L 510 290" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arr4-blue)"/>
+      <rect x="220" y="272" width="180" height="35" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+      <text x="310" y="289" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">4. &apos;verack&apos; message</text>
+      <text x="310" y="302" fill="#94a3b8" font-size="9" text-anchor="middle">(Connection Fully Established)</text>
+
+      <!-- Phase 3 Separator -->
+      <line x1="20" y1="330" x2="600" y2="330" stroke="#475569" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="310" y="345" fill="#fde68a" font-size="10" font-weight="bold" text-anchor="middle">PEER EXCHANGE: BUILDING LOCAL PEER DATABASE</text>
+
+      <!-- Message 5: getaddr (A -> B) -->
+      <path d="M 110 380 L 510 380" fill="none" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arr4-purple)"/>
+      <rect x="210" y="362" width="200" height="35" rx="4" fill="#0f172a" stroke="#a78bfa" stroke-width="1"/>
+      <text x="310" y="379" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">5. &apos;getaddr&apos; request</text>
+      <text x="310" y="392" fill="#94a3b8" font-size="9" text-anchor="middle">Requests list of known active peers</text>
+
+      <!-- Message 6: addr (B -> A) -->
+      <path d="M 510 440 L 110 440" fill="none" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arr4-purple)"/>
+      <rect x="180" y="420" width="260" height="40" rx="4" fill="#0f172a" stroke="#a78bfa" stroke-width="1"/>
+      <text x="310" y="437" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">6. &apos;addr&apos; response</text>
+      <text x="310" y="452" fill="#94a3b8" font-size="9" text-anchor="middle">Contains up to 1,000 peer IP addresses &amp; ports</text>
+
+      <!-- Step 7 Local peer storage -->
+      <rect x="40" y="480" width="540" height="55" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="310" y="502" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Node A populates local &apos;peers.dat&apos; database</text>
+      <text x="310" y="522" fill="#cbd5e1" font-size="10" text-anchor="middle">Connects to 8 outbound peers to establish mesh routing overlay.</text>
+    </g>
+  </g>
+
+</svg>

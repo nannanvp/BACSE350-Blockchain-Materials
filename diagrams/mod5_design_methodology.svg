@@ -1,0 +1,392 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 1020" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgDark2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="critGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1320" height="1020" rx="14" fill="url(#bgDark2)"/>
+  <rect x="2" y="2" width="1316" height="1016" rx="13" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="660" y="44" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="0.5">DESIGN METHODOLOGY FOR BLOCKCHAIN APPLICATIONS</text>
+  <text x="660" y="70" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13">Complete 10-Step Decision &amp; Implementation Framework with Detailed Instance Configuration</text>
+
+  <!-- TOP PIPELINE: 10 Steps Flow -->
+  <g transform="translate(30, 95)">
+    <rect width="1260" height="260" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="28" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="14.5" font-weight="700">END-TO-END METHODOLOGY PIPELINE (STEPS 1 TO 10)</text>
+
+    <!-- Row 1: Steps 1 to 5 -->
+    <!-- Step 1 -->
+    <g transform="translate(25, 42)">
+      <rect width="225" height="92" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 1: Identify Use Case</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Map hype to real problems</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Needs: multi-party trust,</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">  shared state, tamper-proofing</text>
+    </g>
+    <!-- Arrow 1->2 -->
+    <path d="M 252 88 L 268 88" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 2 -->
+    <g transform="translate(272, 42)">
+      <rect width="225" height="92" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 2: Design Workflow</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Feasibility &amp; trade-offs</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Centralized vs Distributed</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Avoid spec before validation</text>
+    </g>
+    <!-- Arrow 2->3 -->
+    <path d="M 499 88 L 515 88" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 3 -->
+    <g transform="translate(519, 42)">
+      <rect width="225" height="92" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 3: Select Consensus</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; PoW, PoS, DPoS (Public)</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; PoA, PBFT, Raft (Private)</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Latency vs Security vs Cost</text>
+    </g>
+    <!-- Arrow 3->4 -->
+    <path d="M 746 88 L 762 88" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 4 -->
+    <g transform="translate(766, 42)">
+      <rect width="225" height="92" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 4: Identify Platform</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Ethereum / Polygon (EVM)</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Hyperledger Fabric / Corda</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Quorum, BigchainDB, Stellar</text>
+    </g>
+    <!-- Arrow 4->5 -->
+    <path d="M 993 88 L 1009 88" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 5 -->
+    <g transform="translate(1013, 42)">
+      <rect width="222" height="92" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="222" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 5: Design Architecture</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Public vs Permissioned</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Cloud vs On-Premises</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Hybrid storage partitioning</text>
+    </g>
+
+    <!-- Row 2: Steps 6 to 10 (Wrapped Flow) -->
+    <!-- Step 6: Highlighted CRITICAL -->
+    <g transform="translate(25, 148)" filter="url(#shadow2)">
+      <rect width="225" height="96" rx="6" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="url(#critGrad)"/>
+      <text x="12" y="17" fill="#0F172A" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">&#9733; STEP 6: Design Instance</text>
+      <text x="10" y="42" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">&#8226; CRITICAL STEP: 10 Configs</text>
+      <text x="10" y="58" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Permissions, Assets, Atomic</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Block limits &amp; key schemas</text>
+      <text x="10" y="88" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="8.5">(See detailed grid below &#8595;)</text>
+    </g>
+    <!-- Arrow 6->7 -->
+    <path d="M 252 196 L 268 196" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 7 -->
+    <g transform="translate(272, 148)">
+      <rect width="225" height="96" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 7: Build Blockchain APIs</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Keygen, Issuance, Auth</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Ledger Read/Create CRUD</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Smart contract triggers</text>
+    </g>
+    <!-- Arrow 7->8 -->
+    <path d="M 499 196 L 515 196" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 8 -->
+    <g transform="translate(519, 148)">
+      <rect width="225" height="96" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 8: Design Front-End</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Web/Mobile User Interfaces</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; React, Vue, AngularJS, Node</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; JSON-RPC &amp; Web3 providers</text>
+    </g>
+    <!-- Arrow 8->9 -->
+    <path d="M 746 196 L 762 196" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 9 -->
+    <g transform="translate(766, 148)">
+      <rect width="225" height="96" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="225" height="24" rx="6" fill="#1D4ED8"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 9: Testing &amp; Security</text>
+      <text x="10" y="42" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Smart contract security audit</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Reentrancy &amp; fuzz testing</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Latency &amp; throughput metrics</text>
+    </g>
+    <!-- Arrow 9->10 -->
+    <path d="M 993 196 L 1009 196" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Step 10 -->
+    <g transform="translate(1013, 148)">
+      <rect width="222" height="96" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+      <rect x="0" y="0" width="222" height="24" rx="6" fill="#059669"/>
+      <text x="12" y="17" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">STEP 10: Deploy &amp; Maintain</text>
+      <text x="10" y="42" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Node cluster deployment</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; HSM key custody &amp; backup</text>
+      <text x="10" y="74" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Protocol hard fork upgrades</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM GRID: STEP 6 INSTANCE CONFIGURATION (10 PARAMETERS) -->
+  <g transform="translate(30, 375)">
+    <rect width="1260" height="615" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="25" y="30" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="800">&#9733; STEP 6 DEEP DIVE: 10 CORE PARAMETERS FOR BLOCKCHAIN INSTANCE CONFIGURATION</text>
+    <text x="25" y="48" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5">Configure carefully before network launch — immutable parameters are impossible or costly to reconfigure post-genesis.</text>
+
+    <!-- Grid: 2 rows of 5 cards -->
+    <!-- ROW 1 (Cards 1 to 5) -->
+    <!-- Card 1: Permissions -->
+    <g transform="translate(25, 65)">
+      <rect width="230" height="250" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#1E3A8A"/>
+      <circle cx="20" cy="15" r="10" fill="#3B82F6"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">1</text>
+      <text x="38" y="20" fill="#93C5FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Permissions</text>
+      
+      <text x="12" y="48" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Defines who can access the chain</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&amp; what actions they perform</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">(join, validate, submit, deploy).</text>
+
+      <text x="12" y="118" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Role-Based Access Control</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">(RBAC) &amp; X.509 PKI certificates.</text>
+
+      <text x="12" y="174" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">In pharma supply chain, only</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">licensed producers can mint drug</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">batches; buyers only read status.</text>
+    </g>
+
+    <!-- Card 2: Asset Issuance / Reissuance -->
+    <g transform="translate(270, 65)">
+      <rect width="230" height="250" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#065F46"/>
+      <circle cx="20" cy="15" r="10" fill="#10B981"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">2</text>
+      <text x="38" y="20" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Asset Issuance</text>
+      
+      <text x="12" y="48" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Controls who can create digital</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">assets and whether subsequent</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">units can be issued later.</text>
+
+      <text x="12" y="118" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">ERC-20/721 minting logic with</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">hard cap supply ceiling.</text>
+
+      <text x="12" y="174" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">University issues 1,000 degree</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">tokens. More tokens require</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Registrar admin multisig approval.</text>
+    </g>
+
+    <!-- Card 3: Atomic Exchanges -->
+    <g transform="translate(515, 65)">
+      <rect width="230" height="250" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#92400E"/>
+      <circle cx="20" cy="15" r="10" fill="#F59E0B"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">3</text>
+      <text x="38" y="20" fill="#FDE68A" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Atomic Swaps</text>
+      
+      <text x="12" y="48" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Ensures dual asset exchanges</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">complete atomically (all-or-</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">nothing) without counterparty risk.</text>
+
+      <text x="12" y="118" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Hashed Time-Lock Contracts</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">(HTLC) across disparate ledgers.</text>
+
+      <text x="12" y="174" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Alice swaps 2 Token A for 5</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Token B with Bob. If either fails,</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">both transactions auto-refund.</text>
+    </g>
+
+    <!-- Card 4: Key Management -->
+    <g transform="translate(760, 65)">
+      <rect width="230" height="250" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#5B21B6"/>
+      <circle cx="20" cy="15" r="10" fill="#8B5CF6"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">4</text>
+      <text x="38" y="20" fill="#DDD6FE" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Key Management</text>
+      
+      <text x="12" y="48" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Generation, storage, backup,</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">rotation, and revocation of</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">cryptographic private keys.</text>
+
+      <text x="12" y="118" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Hardware Security Modules (HSM)</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">FIPS 140-2 Level 3, Shamir secret.</text>
+
+      <text x="12" y="174" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">A commercial bank stores master</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">validator keys in HSM enclaves</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">with strict air-gapped backups.</text>
+    </g>
+
+    <!-- Card 5: Multi-Signature -->
+    <g transform="translate(1005, 65)">
+      <rect width="230" height="250" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#9D174D"/>
+      <circle cx="20" cy="15" r="10" fill="#EC4899"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">5</text>
+      <text x="38" y="20" fill="#FCE7F3" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Multi-Signature</text>
+      
+      <text x="12" y="48" fill="#F472B6" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Requires M-of-N threshold of</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">authorized signatures to approve</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">critical state transactions.</text>
+
+      <text x="12" y="118" fill="#F472B6" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">3-of-5 Gnosis Safe multisig</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">smart contract vault.</text>
+
+      <text x="12" y="174" fill="#F472B6" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Enterprise treasury wallet requires</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">signatures from CFO, CEO, &amp; CTO</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">before releasing escrow capital.</text>
+    </g>
+
+    <!-- ROW 2 (Cards 6 to 10) -->
+    <!-- Card 6: Block Parameters -->
+    <g transform="translate(25, 335)">
+      <rect width="230" height="255" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#155E75"/>
+      <circle cx="20" cy="15" r="10" fill="#06B6D4"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">6</text>
+      <text x="38" y="20" fill="#CFFAFE" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Block Parameters</text>
+      
+      <text x="12" y="48" fill="#22D3EE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Defines block size, block time,</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">gas/resource limits, and</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">consensus timeouts.</text>
+
+      <text x="12" y="118" fill="#22D3EE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Block size: 2 MB; Interval: 2s;</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Gas target: 30M gas/block.</text>
+
+      <text x="12" y="174" fill="#22D3EE" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Supply-chain consortium tunes</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">block time to 1 second to handle</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">10,000 barcode scans/second.</text>
+    </g>
+
+    <!-- Card 7: Limits -->
+    <g transform="translate(270, 335)">
+      <rect width="230" height="255" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#831843"/>
+      <circle cx="20" cy="15" r="10" fill="#F43F5E"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">7</text>
+      <text x="38" y="20" fill="#FFE4E6" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Limits &amp; Ceilings</text>
+      
+      <text x="12" y="48" fill="#FB7185" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Sets maximum bounds on tx size,</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">value transfers, contract byte-</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">code length &amp; rate limits.</text>
+
+      <text x="12" y="118" fill="#FB7185" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Max tx: ₹5,00,000; Spurious</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Dragon: 24,576 byte contract cap.</text>
+
+      <text x="12" y="174" fill="#FB7185" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Payment settlement engine</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">auto-rejects single tx &gt; ₹5L</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">to enforce AML compliance.</text>
+    </g>
+
+    <!-- Card 8: Network Protocols / Handshaking -->
+    <g transform="translate(515, 335)">
+      <rect width="230" height="255" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#1E3A8A"/>
+      <circle cx="20" cy="15" r="10" fill="#3B82F6"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">8</text>
+      <text x="38" y="20" fill="#93C5FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Protocols / Handshake</text>
+      
+      <text x="12" y="48" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Specifies how peer nodes verify</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">compatibility, establish secure</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">channels &amp; synchronize state.</text>
+
+      <text x="12" y="118" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Mutual TLS (mTLS), RLPx</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">handshake &amp; Genesis hash check.</text>
+
+      <text x="12" y="174" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Node verifies protocol version</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">and certificate CA before peering;</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">rejects unauthorized connections.</text>
+    </g>
+
+    <!-- Card 9: Key and Address Formats -->
+    <g transform="translate(760, 335)">
+      <rect width="230" height="255" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#047857"/>
+      <circle cx="20" cy="15" r="10" fill="#10B981"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">9</text>
+      <text x="38" y="20" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Key &amp; Address Format</text>
+      
+      <text x="12" y="48" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Defines curve encoding, address</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">derivation algorithms &amp; checksum</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">prefixes (Hex, Base58Check).</text>
+
+      <text x="12" y="118" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Ethereum: Keccak256 last 20B (0x)</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Bitcoin: RIPEMD160(SHA256(pub)).</text>
+
+      <text x="12" y="174" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Client UI validates checksum</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">prefix before sending funds to</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">prevent cross-chain fund loss.</text>
+    </g>
+
+    <!-- Card 10: Native Assets -->
+    <g transform="translate(1005, 335)">
+      <rect width="230" height="255" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="0" width="230" height="30" rx="8" fill="#7C2D12"/>
+      <circle cx="20" cy="15" r="10" fill="#EA580C"/>
+      <text x="20" y="19" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800">10</text>
+      <text x="38" y="20" fill="#FFEDD5" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Native Assets</text>
+      
+      <text x="12" y="48" fill="#FB923C" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">DEFINITION:</text>
+      <text x="12" y="64" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">The baseline layer-1 protocol</text>
+      <text x="12" y="78" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">asset used for execution fees,</text>
+      <text x="12" y="92" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">staking, &amp; anti-spam protection.</text>
+
+      <text x="12" y="118" fill="#FB923C" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">TECHNICAL EXAMPLE:</text>
+      <text x="12" y="134" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">ETH settles EVM gas computations;</text>
+      <text x="12" y="148" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">ERC-20 USDT is smart contract token.</text>
+
+      <text x="12" y="174" fill="#FB923C" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700">REAL-WORLD SCENARIO:</text>
+      <text x="12" y="190" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">Private consortium creates zero-cost</text>
+      <text x="12" y="204" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">native token or disables gas engine</text>
+      <text x="12" y="218" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">for enterprise throughput.</text>
+    </g>
+  </g>
+</svg>

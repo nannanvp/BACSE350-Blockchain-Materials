@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 880" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgDark6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="gHeader6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow6" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="880" rx="14" fill="url(#bgDark6)"/>
+  <rect x="2" y="2" width="1276" height="876" rx="13" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="640" y="44" text-anchor="middle" fill="#F8FAFC" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="0.5">HEALTHCARE BLOCKCHAIN: EHR, CLINICAL TRIALS &amp; BILLING</text>
+  <text x="640" y="70" text-anchor="middle" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13">Patient Consent Access Control, Clinical Trial Data Integrity &amp; Automated Insurance Adjudication</text>
+
+  <!-- 3 PILLARS LAYOUT -->
+  <g transform="translate(35, 95)">
+    <!-- Pillar 1: Patient-Centric EHR & Consent Management -->
+    <g transform="translate(0, 0)" filter="url(#shadow6)">
+      <rect width="385" height="745" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#3B82F6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="385" height="34" rx="10" fill="#1D4ED8"/>
+      <text x="192" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">1. EHR DATA &amp; PATIENT CONSENT</text>
+
+      <circle cx="192" cy="75" r="26" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="192" y="82" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="18">&#128100;</text>
+      <text x="192" y="118" text-anchor="middle" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Patient-Controlled Access Control</text>
+
+      <!-- Flow step 1 -->
+      <rect x="16" y="135" width="353" height="88" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="26" y="155" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">A. DATA GENERATION &amp; ENCRYPTION:</text>
+      <text x="26" y="173" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Doctors, MRI labs, IoT wearables generate records.</text>
+      <text x="26" y="191" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Payload encrypted with symmetric AES-256 key.</text>
+      <text x="26" y="209" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; Stored in Off-Chain Secure Data Lake / IPFS.</text>
+
+      <!-- Flow step 2 -->
+      <rect x="16" y="235" width="353" height="120" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1"/>
+      <text x="26" y="255" fill="#60A5FA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">B. SMART CONTRACT ACCESS PERMISSIONS:</text>
+      <text x="26" y="273" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Patient holds private key governing access.</text>
+      <text x="26" y="291" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Grants time-bounded decryption key share to:</text>
+      <text x="36" y="307" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">- Consulting Doctor / Specialist</text>
+      <text x="36" y="321" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">- Hospital Emergency Room</text>
+      <text x="26" y="341" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#10003; Patient can instantly REVOKE access on-chain.</text>
+
+      <!-- Flow step 3 -->
+      <rect x="16" y="367" width="353" height="110" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="26" y="387" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">C. ON-CHAIN IMMUTABLE AUDIT TRAIL:</text>
+      <text x="26" y="405" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Every record access logged with digital signature.</text>
+      <text x="26" y="423" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Prevents unauthorized health data selling.</text>
+      <text x="26" y="441" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Full compliance with HIPAA and GDPR.</text>
+      <text x="26" y="461" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#9733; No single central server for hackers to breach.</text>
+
+      <!-- Summary Box -->
+      <rect x="16" y="490" width="353" height="235" rx="6" fill="#0F172A" stroke="#059669" stroke-width="1.2"/>
+      <text x="26" y="512" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">TECHNICAL STACK &amp; PROPERTIES:</text>
+      <text x="26" y="534" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Public Key Infrastructure (ECDSA / Ed25519)</text>
+      <text x="26" y="552" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Proxy Re-Encryption (PRE) for doctor sharing</text>
+      <text x="26" y="570" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Zero-Knowledge Proofs for identity privacy</text>
+      <text x="26" y="588" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; BigchainDB CRAB Model: Append-only ledger</text>
+      <text x="26" y="606" fill="#FCA5A5" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; No DELETE: Stale assets marked as BURNED</text>
+      <text x="26" y="628" fill="#BAE6FD" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#9733; Solves healthcare interoperability silos</text>
+      <text x="26" y="646" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">  across independent hospital systems globally.</text>
+    </g>
+
+    <!-- Pillar 2: Clinical Trial Integrity -->
+    <g transform="translate(412, 0)" filter="url(#shadow6)">
+      <rect width="385" height="745" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#8B5CF6" stroke-width="1.2"/>
+      <rect x="0" y="0" width="385" height="34" rx="10" fill="#6D28D9"/>
+      <text x="192" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">2. CLINICAL TRIAL DATA INTEGRITY</text>
+
+      <circle cx="192" cy="75" r="26" fill="#0F172A" stroke="#A78BFA" stroke-width="1.5"/>
+      <text x="192" y="82" text-anchor="middle" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="18">&#128202;</text>
+      <text x="192" y="118" text-anchor="middle" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Preventing Research Misconduct</text>
+
+      <!-- Problem box -->
+      <rect x="16" y="135" width="353" height="88" rx="6" fill="#0F172A" stroke="#EF4444" stroke-width="1"/>
+      <text x="26" y="155" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">THE RESEARCH INTEGRITY CRISIS:</text>
+      <text x="26" y="173" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Over 50% of trials report misconduct or bias.</text>
+      <text x="26" y="191" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; P-hacking, endpoint switching, selective data</text>
+      <text x="26" y="209" fill="#FCA5A5" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">  reporting &amp; retroactive data fabrication.</text>
+
+      <!-- Solution box -->
+      <rect x="16" y="235" width="353" height="120" rx="6" fill="#0F172A" stroke="#8B5CF6" stroke-width="1"/>
+      <text x="26" y="255" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">BLOCKCHAIN SYNCHRONIZED SUBMISSION:</text>
+      <text x="26" y="273" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Trial Protocol pre-registered on blockchain.</text>
+      <text x="26" y="291" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Multi-center trial sites submit raw observations</text>
+      <text x="36" y="307" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">  directly to CRO smart contract in real time.</text>
+      <text x="26" y="327" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Cryptographic timestamp prevents backdating.</text>
+      <text x="26" y="345" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#10003; Data cannot be altered after submission.</text>
+
+      <!-- Regulators audit box -->
+      <rect x="16" y="367" width="353" height="110" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="26" y="387" fill="#FBBF24" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">REGULATORS &amp; SPONSOR VISIBILITY:</text>
+      <text x="26" y="405" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Regulators (FDA, EMA, MHRA) inspect state live.</text>
+      <text x="26" y="423" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Pharma sponsors monitor efficacy signals safely.</text>
+      <text x="26" y="441" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Adverse event reporting cannot be buried.</text>
+      <text x="26" y="461" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#9733; Mathematical guarantee of trial authenticity.</text>
+
+      <!-- Clinical Trial Outcomes -->
+      <rect x="16" y="490" width="353" height="235" rx="6" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.2"/>
+      <text x="26" y="512" fill="#A78BFA" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">SCIENTIFIC IMPACT:</text>
+      <text x="26" y="534" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Restores public trust in novel therapies</text>
+      <text x="26" y="552" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Patient consent tracked per trial amendment</text>
+      <text x="26" y="570" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Streamlines FDA new drug approval (NDA)</text>
+      <text x="26" y="588" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Accelerates multi-institution cross analysis</text>
+      <text x="26" y="608" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="600">&#9733; Cuts trial verification overhead by 65%</text>
+      <text x="26" y="626" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">  while guaranteeing zero post-hoc data tampering.</text>
+    </g>
+
+    <!-- Pillar 3: Healthcare Billing & Fraud Reduction -->
+    <g transform="translate(825, 0)" filter="url(#shadow6)">
+      <rect width="385" height="745" rx="10" fill="#1E293B" fill-opacity="0.6" stroke="#10B981" stroke-width="1.2"/>
+      <rect x="0" y="0" width="385" height="34" rx="10" fill="#047857"/>
+      <text x="192" y="22" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">3. BILLING &amp; CLAIMS FRAUD REDUCTION</text>
+
+      <circle cx="192" cy="75" r="26" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+      <text x="192" y="82" text-anchor="middle" fill="#10B981" font-family="'Segoe UI', system-ui, sans-serif" font-size="18">&#128179;</text>
+      <text x="192" y="118" text-anchor="middle" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700">Automated Smart Adjudication</text>
+
+      <!-- Problem box -->
+      <rect x="16" y="135" width="353" height="88" rx="6" fill="#0F172A" stroke="#EF4444" stroke-width="1"/>
+      <text x="26" y="155" fill="#F87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">THE BILLING FRAUD &amp; DELAY BURDEN:</text>
+      <text x="26" y="173" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; $100B+ annual healthcare billing fraud (US).</text>
+      <text x="26" y="191" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Phantom billing, upcoding &amp; double claims.</text>
+      <text x="26" y="209" fill="#FCA5A5" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#8226; 30 to 90 days delay for insurance settlement.</text>
+
+      <!-- Solution box -->
+      <rect x="16" y="235" width="353" height="120" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+      <text x="26" y="255" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">SMART CONTRACT ADJUDICATION:</text>
+      <text x="26" y="273" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Hospital submits billing claim on-chain.</text>
+      <text x="26" y="291" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Claim cryptographically references treatment record.</text>
+      <text x="26" y="309" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Smart contract validates policy coverage rules.</text>
+      <text x="26" y="327" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Actuaries inspect immutable claim verification.</text>
+      <text x="26" y="345" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#10003; Settlement triggered automatically in seconds.</text>
+
+      <!-- Benefits box -->
+      <rect x="16" y="367" width="353" height="110" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="26" y="387" fill="#38BDF8" font-family="'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="700">ANTI-FRAUD IMMUTABLE GUARANTEE:</text>
+      <text x="26" y="405" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Duplicate claims auto-rejected by ledger rules.</text>
+      <text x="26" y="423" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Impossible to bill for non-performed services.</text>
+      <text x="26" y="441" fill="#CBD5E1" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Transparent shared truth across insurers &amp; clinics.</text>
+      <text x="26" y="461" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5">&#9733; 95% reduction in claims processing costs.</text>
+
+      <!-- Quantitative Wins -->
+      <rect x="16" y="490" width="353" height="235" rx="6" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+      <text x="26" y="512" fill="#34D399" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700">FINANCIAL &amp; OPERATIONAL METRICS:</text>
+      <text x="26" y="534" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Settlement time: Slashed from 45 days to &lt; 1 min</text>
+      <text x="26" y="552" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Administrative costs: Slashed by 70%</text>
+      <text x="26" y="570" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Ghost billing / unbundled fees: 0% incidence</text>
+      <text x="26" y="588" fill="#E2E8F0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">&#8226; Patient copay clarity: Instant transparent mobile receipt</text>
+      <text x="26" y="608" fill="#A7F3D0" font-family="'Segoe UI', system-ui, sans-serif" font-size="9.5" font-weight="600">&#9733; Full auditability for actuarial risk modeling</text>
+      <text x="26" y="626" fill="#94A3B8" font-family="'Segoe UI', system-ui, sans-serif" font-size="9">  while preserving complete cryptographic privacy.</text>
+    </g>
+  </g>
+</svg>

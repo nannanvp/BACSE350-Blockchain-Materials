@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#141d33"/>
+    </linearGradient>
+    <linearGradient id="senderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="verifierGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#022c22"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <marker id="sigArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 1 1 L 7 4 L 1 7 Z" fill="#818cf8"/>
+    </marker>
+    <marker id="verifyArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 1 1 L 7 4 L 1 7 Z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect width="1150" height="720" fill="url(#bgGrad3)"/>
+
+  <!-- Title -->
+  <text x="575" y="38" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" letter-spacing="1">ECDSA DIGITAL SIGNATURE GENERATION &amp; VERIFICATION</text>
+  <text x="575" y="62" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Asymmetric cryptography in Bitcoin: Proving ownership and transaction authenticity without revealing private keys</text>
+
+  <!-- LEFT PANEL: Alice (Signing) -->
+  <g transform="translate(30, 85)">
+    <rect width="470" height="480" rx="14" fill="url(#senderGrad)" stroke="#6366f1" stroke-width="1.5"/>
+    <rect width="470" height="38" rx="14" fill="#4338ca"/>
+    <text x="235" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">SIGNING PROCESS (Alice / Private Key Holder)</text>
+
+    <!-- Key Pair Box -->
+    <rect x="20" y="52" width="430" height="60" rx="8" fill="#1e1b4b" stroke="#818cf8" stroke-dasharray="3,3"/>
+    <text x="32" y="72" fill="#c7d2fe" font-family="sans-serif" font-size="11" font-weight="bold">Alice's Key Pair (secp256k1 Curve: y&#178; = x&#179; + 7):</text>
+    <text x="32" y="90" fill="#f43f5e" font-family="sans-serif" font-size="10">&#8226; Private Key (k): Secret 256-bit random integer</text>
+    <text x="32" y="104" fill="#38bdf8" font-family="sans-serif" font-size="10">&#8226; Public Key (K): K = k &#215; G (Elliptic curve point multiplication, publicly known)</text>
+
+    <!-- Step 1: Message -->
+    <rect x="135" y="125" width="200" height="42" rx="6" fill="#0f172a" stroke="#cbd5e1"/>
+    <text x="235" y="142" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">Transaction Message (M)</text>
+    <text x="235" y="157" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="10" font-weight="bold">"Alice pays Bob 1.5 BTC"</text>
+
+    <!-- Step 2: Hash Function -->
+    <line x1="235" y1="167" x2="235" y2="195" stroke="#818cf8" stroke-width="2" marker-end="url(#sigArrow)"/>
+    <rect x="155" y="195" width="160" height="36" rx="6" fill="#312e81" stroke="#818cf8"/>
+    <text x="235" y="217" text-anchor="middle" fill="#e0e7ff" font-family="sans-serif" font-size="11" font-weight="bold">SHA-256 Hashing</text>
+
+    <!-- Step 3: Message Digest -->
+    <line x1="235" y1="231" x2="235" y2="255" stroke="#818cf8" stroke-width="2" marker-end="url(#sigArrow)"/>
+    <rect x="120" y="255" width="230" height="36" rx="6" fill="#0f172a" stroke="#a5b4fc"/>
+    <text x="235" y="271" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Message Digest: h = SHA256(M)</text>
+    <text x="235" y="284" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="9">256-bit fixed fingerprint</text>
+
+    <!-- Step 4: Signing Algorithm -->
+    <line x1="235" y1="291" x2="235" y2="315" stroke="#818cf8" stroke-width="2" marker-end="url(#sigArrow)"/>
+    <!-- Private Key Input to Sign -->
+    <path d="M 40 112 L 40 335 L 110 335" fill="none" stroke="#f43f5e" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#sigArrow)"/>
+    <text x="45" y="325" fill="#f87171" font-family="sans-serif" font-size="9" font-weight="bold">Alice's Private Key (k)</text>
+
+    <rect x="110" y="315" width="250" height="45" rx="8" fill="#4338ca" stroke="#c7d2fe"/>
+    <text x="235" y="333" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">ECDSA Signing Algorithm</text>
+    <text x="235" y="348" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="10">Sig = Sign(h, k_Alice)</text>
+
+    <!-- Step 5: Output Signature -->
+    <line x1="235" y1="360" x2="235" y2="385" stroke="#818cf8" stroke-width="2" marker-end="url(#sigArrow)"/>
+    <rect x="115" y="385" width="240" height="45" rx="8" fill="#1e1b4b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="235" y="403" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="bold">Digital Signature (r, s)</text>
+    <text x="235" y="418" text-anchor="middle" fill="#93c5fd" font-family="monospace" font-size="9">Two 256-bit integers (r, s)</text>
+
+    <text x="235" y="455" text-anchor="middle" fill="#a5b4fc" font-family="sans-serif" font-size="10">&#10004; Signing the hash prevents computational lag on big data</text>
+  </g>
+
+  <!-- TRANSMISSION CHANNEL -->
+  <g transform="translate(520, 240)">
+    <rect width="110" height="170" rx="10" fill="#0f172a" stroke="#64748b" stroke-dasharray="4,4"/>
+    <text x="55" y="22" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">P2P BROADCAST</text>
+    
+    <rect x="10" y="35" width="90" height="30" rx="4" fill="#1e293b"/>
+    <text x="55" y="53" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="9">Message (M)</text>
+
+    <rect x="10" y="75" width="90" height="30" rx="4" fill="#1e1b4b" stroke="#38bdf8"/>
+    <text x="55" y="93" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="9">Sig (r, s)</text>
+
+    <rect x="10" y="115" width="90" height="30" rx="4" fill="#042f2e" stroke="#2dd4bf"/>
+    <text x="55" y="133" text-anchor="middle" fill="#2dd4bf" font-family="sans-serif" font-size="9">Public Key (K)</text>
+
+    <!-- Transmit Arrows -->
+    <path d="M -20 170 L 10 170" stroke="#818cf8" stroke-width="2"/>
+    <path d="M 100 170 L 130 170" stroke="#34d399" stroke-width="2" marker-end="url(#verifyArrow)"/>
+  </g>
+
+  <!-- RIGHT PANEL: Verifier (Network / Miner / Bob) -->
+  <g transform="translate(650, 85)">
+    <rect width="470" height="480" rx="14" fill="url(#verifierGrad)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="470" height="38" rx="14" fill="#047857"/>
+    <text x="235" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">VERIFICATION PROCESS (Every Network Node / Miner)</text>
+
+    <!-- Inputs Received -->
+    <rect x="25" y="55" width="125" height="40" rx="5" fill="#0f172a" stroke="#cbd5e1"/>
+    <text x="87" y="72" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Received Tx (M)</text>
+    <text x="87" y="87" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="9">"Alice pays..."</text>
+
+    <rect x="170" y="55" width="130" height="40" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="235" y="72" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Signature</text>
+    <text x="235" y="87" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9">(r, s)</text>
+
+    <rect x="320" y="55" width="125" height="40" rx="5" fill="#0f172a" stroke="#2dd4bf"/>
+    <text x="382" y="72" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Alice's Public Key</text>
+    <text x="382" y="87" text-anchor="middle" fill="#2dd4bf" font-family="monospace" font-size="9">K_Alice</text>
+
+    <!-- Hash the received message -->
+    <line x1="87" y1="95" x2="87" y2="135" stroke="#34d399" stroke-width="1.8" marker-end="url(#verifyArrow)"/>
+    <rect x="25" y="135" width="125" height="35" rx="5" fill="#064e3b" stroke="#34d399"/>
+    <text x="87" y="156" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="bold">SHA256(M)</text>
+
+    <!-- Digest h' -->
+    <line x1="87" y1="170" x2="87" y2="200" stroke="#34d399" stroke-width="1.8" marker-end="url(#verifyArrow)"/>
+    <rect x="25" y="200" width="125" height="35" rx="5" fill="#0f172a" stroke="#6ee7b7"/>
+    <text x="87" y="217" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Calculated Digest</text>
+    <text x="87" y="228" text-anchor="middle" fill="#6ee7b7" font-family="monospace" font-size="9">h' = SHA256(M)</text>
+
+    <!-- Convergence to ECDSA Verify -->
+    <path d="M 87 235 L 87 280 L 170 280" fill="none" stroke="#34d399" stroke-width="1.8" marker-end="url(#verifyArrow)"/>
+    <path d="M 235 95 L 235 260" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#verifyArrow)"/>
+    <path d="M 382 95 L 382 280 L 300 280" fill="none" stroke="#2dd4bf" stroke-width="1.8" marker-end="url(#verifyArrow)"/>
+
+    <!-- Verification Engine -->
+    <rect x="140" y="260" width="190" height="50" rx="8" fill="#047857" stroke="#6ee7b7"/>
+    <text x="235" y="280" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">ECDSA Verify Algorithm</text>
+    <text x="235" y="297" text-anchor="middle" fill="#ecfdf5" font-family="monospace" font-size="10">Verify(h', (r, s), K_Alice)</text>
+
+    <!-- Decision Result -->
+    <line x1="235" y1="310" x2="235" y2="340" stroke="#34d399" stroke-width="2" marker-end="url(#verifyArrow)"/>
+
+    <!-- True Branch -->
+    <rect x="60" y="340" width="160" height="75" rx="8" fill="#064e3b" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="140" y="362" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-size="12" font-weight="bold">&#10004; VALID (TRUE)</text>
+    <text x="140" y="380" text-anchor="middle" fill="#dcfce7" font-family="sans-serif" font-size="9">&#8226; Sender possesses private key</text>
+    <text x="140" y="395" text-anchor="middle" fill="#dcfce7" font-family="sans-serif" font-size="9">&#8226; Data untampered in transit</text>
+    <text x="140" y="408" text-anchor="middle" fill="#dcfce7" font-family="sans-serif" font-size="9">&#8226; Transaction added to Mempool</text>
+
+    <!-- False Branch -->
+    <rect x="250" y="340" width="160" height="75" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="330" y="362" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="12" font-weight="bold">&#10008; INVALID (FALSE)</text>
+    <text x="330" y="380" text-anchor="middle" fill="#fee2e2" font-family="sans-serif" font-size="9">&#8226; Signature mismatch or forged</text>
+    <text x="330" y="395" text-anchor="middle" fill="#fee2e2" font-family="sans-serif" font-size="9">&#8226; Data altered by man-in-the-middle</text>
+    <text x="330" y="408" text-anchor="middle" fill="#fee2e2" font-family="sans-serif" font-size="9">&#8226; Transaction dropped instantly</text>
+  </g>
+
+  <!-- Bottom Core Security Properties -->
+  <g transform="translate(30, 580)">
+    <rect width="1090" height="115" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    <text x="25" y="24" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="bold">THREE CARDINAL SECURITY GUARANTEES PROVIDED BY DIGITAL SIGNATURES:</text>
+
+    <rect x="20" y="38" width="335" height="65" rx="6" fill="#1e1b4b" stroke="#6366f1"/>
+    <text x="32" y="58" fill="#a5b4fc" font-family="sans-serif" font-size="11" font-weight="bold">1. Authentication (Ownership)</text>
+    <text x="32" y="74" fill="#e2e8f0" font-family="sans-serif" font-size="10">Mathematically proves that the transaction was created by the sole owner of the private key corresponding to the public address.</text>
+
+    <rect x="375" y="38" width="335" height="65" rx="6" fill="#022c22" stroke="#10b981"/>
+    <text x="387" y="58" fill="#6ee7b7" font-family="sans-serif" font-size="11" font-weight="bold">2. Data Integrity (Tamper Proof)</text>
+    <text x="387" y="74" fill="#e2e8f0" font-family="sans-serif" font-size="10">Even if an adversary alters the destination or amount by 1 satoshi, the recalculated digest h' will fail verification completely.</text>
+
+    <rect x="730" y="38" width="340" height="65" rx="6" fill="#172554" stroke="#3b82f6"/>
+    <text x="742" y="58" fill="#93c5fd" font-family="sans-serif" font-size="11" font-weight="bold">3. Non-Repudiation (Irrevocable)</text>
+    <text x="742" y="74" fill="#e2e8f0" font-family="sans-serif" font-size="10">The signer cannot later deny having authorized the transaction, because no other entity in the universe could have computed (r, s).</text>
+  </g>
+</svg>

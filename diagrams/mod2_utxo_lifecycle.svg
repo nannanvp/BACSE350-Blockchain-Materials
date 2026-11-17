@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="100%" height="100%" style="background-color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arr3" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arr3-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444" />
+    </marker>
+    <marker id="arr3-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="30" y="20" width="1090" height="65" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#glow3)"/>
+  <text x="575" y="48" fill="#f8fafc" font-size="20" font-weight="bold" text-anchor="middle">Bitcoin UTXO Model: Atomic Consumption, Change &amp; Fee Flow</text>
+  <text x="575" y="72" fill="#94a3b8" font-size="13" text-anchor="middle">Rule of Entirety: Spender must consume inputs completely; remainder returns as Change; difference is Miner Fee</text>
+
+  <!-- Transaction 1: Alice spends 5 BTC (TxID: abc...) -->
+  <g transform="translate(50, 110)" filter="url(#glow3)">
+    <rect width="480" height="340" rx="10" fill="url(#cardGrad3)" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="12" width="450" height="28" rx="5" fill="#0284c7" fill-opacity="0.2"/>
+    <text x="240" y="31" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">TRANSACTION 1 (TxID: abc...)</text>
+
+    <!-- Inputs Section -->
+    <rect x="20" y="55" width="200" height="130" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="25" y="60" width="190" height="20" rx="3" fill="#ef4444" fill-opacity="0.2"/>
+    <text x="120" y="75" fill="#fca5a5" font-size="11" font-weight="bold" text-anchor="middle">INPUTS (VIN)</text>
+    <text x="30" y="100" fill="#cbd5e1" font-size="10">&#8226; Prev Tx: <tspan fill="#f8fafc" font-family="monospace">prev_hash</tspan></text>
+    <text x="30" y="118" fill="#cbd5e1" font-size="10">&#8226; VOUT: <tspan fill="#f8fafc" font-family="monospace">0</tspan></text>
+    <text x="30" y="136" fill="#cbd5e1" font-size="10">&#8226; Unlocking Script:</text>
+    <text x="38" y="152" fill="#38bdf8" font-family="monospace" font-size="9">&lt;Sig_Alice&gt; &lt;PubKey_Alice&gt;</text>
+    <text x="30" y="174" fill="#ef4444" font-size="11" font-weight="bold">&#8226; Value: 5.000 BTC</text>
+
+    <!-- Rule Arrow -->
+    <path d="M 220 120 L 255 120" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arr3)"/>
+
+    <!-- Outputs Section -->
+    <rect x="260" y="55" width="200" height="260" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="265" y="60" width="190" height="20" rx="3" fill="#10b981" fill-opacity="0.2"/>
+    <text x="360" y="75" fill="#6ee7b7" font-size="11" font-weight="bold" text-anchor="middle">OUTPUTS (VOUT)</text>
+
+    <!-- Output 0: Bob -->
+    <rect x="270" y="88" width="180" height="95" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="280" y="105" fill="#fbbf24" font-size="10" font-weight="bold">Output 0: Bob (Payment)</text>
+    <text x="280" y="123" fill="#10b981" font-size="12" font-weight="bold">Value: 3.000 BTC</text>
+    <text x="280" y="141" fill="#94a3b8" font-size="9">Locking scriptPubKey:</text>
+    <text x="280" y="157" fill="#a78bfa" font-family="monospace" font-size="9">OP_DUP OP_HASH160 &lt;Bob&gt;...</text>
+    <rect x="390" y="165" width="55" height="15" rx="3" fill="#10b981"/>
+    <text x="417" y="176" fill="#fff" font-size="8" font-weight="bold" text-anchor="middle">UTXO #1</text>
+
+    <!-- Output 1: Alice Change -->
+    <rect x="270" y="195" width="180" height="95" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="280" y="212" fill="#60a5fa" font-size="10" font-weight="bold">Output 1: Alice (Change)</text>
+    <text x="280" y="230" fill="#10b981" font-size="12" font-weight="bold">Value: 1.999 BTC</text>
+    <text x="280" y="248" fill="#94a3b8" font-size="9">Locking scriptPubKey:</text>
+    <text x="280" y="264" fill="#a78bfa" font-family="monospace" font-size="9">OP_DUP OP_HASH160 &lt;Alice&gt;...</text>
+    <rect x="390" y="272" width="55" height="15" rx="3" fill="#10b981"/>
+    <text x="417" y="283" fill="#fff" font-size="8" font-weight="bold" text-anchor="middle">UTXO #2</text>
+
+    <!-- Miner Fee Badge -->
+    <rect x="20" y="200" width="200" height="115" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="120" y="222" fill="#fbbf24" font-size="11" font-weight="bold" text-anchor="middle">IMPLICIT MINER FEE</text>
+    <text x="30" y="244" fill="#cbd5e1" font-size="10">Fee = &#8721;Inputs &#8722; &#8721;Outputs</text>
+    <text x="30" y="264" fill="#cbd5e1" font-size="10">5.000 &#8722; (3.000 + 1.999)</text>
+    <text x="30" y="288" fill="#f59e0b" font-size="12" font-weight="bold">= 0.001 BTC (100,000 Sat)</text>
+    <text x="30" y="304" fill="#94a3b8" font-size="9">Claimed by miner in Coinbase</text>
+  </g>
+
+  <!-- Flow Arrow from Bob's UTXO to Transaction 2 -->
+  <path d="M 530 190 C 570 190, 580 190, 620 190" fill="none" stroke="#10b981" stroke-width="3" marker-end="url(#arr3-green)"/>
+  <text x="575" y="175" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Bob Spends UTXO</text>
+  <text x="575" y="208" fill="#94a3b8" font-size="10" text-anchor="middle">(Becomes Spent/Inactive)</text>
+
+  <!-- Transaction 2: Bob spends 3 BTC (TxID: xyz...) -->
+  <g transform="translate(620, 110)" filter="url(#glow3)">
+    <rect width="480" height="340" rx="10" fill="url(#cardGrad3)" stroke="#10b981" stroke-width="2"/>
+    <rect x="15" y="12" width="450" height="28" rx="5" fill="#059669" fill-opacity="0.2"/>
+    <text x="240" y="31" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle">TRANSACTION 2 (TxID: xyz...)</text>
+
+    <!-- Inputs Section -->
+    <rect x="20" y="55" width="200" height="130" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="25" y="60" width="190" height="20" rx="3" fill="#ef4444" fill-opacity="0.2"/>
+    <text x="120" y="75" fill="#fca5a5" font-size="11" font-weight="bold" text-anchor="middle">INPUTS (VIN)</text>
+    <text x="30" y="100" fill="#cbd5e1" font-size="10">&#8226; Prev Tx: <tspan fill="#38bdf8" font-family="monospace">abc... (Tx 1)</tspan></text>
+    <text x="30" y="118" fill="#cbd5e1" font-size="10">&#8226; Output Index: <tspan fill="#f8fafc" font-family="monospace">0</tspan></text>
+    <text x="30" y="136" fill="#cbd5e1" font-size="10">&#8226; Unlocking Script:</text>
+    <text x="38" y="152" fill="#38bdf8" font-family="monospace" font-size="9">&lt;Sig_Bob&gt; &lt;PubKey_Bob&gt;</text>
+    <text x="30" y="174" fill="#ef4444" font-size="11" font-weight="bold">&#8226; Value: 3.000 BTC</text>
+
+    <!-- Rule Arrow -->
+    <path d="M 220 120 L 255 120" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arr3)"/>
+
+    <!-- Outputs Section -->
+    <rect x="260" y="55" width="200" height="260" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="265" y="60" width="190" height="20" rx="3" fill="#10b981" fill-opacity="0.2"/>
+    <text x="360" y="75" fill="#6ee7b7" font-size="11" font-weight="bold" text-anchor="middle">OUTPUTS (VOUT)</text>
+
+    <!-- Output 0: David -->
+    <rect x="270" y="88" width="180" height="95" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="280" y="105" fill="#f472b6" font-size="10" font-weight="bold">Output 0: David (Payment)</text>
+    <text x="280" y="123" fill="#10b981" font-size="12" font-weight="bold">Value: 1.000 BTC</text>
+    <text x="280" y="141" fill="#94a3b8" font-size="9">Locking scriptPubKey:</text>
+    <text x="280" y="157" fill="#a78bfa" font-family="monospace" font-size="9">OP_DUP OP_HASH160 &lt;David&gt;...</text>
+    <rect x="390" y="165" width="55" height="15" rx="3" fill="#10b981"/>
+    <text x="417" y="176" fill="#fff" font-size="8" font-weight="bold" text-anchor="middle">UTXO #3</text>
+
+    <!-- Output 1: Bob Change -->
+    <rect x="270" y="195" width="180" height="95" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="280" y="212" fill="#fbbf24" font-size="10" font-weight="bold">Output 1: Bob (Change)</text>
+    <text x="280" y="230" fill="#10b981" font-size="12" font-weight="bold">Value: 1.999 BTC</text>
+    <text x="280" y="248" fill="#94a3b8" font-size="9">Locking scriptPubKey:</text>
+    <text x="280" y="264" fill="#a78bfa" font-family="monospace" font-size="9">OP_DUP OP_HASH160 &lt;Bob&gt;...</text>
+    <rect x="390" y="272" width="55" height="15" rx="3" fill="#10b981"/>
+    <text x="417" y="283" fill="#fff" font-size="8" font-weight="bold" text-anchor="middle">UTXO #4</text>
+
+    <!-- Miner Fee Badge -->
+    <rect x="20" y="200" width="200" height="115" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="120" y="222" fill="#fbbf24" font-size="11" font-weight="bold" text-anchor="middle">IMPLICIT MINER FEE</text>
+    <text x="30" y="244" fill="#cbd5e1" font-size="10">Fee = &#8721;Inputs &#8722; &#8721;Outputs</text>
+    <text x="30" y="264" fill="#cbd5e1" font-size="10">3.000 &#8722; (1.000 + 1.999)</text>
+    <text x="30" y="288" fill="#f59e0b" font-size="12" font-weight="bold">= 0.001 BTC (100,000 Sat)</text>
+    <text x="30" y="304" fill="#94a3b8" font-size="9">Claimed by miner in Coinbase</text>
+  </g>
+
+  <!-- Bottom Comparison: Account-based vs UTXO Summary -->
+  <g transform="translate(50, 480)" filter="url(#glow3)">
+    <rect width="1050" height="210" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <rect x="20" y="15" width="1010" height="28" rx="4" fill="#334155"/>
+    <text x="525" y="34" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">CRITICAL UTXO CONCEPTS FOR BITCOIN EXAMINATIONS</text>
+
+    <!-- Col 1 -->
+    <g transform="translate(40, 55)">
+      <text x="0" y="20" fill="#38bdf8" font-size="12" font-weight="bold">1. Rule of Entirety</text>
+      <text x="0" y="40" fill="#cbd5e1" font-size="11">Like physical cash notes: you cannot tear a</text>
+      <text x="0" y="58" fill="#cbd5e1" font-size="11">100-dollar bill in half. An input must be spent in</text>
+      <text x="0" y="76" fill="#cbd5e1" font-size="11">its entirety, and change is sent back as a new</text>
+      <text x="0" y="94" fill="#cbd5e1" font-size="11">output to the sender&apos;s own address.</text>
+    </g>
+
+    <!-- Col 2 -->
+    <g transform="translate(380, 55)">
+      <text x="0" y="20" fill="#10b981" font-size="12" font-weight="bold">2. Inputs have NO Value Field</text>
+      <text x="0" y="40" fill="#cbd5e1" font-size="11">A transaction input does not contain a BTC value!</text>
+      <text x="0" y="58" fill="#cbd5e1" font-size="11">It is purely a pointer (TxID + Output Index) to an</text>
+      <text x="0" y="76" fill="#cbd5e1" font-size="11">existing unspent transaction output. The value is</text>
+      <text x="0" y="94" fill="#cbd5e1" font-size="11">retrieved by nodes looking up the referenced UTXO.</text>
+    </g>
+
+    <!-- Col 3 -->
+    <g transform="translate(730, 55)">
+      <text x="0" y="20" fill="#f59e0b" font-size="12" font-weight="bold">3. The UTXO Set (Chainstate)</text>
+      <text x="0" y="40" fill="#cbd5e1" font-size="11">Nodes keep the entire UTXO set in RAM (LevelDB)</text>
+      <text x="0" y="58" fill="#cbd5e1" font-size="11">to validate incoming transactions in O(1) time.</text>
+      <text x="0" y="76" fill="#cbd5e1" font-size="11">Once spent, an output is deleted from the UTXO set</text>
+      <text x="0" y="94" fill="#cbd5e1" font-size="11">and becomes historical immutable ledger data.</text>
+    </g>
+  </g>
+
+</svg>
